@@ -75,3 +75,4 @@ crashlytics-build.properties
 RoomForSound_FMOD/.cache/*
 RoomForSound_FMOD/.unsaved/*
 RoomForSound_FMOD/desktop.ini
+fmod_editor.log
