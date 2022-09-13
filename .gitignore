@@ -76,3 +76,4 @@ RoomForSound_FMOD/.cache/*
 RoomForSound_FMOD/.unsaved/*
 RoomForSound_FMOD/desktop.ini
 fmod_editor.log
+Assets/Plugins/FMOD/Cache/*
