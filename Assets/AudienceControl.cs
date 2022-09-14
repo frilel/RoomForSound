@@ -20,4 +20,20 @@ public class AudienceControl : MonoBehaviour
     {
         nameText.text = name;
     }
+    public void ChangeAvatar(int index)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (i == index)
+            {
+                transform.GetChild(i).gameObject.SetActive(true);
+            }
+            else
+            {
+                transform.GetChild(i).gameObject.SetActive(false);
+            }
+
+        }
+    }
+
 }
