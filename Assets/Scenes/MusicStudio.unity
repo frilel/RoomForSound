@@ -341,6 +341,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8370560498537395720, guid: b0d4468d7d655d249a7dd6e6e3730317, type: 3}
   m_PrefabInstance: {fileID: 11157308}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &16677302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8063863610884553424, guid: bf95071d658415e4196a88f5cb8c5018, type: 3}
+  m_PrefabInstance: {fileID: 1328464729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &16677304
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16677302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7902413615292745912, guid: bf95071d658415e4196a88f5cb8c5018, type: 3}
 --- !u!1001 &19801617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17269,7 +17288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770019064}
   m_LocalRotation: {x: 0.7572977, y: 0.14441189, z: -0.04659797, w: 0.63519615}
-  m_LocalPosition: {x: 0.435, y: 0.802, z: 0.323}
+  m_LocalPosition: {x: 0.435, y: 0.7861, z: 0.323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1188605513}
@@ -17638,7 +17657,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808396304}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 452cab5cd4cc31a4bbda065fe1729e0d, type: 3}
@@ -18143,6 +18162,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8370560498537395720, guid: b0d4468d7d655d249a7dd6e6e3730317, type: 3}
   m_PrefabInstance: {fileID: 838664982}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &844854454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1140748960044852465, guid: bf95071d658415e4196a88f5cb8c5018, type: 3}
+  m_PrefabInstance: {fileID: 1328464729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &844854456
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844854454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9002772241236407876, guid: bf95071d658415e4196a88f5cb8c5018, type: 3}
 --- !u!1001 &857303830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18904,7 +18942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &923697994
 Transform:
   m_ObjectHideFlags: 0
@@ -20454,7 +20492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1188605510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23036,6 +23074,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1167011964154784225, guid: 273ff923a671c0544970539abc6984c2, type: 3}
   m_PrefabInstance: {fileID: 1523685882}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1525152518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6835953478294775287, guid: bf95071d658415e4196a88f5cb8c5018, type: 3}
+  m_PrefabInstance: {fileID: 1328464729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1525152520
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525152518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6938190333008534659, guid: bf95071d658415e4196a88f5cb8c5018, type: 3}
 --- !u!1001 &1530304582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25790,7 +25847,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787355413}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 80fbb8c0c68727f429e4d50ddadd683b, type: 3}
@@ -32030,6 +32087,25 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &1992573007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7215512017404137089, guid: bf95071d658415e4196a88f5cb8c5018, type: 3}
+  m_PrefabInstance: {fileID: 1328464729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1992573009
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992573007}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6566684382962765086, guid: bf95071d658415e4196a88f5cb8c5018, type: 3}
 --- !u!1001 &1996891318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32251,7 +32327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2007168519
 Transform:
   m_ObjectHideFlags: 0
@@ -42973,7 +43049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &3658783868876106976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43587,7 +43663,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3586528378277747064}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8787516743477980184}
@@ -48607,7 +48683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7660387496820105688}
   m_LocalRotation: {x: 0.64393157, y: 0.29215086, z: -0.29215077, w: 0.6439316}
-  m_LocalPosition: {x: 0.438, y: 0.788, z: 0.329}
+  m_LocalPosition: {x: 0.438, y: 0.8093, z: 0.329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3658783868527175132}
@@ -49181,7 +49257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9008194412231286840
 Transform:
   m_ObjectHideFlags: 0
