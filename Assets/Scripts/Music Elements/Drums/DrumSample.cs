@@ -1,11 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DrumSample : MonoBehaviour
 {
-  public FMODUnity.EventReference _eventPath;
-  public void OnTriggerEnter() {
-    FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
-  }
+    public FMODUnity.EventReference _eventPath;
+
+    private float impactSpeed;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick) && drumStick.interactable == true)
+        {
+            impactSpeed = Vector3.Distance(drumStick.previousPos, drumStick.transform.position) / Time.deltaTime;
+#if UNITY_EDITOR
+            Debug.Log("You hit the" + transform.name + "with impact speed: " + impactSpeed);
+#endif
+
+        }
+        FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
+
+
+    }
+
+
 }

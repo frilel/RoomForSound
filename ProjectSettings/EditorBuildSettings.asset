@@ -14,12 +14,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestVR.unity
     guid: 322b7d4df13a31543a97010da00bbd39
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MusicStudio.unity
     guid: 4c247c42f49209e438996b7149881eef
   - enabled: 0
     path: Assets/Scenes/Ben Scene.unity
     guid: f443ffd921c163e4eaaf7790778ee45f
+  - enabled: 1
+    path: Assets/Scenes/Christian/StudioChristian.unity
+    guid: d14fd526d174d954594bd891d6340770
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 97c39cff9565a2a4392032a9ad8d3a15, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f89ac578f7ee1e142bb2dfa44d5f2617, type: 2}
