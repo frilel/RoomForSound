@@ -7,7 +7,8 @@ public class TestController : MonoBehaviour
     public GameObject audiencePrefab;
     public Transform audienceParent;
     //public Transform lookAtTarget;
-    public List<string> IDs = new List<string>();
+    //public List<string> IDs = new List<string>();
+    Dictionary<string,GameObject> idsStored=new Dictionary<string, GameObject>();
     string url;
     private void Start()
     {
@@ -32,16 +33,31 @@ public class TestController : MonoBehaviour
         {
             foreach (Audience aud in audiences.data)
             {
-                if (!IDs.Contains(aud.id))
+                if (idsStored.Count <= 44)
                 {
-                    IDs.Add(aud.id);
-                    Vector3 randomPos = audienceParent.GetChild(0).GetComponent<RandomPositionAllocator>().GenerateRandomPos();
-                    GameObject go = Instantiate(audiencePrefab, randomPos, Quaternion.identity, audienceParent);
-                    go.transform.LookAt(new Vector3(0,go.transform.position.y,0));
-                    go.GetComponent<AudienceControl>().UpdateDisplay(aud.name);
-                    go.GetComponent<AudienceControl>().ChangeAvatar(Random.Range(0,4));
-                    Debug.Log(aud.name+" added");
+                    if (!idsStored.ContainsKey(aud.id))
+                    {
+                        //IDs.Add(aud.id);
+                        Vector3 randomPos = audienceParent.GetChild(0).GetComponent<RandomPositionAllocator>().GenerateRandomPos();
+                        GameObject go = Instantiate(audiencePrefab, randomPos, Quaternion.identity, audienceParent);
+                        idsStored.Add(aud.id,go);
+                        go.transform.LookAt(new Vector3(0, go.transform.position.y, 0));
+                        go.GetComponent<AudienceControl>().UpdateAuience(aud);
+                        go.GetComponent<AudienceControl>().ChangeAvatar(Random.Range(0, 4));
+                        Debug.Log(aud.name + " added");
+                    }
+                    else
+                    {
+                        if(aud.messages.Count>0)
+                        {
+                            GameObject go;
+                            idsStored.TryGetValue(aud.id,out go);
+                            go.GetComponent<AudienceControl>().audience=aud;
+                            go.GetComponent<AudienceControl>().UpdateMessage();
+                        }
+                    }
                 }
+
             }
         }
         else
