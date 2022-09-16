@@ -3569,7 +3569,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audiencePrefab: {fileID: 7186970181888403400, guid: 22c8422801329df4da2de606891c714c, type: 3}
   audienceParent: {fileID: 268328673}
-  IDs: []
 --- !u!1001 &276221947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22565,8 +22564,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  _windowSize: 512
-  _windowShape: 0
 --- !u!54 &1328464732
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23080,8 +23077,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  _windowSize: 512
-  _windowShape: 0
 --- !u!1001 &1399384928
 PrefabInstance:
   m_ObjectHideFlags: 0

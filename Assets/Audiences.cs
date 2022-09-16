@@ -16,9 +16,9 @@ public class Audience
 [System.Serializable]
 public class Message
 {
-   public string messageID;
-   public string audienceID;
-   public string text;
+   public string id;
+   public string audienceId;
+   public string message;
 }
 
 
