@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DrumSample : MonoBehaviour
 {
+
     FMOD.Studio.EventInstance drumHitSFXInstance;
     public FMODUnity.EventReference eventPath;
     private float impactSpeed;
@@ -11,7 +12,6 @@ public class DrumSample : MonoBehaviour
         _VFXController = GetComponentInParent<VFXController>();
     }
 
-    
     private void OnCollisionEnter(Collision collision)
     {
         // get the drum stick object if the interaction on the single drum is noticed = interaction
@@ -51,9 +51,7 @@ public class DrumSample : MonoBehaviour
         {
             //_VFXController.triggerVibration(drumStick.getGrabber(), 0.1f, 0.1f, 1);
         }
-
-
-
+        //FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
 
     }
 

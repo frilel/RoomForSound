@@ -3,8 +3,12 @@ using UnityEngine;
 public class DrumStick : MonoBehaviour
 {
     internal bool interactable;
-
+    OVRGrabbable grabbable;
     public Vector3 previousPos { get; private set; }
+    private void Start()
+    {
+        grabbable = GetComponent<OVRGrabbable>();
+    }
 
     /*public OVRInput.Controller getGrabber()
     {

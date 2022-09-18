@@ -432,6 +432,7 @@ MonoBehaviour:
       Data3: 932121533
       Data4: 1845295261
     Path: event:/Drum set/HighTom
+  _VFXController: {fileID: 0}
 --- !u!64 &16677304
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1590,7 +1591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6363313208851447422, guid: 3c7418e6509b8a944a1b112cb8a1bbd5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6363313208851447423, guid: 3c7418e6509b8a944a1b112cb8a1bbd5, type: 3}
       propertyPath: m_RootOrder
@@ -8534,6 +8535,7 @@ MonoBehaviour:
       Data3: -1052476788
       Data4: 717657000
     Path: event:/Drum set/MediumTom
+  _VFXController: {fileID: 0}
 --- !u!64 &844854456
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11898,6 +11900,7 @@ MonoBehaviour:
       Data3: -972427889
       Data4: -509725279
     Path: event:/Drum set/Snare
+  _VFXController: {fileID: 0}
 --- !u!54 &1328464732
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12346,6 +12349,7 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  _VFXController: {fileID: 0}
 --- !u!1001 &1399384928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13401,6 +13405,7 @@ MonoBehaviour:
       Data3: -1479241821
       Data4: 226147470
     Path: event:/Drum set/BassDrum
+  _VFXController: {fileID: 0}
 --- !u!64 &1525152520
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17129,6 +17134,7 @@ MonoBehaviour:
       Data3: 2134569857
       Data4: 646834438
     Path: event:/Drum set/FloorTom
+  _VFXController: {fileID: 0}
 --- !u!1001 &1996891318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17943,7 +17949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681372687013864540, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681372687013864541, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_RootOrder
@@ -23599,6 +23605,7 @@ MonoBehaviour:
       Data3: -425426541
       Data4: 771988884
     Path: event:/Drum set/HiHat
+  _VFXController: {fileID: 0}
 --- !u!23 &1505362686720866261
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28658,6 +28665,7 @@ MonoBehaviour:
       Data3: -1479241821
       Data4: 226147470
     Path: event:/Drum set/BassDrum
+  _VFXController: {fileID: 0}
 --- !u!4 &2595808345833011663
 Transform:
   m_ObjectHideFlags: 0
@@ -28801,6 +28809,7 @@ MonoBehaviour:
       Data3: -917767751
       Data4: 856131223
     Path: event:/Drum set/Cymbal2
+  _VFXController: {fileID: 0}
 --- !u!64 &3121186611604412717
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28937,6 +28946,7 @@ MonoBehaviour:
       Data3: 1585134506
       Data4: -451431526
     Path: event:/Drum set/Cymbal1
+  _VFXController: {fileID: 0}
 --- !u!4 &3253779574460851926
 Transform:
   m_ObjectHideFlags: 0
@@ -30126,6 +30136,7 @@ MonoBehaviour:
       Data3: -917767751
       Data4: 856131223
     Path: event:/Drum set/Cymbal2
+  _VFXController: {fileID: 0}
 --- !u!114 &4830013940002327239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30263,6 +30274,7 @@ MonoBehaviour:
       Data3: 1585134506
       Data4: -451431526
     Path: event:/Drum set/Cymbal1
+  _VFXController: {fileID: 0}
 --- !u!64 &5138015058198050933
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -30653,6 +30665,7 @@ MonoBehaviour:
       Data3: 932121533
       Data4: 1845295261
     Path: event:/Drum set/HighTom
+  _VFXController: {fileID: 0}
 --- !u!114 &6239145491968251109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36055,6 +36068,7 @@ MonoBehaviour:
       Data3: -1052476788
       Data4: 717657000
     Path: event:/Drum set/MediumTom
+  _VFXController: {fileID: 0}
 --- !u!4 &8050346026580866371
 Transform:
   m_ObjectHideFlags: 0
@@ -36220,6 +36234,7 @@ MonoBehaviour:
       Data3: 2134569857
       Data4: 646834438
     Path: event:/Drum set/FloorTom
+  _VFXController: {fileID: 0}
 --- !u!4 &8361169423728196725
 Transform:
   m_ObjectHideFlags: 0
@@ -36394,6 +36409,7 @@ MonoBehaviour:
       Data3: -425426541
       Data4: 771988884
     Path: event:/Drum set/HiHat
+  _VFXController: {fileID: 0}
 --- !u!1 &8662579693557125304
 GameObject:
   m_ObjectHideFlags: 0
@@ -36464,6 +36480,7 @@ MonoBehaviour:
       Data3: -972427889
       Data4: -509725279
     Path: event:/Drum set/Snare
+  _VFXController: {fileID: 0}
 --- !u!23 &8749319521846893784
 MeshRenderer:
   m_ObjectHideFlags: 0
