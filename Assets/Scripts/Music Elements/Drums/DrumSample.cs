@@ -5,6 +5,7 @@ public class DrumSample : MonoBehaviour
     public FMODUnity.EventReference _eventPath;
     [SerializeField] VFXController _VFXController;
     private float impactSpeed;
+
     private void Start()
     {
         _VFXController = GetComponentInParent<VFXController>();
@@ -20,8 +21,8 @@ public class DrumSample : MonoBehaviour
 
         }
         FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
-        _VFXController.triggerOne();
-        Debug.Log("trigger when hit");
+        _VFXController.triggerOne(collision.transform);
+        //_VFXController.triggerOne(collision.transform, collision.collider.GetComponent<DrumStick>().getGrabber());
 
     }
 
