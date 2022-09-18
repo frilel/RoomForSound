@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class DrumSample : MonoBehaviour
 {
+
     FMOD.Studio.EventInstance drumHitSFXInstance;
     public FMODUnity.EventReference eventPath;
-
     private float impactSpeed;
-    
+    VFXController _VFXController;
+    private void Start()
+    {
+        _VFXController = GetComponentInParent<VFXController>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         // get the drum stick object if the interaction on the single drum is noticed = interaction
@@ -19,7 +24,7 @@ public class DrumSample : MonoBehaviour
             DebugInVR.Instance.text.text = $"impactSpeed: {impactSpeed}";
 
             // normalize the impact speed to get a range approx. between 0 and 1
-            //x normalized = (x – x minimum) / (x maximum – x minimum)
+            //x normalized = (x ï¿½ x minimum) / (x maximum ï¿½ x minimum)
             float normalizedImpactSpeed = impactSpeed / 3f;
 
             // limit the min value to 0 and max value to 1 
@@ -35,6 +40,15 @@ public class DrumSample : MonoBehaviour
             drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
             drumHitSFXInstance.start();
             drumHitSFXInstance.release();
+
+        }
+        
+        FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
+        _VFXController.triggerOne(collision.transform);
+        _VFXController.triggerVibration(OVRInput.Controller.RTouch, 0.1f, 0.1f, 1);
+        if (drumStick)
+        {
+            _VFXController.triggerVibration(drumStick.getGrabber(), 0.1f, 0.1f, 1);
 
         }
     }

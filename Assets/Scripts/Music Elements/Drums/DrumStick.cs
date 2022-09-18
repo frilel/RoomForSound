@@ -11,9 +11,10 @@ public class DrumStick : MonoBehaviour
     private float previousPosResetTime = 100f; //100ms
 
     OVRGrabbable grabbable;
+
     private void Start()
     {
-        grabbable = transform.root.GetComponent<OVRGrabbable>();
+        grabbable = GetComponent<OVRGrabbable>();
     }
 
     private void Update()
