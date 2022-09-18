@@ -22,6 +22,11 @@ public class DrumSample : MonoBehaviour
         }
         FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
         _VFXController.triggerOne(collision.transform);
+        if (drumStick)
+        {
+            _VFXController.triggerVibration(drumStick.getGrabber(), 0.1f, 0.1f, 1);
+
+        }
         //_VFXController.triggerOne(collision.transform, collision.collider.GetComponent<DrumStick>().getGrabber());
 
     }

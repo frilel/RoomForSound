@@ -10,14 +10,14 @@ public class DrumStick : MonoBehaviour
         grabbable = GetComponent<OVRGrabbable>();
     }
 
-    public OVRGrabber getGrabber()
+    public OVRInput.Controller getGrabber()
     {
         if (grabbable.isGrabbed)
         {
             // use this to trigger vibration 
-            return grabbable.grabbedBy;
+            return grabbable.grabbedBy.GetController();
         }
-        else return null;
+        else return OVRInput.Controller.RTouch;
     }
     private void LateUpdate()
     {

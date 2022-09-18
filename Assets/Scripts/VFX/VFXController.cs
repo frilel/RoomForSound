@@ -14,12 +14,18 @@ public class VFXController : MonoBehaviour
         //GameObject particle = Instantiate(prefab, position, Quaternion.identity);
         particle.GetComponentInChildren<ParticleSystem>().Play();
 
-        OVRInput.SetControllerVibration(0.1f, 1, OVRInput.Controller.RTouch);
-        this.CallWithDelay(stopVibration, 0.1f);
+    }
+    public void triggerVibration(OVRInput.Controller controller, float delay, float freq, float amplitude)
+    {
+        OVRInput.SetControllerVibration(freq, amplitude, controller);
+        this.CallWithDelay(stopVibration, delay);
+
     }
     void stopVibration()
     {
         OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+
     }
 }
 
