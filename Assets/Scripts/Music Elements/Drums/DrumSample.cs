@@ -7,6 +7,7 @@ public class DrumSample : MonoBehaviour
     public FMODUnity.EventReference eventPath;
     private float impactSpeed;
     VFXController _VFXController;
+
     private void Start()
     {
         _VFXController = GetComponentInParent<VFXController>();
@@ -43,7 +44,6 @@ public class DrumSample : MonoBehaviour
 
         }
         
-        FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
         _VFXController.triggerOne(collision.transform);
         _VFXController.triggerVibration(OVRInput.Controller.RTouch, 0.1f, 0.1f, 1);
         if (drumStick)
