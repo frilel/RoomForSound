@@ -3,18 +3,20 @@ using UnityEngine;
 [DefaultExecutionOrder (50)]
 public class IgnoreHits : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.transform.TryGetComponent<DrumStick>(out DrumStick drumstick))
+        if(collision.transform.TryGetComponent<DrumStick>(out DrumStick drumstick))
         {
             drumstick.interactable = false;
+            Debug.Log("Test Enter");
         }
     }
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision collision)
     {
-        if (other.transform.TryGetComponent<DrumStick>(out DrumStick drumstick))
+        if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumstick))
         {
             drumstick.interactable = true;
+            Debug.Log("Test Exit");
         }
     }
 }
