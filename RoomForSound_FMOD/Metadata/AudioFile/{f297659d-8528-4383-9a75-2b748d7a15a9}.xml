@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f297659d-8528-4383-9a75-2b748d7a15a9}">
+		<property name="assetPath">
+			<value>BassDrum.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.83333333333333337</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{eb0c8f70-42cc-4c3e-8e0a-d1540967a8c0}</destination>
+		</relationship>
+	</object>
+</objects>
