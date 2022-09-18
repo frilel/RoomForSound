@@ -10,7 +10,7 @@ public class DrumStick : MonoBehaviour
         grabbable = GetComponent<OVRGrabbable>();
     }
 
-    public OVRInput.Controller getGrabber()
+    /*public OVRInput.Controller getGrabber()
     {
         if (grabbable.isGrabbed)
         {
@@ -22,5 +22,5 @@ public class DrumStick : MonoBehaviour
     private void LateUpdate()
     {
         previousPos = transform.position;
-    }
+    }*/
 }
