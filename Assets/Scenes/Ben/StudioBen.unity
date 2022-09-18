@@ -31181,10 +31181,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath:
     Guid:
-      Data1: -1197247510
-      Data2: 1150105224
-      Data3: -917767751
-      Data4: 856131223
+      Data1: -590247715
+      Data2: 1296471657
+      Data3: -890002242
+      Data4: 1977388256
     Path: event:/Drum set/Cymbal2
 --- !u!64 &3121186611604412717
 MeshCollider:
