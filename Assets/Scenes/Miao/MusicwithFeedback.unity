@@ -1591,7 +1591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6363313208851447422, guid: 3c7418e6509b8a944a1b112cb8a1bbd5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6363313208851447423, guid: 3c7418e6509b8a944a1b112cb8a1bbd5, type: 3}
       propertyPath: m_RootOrder
@@ -17949,7 +17949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681372687013864540, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7681372687013864541, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_RootOrder
@@ -35759,6 +35759,7 @@ GameObject:
   - component: {fileID: 7798806737923296948}
   - component: {fileID: 6599241292521685265}
   - component: {fileID: 8967161312610661851}
+  - component: {fileID: 7453806770824614927}
   m_Layer: 0
   m_Name: DrumSurfaceSeparated
   m_TagString: Untagged
@@ -35766,6 +35767,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7453806770824614927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7453806770824614926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6a99690c46d7241902cece8594b226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8502348328460407429, guid: f56e2b593f2811d47902809bf240a964, type: 3}
 --- !u!4 &7501163385712097163
 Transform:
   m_ObjectHideFlags: 0
