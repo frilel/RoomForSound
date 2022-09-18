@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Delete/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 0
-    path: Assets/Scenes/SceneSetup.unity
+    path: Assets/Scenes/Delete/SceneSetup.unity
     guid: 4e311cc10b6a52147a682f7f36cecadc
   - enabled: 0
-    path: Assets/Scenes/TestVR.unity
+    path: Assets/Scenes/Delete/TestVR.unity
     guid: 322b7d4df13a31543a97010da00bbd39
   - enabled: 0
     path: Assets/Scenes/MusicStudio.unity
     guid: 4c247c42f49209e438996b7149881eef
   - enabled: 0
-    path: Assets/Scenes/Ben Scene.unity
+    path: Assets/Scenes/Ben/Ben Scene.unity
     guid: f443ffd921c163e4eaaf7790778ee45f
   - enabled: 1
     path: Assets/Scenes/Christian/StudioChristian.unity
