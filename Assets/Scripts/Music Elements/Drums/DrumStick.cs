@@ -2,12 +2,21 @@ using UnityEngine;
 
 public class DrumStick : MonoBehaviour
 {
-    internal bool interactable;
+    internal bool interactable = true;
 
-    public Vector3 previousPos { get; private set; }
+    public Vector3 PreviousPos { get; private set; }
+    public float TimeSincePrevPosSave { get; private set; } = 0f;
 
-    private void LateUpdate()
+    private float previousPosResetTime = 100f; //100ms
+
+    private void Update()
     {
-        previousPos = transform.position;
+        TimeSincePrevPosSave += Time.deltaTime;
+        if (TimeSincePrevPosSave > previousPosResetTime)
+        {
+            PreviousPos = transform.position;
+            TimeSincePrevPosSave = 0f;
+        }
+
     }
 }
