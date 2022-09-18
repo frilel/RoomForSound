@@ -4,14 +4,23 @@ public class DrumSample : MonoBehaviour
 {
     FMOD.Studio.EventInstance drumHitSFXInstance;
     public FMODUnity.EventReference eventPath;
-
     private float impactSpeed;
+    VFXController _VFXController;
+    private void Start()
+    {
+        _VFXController = GetComponentInParent<VFXController>();
+    }
+
     
     private void OnCollisionEnter(Collision collision)
     {
         // get the drum stick object if the interaction on the single drum is noticed = interaction
-        if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick) && drumStick.interactable == true)
+        //if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick) && drumStick.interactable == true)
+        if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick))
+        //if(collision.transform.CompareTag("stick"))
         {
+            //drumStick=collision.transform.GetComponent<DrumStick>();
+            //Debug.Log("ssss");
             // calculate the impact speed
             impactSpeed = Vector3.Distance(drumStick.previousPos, drumStick.transform.position) / Time.deltaTime;
 
@@ -31,9 +40,16 @@ public class DrumSample : MonoBehaviour
         drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         drumHitSFXInstance.start();
         drumHitSFXInstance.release();
-
-        
-
+        }
+        //FMODUnity.RuntimeManager.PlayOneShot(eventPath, transform.position);
+        if(_VFXController != null) 
+        {
+            _VFXController.triggerOne(collision.transform);
+            _VFXController.triggerVibration(OVRInput.Controller.RTouch, 0.1f, 0.1f, 1);
+        }
+        if (drumStick!=null)
+        {
+            //_VFXController.triggerVibration(drumStick.getGrabber(), 0.1f, 0.1f, 1);
         }
 
 
