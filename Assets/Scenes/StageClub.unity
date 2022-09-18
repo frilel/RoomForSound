@@ -1574,11 +1574,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -41342470
+      Data2: 1109358836
+      Data3: -425426541
+      Data4: 771988884
+    Path: event:/Drum set/HiHat
 --- !u!23 &131419988
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4039,11 +4039,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1093874186
+      Data2: 1292045602
+      Data3: 932121533
+      Data4: 1845295261
+    Path: event:/Drum set/HighTom
 --- !u!23 &288591781
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4481,11 +4481,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1679546606
+      Data2: 1319107013
+      Data3: 2134569857
+      Data4: 646834438
+    Path: event:/Drum set/FloorTom
 --- !u!23 &314563576
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12562,11 +12562,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1106919281
+      Data2: 1192445930
+      Data3: 1585134506
+      Data4: -451431526
+    Path: event:/Drum set/Cymbal1
 --- !u!23 &646292894
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20588,7 +20588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &923697994
 Transform:
   m_ObjectHideFlags: 0
@@ -20848,11 +20848,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 753602548
+      Data2: 1337697103
+      Data3: -972427889
+      Data4: -509725279
+    Path: event:/Drum set/Snare
 --- !u!23 &957459182
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21136,11 +21136,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 436201663
+      Data2: 1080008524
+      Data3: -1052476788
+      Data4: 717657000
+    Path: event:/Drum set/MediumTom
 --- !u!23 &986008829
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29141,11 +29141,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -903944124
+      Data2: 1291575271
+      Data3: -1479241821
+      Data4: 226147470
+    Path: event:/Drum set/BassDrum
 --- !u!23 &1801876147
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35322,11 +35322,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPath:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -590247715
+      Data2: 1296471657
+      Data3: -890002242
+      Data4: 1977388256
+    Path: event:/Drum set/Cymbal2
 --- !u!23 &1987114846
 MeshRenderer:
   m_ObjectHideFlags: 0
