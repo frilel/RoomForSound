@@ -13,7 +13,8 @@ public class DrumSample : MonoBehaviour
         if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick))
         {
             // TODO: must somehow figure out which controller hit the drum and replace "OVRInput.Controller.RTouch"
-            impactSpeed = GameManager.Instance.ControllerTrackingSpace.transform.TransformVector(OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch)).magnitude;
+            impactSpeed = GameManager.Instance.ControllerTrackingSpace.transform.TransformVector(
+                OVRInput.GetLocalControllerVelocity(drumStick.getGrabber())).magnitude;
             
             DebugInVR.Instance.text.text = $"impactSpeed: {impactSpeed}";
 

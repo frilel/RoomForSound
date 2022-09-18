@@ -1,3 +1,4 @@
+using Oculus.Interaction;
 using UnityEngine;
 
 public class DrumStick : MonoBehaviour
@@ -9,6 +10,12 @@ public class DrumStick : MonoBehaviour
 
     private float previousPosResetTime = 100f; //100ms
 
+    OVRGrabbable grabbable;
+    private void Start()
+    {
+        grabbable = transform.root.GetComponent<OVRGrabbable>();
+    }
+
     private void Update()
     {
         TimeSincePrevPosSave += Time.deltaTime;
@@ -19,4 +26,15 @@ public class DrumStick : MonoBehaviour
         }
 
     }
+
+    public OVRInput.Controller getGrabber()
+    {
+        if (grabbable.isGrabbed)
+        {
+            // use this to trigger vibration 
+            return grabbable.grabbedBy.GetController();
+        }
+        else return OVRInput.Controller.RTouch;
+    }
+
 }
