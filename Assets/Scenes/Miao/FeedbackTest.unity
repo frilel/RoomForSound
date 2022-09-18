@@ -25913,7 +25913,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6a99690c46d7241902cece8594b226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6131268248031804023, guid: b771499f50356294cb6ab6b842e9ad79, type: 3}
+  prefabs:
+  - {fileID: 6131268248031804023, guid: 58eb57a8db9362b49a2c9d078230ae67, type: 3}
+  - {fileID: 1046451019080088590, guid: 61ab448a77d8dd0479b8e6f492d48783, type: 3}
+  - {fileID: 6131268248031804023, guid: b771499f50356294cb6ab6b842e9ad79, type: 3}
 --- !u!23 &1114226028520269523
 MeshRenderer:
   m_ObjectHideFlags: 0

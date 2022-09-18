@@ -6,10 +6,11 @@ using UnityEngine;
 public class VFXController : MonoBehaviour
 {
 
-    public GameObject prefab;
+    public GameObject[] prefabs;
     public void triggerOne(Transform position)
     {
-        GameObject particle = Instantiate(prefab, position);
+
+        GameObject particle = Instantiate(prefabs[Random.Range(0, 3)], position);
 
         //GameObject particle = Instantiate(prefab, position, Quaternion.identity);
         particle.GetComponentInChildren<ParticleSystem>().Play();
