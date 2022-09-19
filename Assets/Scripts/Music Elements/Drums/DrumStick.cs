@@ -28,7 +28,7 @@ public class DrumStick : MonoBehaviour
 
     }
 
-    public OVRInput.Controller getGrabber()
+    /*public OVRInput.Controller getGrabber()
     {
         if (grabbable.isGrabbed)
         {
@@ -37,5 +37,8 @@ public class DrumStick : MonoBehaviour
         }
         else return OVRInput.Controller.RTouch;
     }
-
+    private void LateUpdate()
+    {
+        previousPos = transform.position;
+    }*/
 }
