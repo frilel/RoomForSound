@@ -5,12 +5,15 @@ public class DrumSample : MonoBehaviour
 
     FMOD.Studio.EventInstance drumHitSFXInstance;
     public FMODUnity.EventReference eventPath;
+
+    [SerializeField] private VFXController _VFXController;
+
     private float impactSpeed;
-    VFXController _VFXController;
 
     private void Start()
     {
-        _VFXController = GetComponentInParent<VFXController>();
+        if(_VFXController == null)
+            _VFXController = GetComponentInParent<VFXController>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -30,7 +33,7 @@ public class DrumSample : MonoBehaviour
             // limit the min value to 0 and max value to 1 
             float clampImpactSpeed = Mathf.Clamp(normalizedImpactSpeed, 0, 1);
             // feedback to console
-            Debug.Log("You hit the" + transform.name + "with impact speed: " + clampImpactSpeed);
+            Debug.Log($"You hit the {transform.name} with impact speed: {clampImpactSpeed}. Using {drumStick.GetGrabber()}");
 
 
             drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPath);
@@ -38,12 +41,13 @@ public class DrumSample : MonoBehaviour
             drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
             drumHitSFXInstance.start();
             drumHitSFXInstance.release();
-        }
-        //FMODUnity.RuntimeManager.PlayOneShot(eventPath, transform.position);
-        if (_VFXController != null)
-        {
-            _VFXController.triggerOne(collision.transform);
-            _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
+            //FMODUnity.RuntimeManager.PlayOneShot(eventPath, transform.position);
+
+            if (_VFXController != null)
+            {
+                _VFXController.triggerOne(collision.transform);
+                _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
+            }
         }
         if (drumStick != null)
         {
