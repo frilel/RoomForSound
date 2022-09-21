@@ -10,6 +10,7 @@ public class TestController : MonoBehaviour
     //public List<string> IDs = new List<string>();
     Dictionary<string,GameObject> idsStored=new Dictionary<string, GameObject>();
     string url;
+    HttpClient httpClient = new HttpClient(new JsonSerializationOption());
     private void Start()
     {
         url = "https://roomforsound-server.herokuapp.com/audiences";
@@ -18,7 +19,6 @@ public class TestController : MonoBehaviour
     [ContextMenu("Test Get")]
     public async void TestGet()
     {
-        var httpClient = new HttpClient(new JsonSerializationOption());
         //var result = await httpClient.Get<TestUIClasses>(url);
         string result = await httpClient.GetText(url);
         //string result="{\"data\":[{\"id\":\"audience-bwzrdu4l81ym2l8\",\"name\":\"ss\",\"messages\":[]},{\"id\":\"audience-bwzrdu4l81ymv5h\",\"name\":\"ss\",\"messages\":[]}]}";
@@ -57,7 +57,6 @@ public class TestController : MonoBehaviour
                         }
                     }
                 }
-
             }
         }
         else
