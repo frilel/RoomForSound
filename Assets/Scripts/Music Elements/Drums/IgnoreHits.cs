@@ -7,7 +7,6 @@ public class IgnoreHits : MonoBehaviour
     {
         if(collision.transform.TryGetComponent<DrumStick>(out DrumStick drumstick))
         {
-            drumstick.interactable = false;
             //Debug.Log("Test Enter");
         }
     }
@@ -15,7 +14,6 @@ public class IgnoreHits : MonoBehaviour
     {
         if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumstick))
         {
-            drumstick.interactable = true;
             //Debug.Log("Test Exit");
         }
     }

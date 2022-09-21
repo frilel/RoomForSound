@@ -18,12 +18,10 @@ public class DrumSample : MonoBehaviour
         // get the drum stick object if the interaction on the single drum is noticed = interaction
         if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick))
         {
-            // TODO: must somehow figure out which controller hit the drum and replace "OVRInput.Controller.RTouch"/getGrabber()
-            impactSpeed = Vector3.Distance(drumStick.previousPos, drumStick.transform.position) / Time.deltaTime;
-            //impactSpeed = GameManager.Instance.ControllerTrackingSpace.transform.TransformVector(
-            //    OVRInput.GetLocalControllerVelocity(drumStick.getGrabber())).magnitude;
-            
-            DebugInVR.Instance.text.text = $"impactSpeed: {impactSpeed}";
+            impactSpeed = GameManager.Instance.ControllerTrackingSpace.transform.TransformVector(
+                OVRInput.GetLocalControllerVelocity(drumStick.GetGrabber())).magnitude;
+
+            //DebugInVR.Instance.text.text = $"impactSpeed: {impactSpeed}";
 
             // normalize the impact speed to get a range approx. between 0 and 1
             //x normalized = (x / x minimum) / (x maximum / x minimum)
@@ -34,7 +32,6 @@ public class DrumSample : MonoBehaviour
             // feedback to console
             Debug.Log("You hit the" + transform.name + "with impact speed: " + clampImpactSpeed);
 
-            //#endif
 
             drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPath);
             drumHitSFXInstance.setParameterByName("Pitch", clampImpactSpeed);
@@ -46,7 +43,7 @@ public class DrumSample : MonoBehaviour
         if (_VFXController != null)
         {
             _VFXController.triggerOne(collision.transform);
-            _VFXController.triggerVibration(OVRInput.Controller.RTouch, 0.1f, 0.1f, 1);
+            _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
         }
         if (drumStick != null)
         {
@@ -55,23 +52,4 @@ public class DrumSample : MonoBehaviour
         //FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
 
     }
-
-    //private void oncollisionexit(collision collision)
-    //{
-    //    if (collision.transform.trygetcomponent<drumstick>(out drumstick drumstick))
-    //    {
-    //        drumstick.interactable = true;
-    //        debug.log("exit");
-    //    }
-    //}
-
-    //private void oncollisionstay(collision collision)
-    //{
-    //    if (collision.transform.trygetcomponent<drumstick>(out drumstick drumstick))
-    //    {
-    //        if(drumstick.interactable == true)
-    //            drumstick.interactable = false;
-    //        //debug.log("stay");
-    //    }
-    //}
 }

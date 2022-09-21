@@ -1,44 +1,38 @@
-using Oculus.Interaction;
 using UnityEngine;
 
 public class DrumStick : MonoBehaviour
 {
-    internal bool interactable = true;
+    OVRInput.Controller usedController = OVRInput.Controller.None;
 
-    public Vector3 PreviousPos { get; private set; }
-    public float TimeSincePrevPosSave { get; private set; } = 0f;
-
-    private float previousPosResetTime = 100f; //100ms
-
-    OVRGrabbable grabbable;
-
-    private void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        grabbable = GetComponent<OVRGrabbable>();
-    }
-
-    private void Update()
-    {
-        TimeSincePrevPosSave += Time.deltaTime;
-        if (TimeSincePrevPosSave > previousPosResetTime)
+        Debug.LogError("Drumstick Collision");
+        if (collision.transform.name == GameManager.Instance.LeftHandControllerRoot.transform.name)
         {
-            PreviousPos = transform.position;
-            TimeSincePrevPosSave = 0f;
+            usedController = OVRInput.Controller.LTouch;
+            Debug.LogError("LEFT");
         }
-
-    }
-
-    /*public OVRInput.Controller getGrabber()
-    {
-        if (grabbable.isGrabbed)
+        else if (collision.transform.name == GameManager.Instance.RightHandControllerRoot.transform.name)
         {
-            // use this to trigger vibration 
-            return grabbable.grabbedBy.GetController();
+            usedController = OVRInput.Controller.RTouch;
+            Debug.LogError("RIGHT");
         }
-        else return OVRInput.Controller.RTouch;
     }
-    private void LateUpdate()
+    private void OnCollisionExit(Collision collision)
     {
-        previousPos = transform.position;
-    }*/
+        if (collision.transform.name == GameManager.Instance.LeftHandControllerRoot.transform.name)
+        {
+            Debug.LogError("NO LEFT");
+            usedController = OVRInput.Controller.None;
+        }
+        else if (collision.transform.name == GameManager.Instance.RightHandControllerRoot.transform.name)
+        {
+            Debug.LogError("NO RIGHT");
+            usedController = OVRInput.Controller.None;
+        }
+    }
+    public OVRInput.Controller GetGrabber()
+    {
+        return usedController;
+    }
 }
