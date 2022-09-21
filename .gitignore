@@ -71,6 +71,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# Oculus VR
+Assets/Resources/OVRBuildConfig.asset
+Assets/Resources/OVRBuildConfig.asset.meta
+
 # FMOD
 RoomForSound_FMOD/.cache/*
 RoomForSound_FMOD/.unsaved/*
@@ -94,6 +98,7 @@ RoomForSound_FMOD/desktop.ini
 # Log files can be ignored.
 fmod_editor.log
 
-# Oculus VR
-Assets/Resources/OVRBuildConfig.asset
-Assets/Resources/OVRBuildConfig.asset.meta
+# Annoys Christian
+Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist
+Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist
+Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist

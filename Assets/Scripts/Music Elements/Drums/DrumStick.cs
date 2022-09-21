@@ -2,25 +2,32 @@ using UnityEngine;
 
 public class DrumStick : MonoBehaviour
 {
-    internal bool interactable;
-    OVRGrabbable grabbable;
-    public Vector3 previousPos { get; private set; }
-    private void Start()
-    {
-        grabbable = GetComponent<OVRGrabbable>();
-    }
+    OVRInput.Controller usedController = OVRInput.Controller.None;
 
-    /*public OVRInput.Controller getGrabber()
+    private void OnCollisionEnter(Collision collision)
     {
-        if (grabbable.isGrabbed)
+        if (collision.transform.name == GameManager.Instance.LeftHandControllerRoot.transform.name)
         {
-            // use this to trigger vibration 
-            return grabbable.grabbedBy.GetController();
+            usedController = OVRInput.Controller.LTouch;
         }
-        else return OVRInput.Controller.RTouch;
+        else if (collision.transform.name == GameManager.Instance.RightHandControllerRoot.transform.name)
+        {
+            usedController = OVRInput.Controller.RTouch;
+        }
     }
-    private void LateUpdate()
+    private void OnCollisionExit(Collision collision)
     {
-        previousPos = transform.position;
-    }*/
+        if (collision.transform.name == GameManager.Instance.LeftHandControllerRoot.transform.name)
+        {
+            usedController = OVRInput.Controller.None;
+        }
+        else if (collision.transform.name == GameManager.Instance.RightHandControllerRoot.transform.name)
+        {
+            usedController = OVRInput.Controller.None;
+        }
+    }
+    public OVRInput.Controller GetGrabber()
+    {
+        return usedController;
+    }
 }
