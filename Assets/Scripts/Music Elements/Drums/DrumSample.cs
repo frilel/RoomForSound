@@ -7,14 +7,18 @@ public class DrumSample : MonoBehaviour
     FMOD.Studio.EventInstance drumHitSFXInstance;
     public FMODUnity.EventReference eventPathInteractionSoundOne;
     public FMODUnity.EventReference eventPathInteractionSoundTwo;
-    private float impactSpeed;
-    VFXController _VFXController;
     Text ImpactSpeedText;
+    public FMODUnity.EventReference eventPath;
+
+    [SerializeField] private VFXController _VFXController;
+
+    private float impactSpeed;
 
     private void Start()
     {
-        _VFXController = GetComponentInParent<VFXController>();
-        // ImpactSpeedText = GameObject.Find("ImpactSpeedText").GetComponent<Text>();
+        if(_VFXController == null)
+            _VFXController = GetComponentInParent<VFXController>();
+            // ImpactSpeedText = GameObject.Find("ImpactSpeedText").GetComponent<Text>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -34,7 +38,7 @@ public class DrumSample : MonoBehaviour
             // limit the min value to 0 and max value to 1 
             float clampImpactSpeed = Mathf.Clamp(normalizedImpactSpeed, 0, 1);
             // feedback to console
-            Debug.Log("You hit the" + transform.name + "with impact speed: " + clampImpactSpeed);
+            Debug.Log($"You hit the {transform.name} with impact speed: {clampImpactSpeed}. Using {drumStick.GetGrabber()}");
 
             // ImpactSpeedText.text = impactSpeed.ToString();
 
