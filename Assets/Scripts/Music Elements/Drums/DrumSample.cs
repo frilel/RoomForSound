@@ -7,6 +7,7 @@ public class DrumSample : MonoBehaviour
     public FMODUnity.EventReference eventPath;
     private float impactSpeed;
     VFXController _VFXController;
+
     private void Start()
     {
         _VFXController = GetComponentInParent<VFXController>();
@@ -15,25 +16,22 @@ public class DrumSample : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // get the drum stick object if the interaction on the single drum is noticed = interaction
-        //if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick) && drumStick.interactable == true)
         if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick))
-        //if(collision.transform.CompareTag("stick"))
         {
-            //drumStick=collision.transform.GetComponent<DrumStick>();
-            //Debug.Log("ssss");
-            // calculate the impact speed
-            impactSpeed = Vector3.Distance(drumStick.previousPos, drumStick.transform.position) / Time.deltaTime;
+            impactSpeed = GameManager.Instance.ControllerTrackingSpace.transform.TransformVector(
+                OVRInput.GetLocalControllerVelocity(drumStick.GetGrabber())).magnitude;
 
-            //#if UNITY_EDITOR
+            //DebugInVR.Instance.text.text = $"impactSpeed: {impactSpeed}";
 
             // normalize the impact speed to get a range approx. between 0 and 1
-            float normalizedImpactSpeed = impactSpeed / 2;
+            //x normalized = (x / x minimum) / (x maximum / x minimum)
+            float normalizedImpactSpeed = impactSpeed / 3f;
+
             // limit the min value to 0 and max value to 1 
             float clampImpactSpeed = Mathf.Clamp(normalizedImpactSpeed, 0, 1);
             // feedback to console
             Debug.Log("You hit the" + transform.name + "with impact speed: " + clampImpactSpeed);
 
-            //#endif
 
             drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPath);
             drumHitSFXInstance.setParameterByName("Pitch", clampImpactSpeed);
@@ -45,7 +43,7 @@ public class DrumSample : MonoBehaviour
         if (_VFXController != null)
         {
             _VFXController.triggerOne(collision.transform);
-            _VFXController.triggerVibration(OVRInput.Controller.RTouch, 0.1f, 0.1f, 1);
+            _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
         }
         if (drumStick != null)
         {
@@ -54,6 +52,4 @@ public class DrumSample : MonoBehaviour
         //FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
 
     }
-
-
 }
