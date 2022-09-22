@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DrumSample : MonoBehaviour
 {
 
     FMOD.Studio.EventInstance drumHitSFXInstance;
-    public FMODUnity.EventReference eventPath;
+    public FMODUnity.EventReference eventPathInteractionSoundOne;
+    public FMODUnity.EventReference eventPathInteractionSoundTwo;
     private float impactSpeed;
     VFXController _VFXController;
+    Text ImpactSpeedText;
 
     private void Start()
     {
         _VFXController = GetComponentInParent<VFXController>();
+        // ImpactSpeedText = GameObject.Find("ImpactSpeedText").GetComponent<Text>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -32,14 +36,22 @@ public class DrumSample : MonoBehaviour
             // feedback to console
             Debug.Log("You hit the" + transform.name + "with impact speed: " + clampImpactSpeed);
 
+            // ImpactSpeedText.text = impactSpeed.ToString();
 
-            drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPath);
+
+            if(OVRInput.Get(OVRInput.Button.One))
+            {
+                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
+            } else 
+            {
+                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+            }
             drumHitSFXInstance.setParameterByName("Pitch", clampImpactSpeed);
             drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
             drumHitSFXInstance.start();
             drumHitSFXInstance.release();
         }
-        //FMODUnity.RuntimeManager.PlayOneShot(eventPath, transform.position);
+
         if (_VFXController != null)
         {
             _VFXController.triggerOne(collision.transform);
