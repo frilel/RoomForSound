@@ -54,17 +54,18 @@ public class DrumSample : MonoBehaviour
             drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
             drumHitSFXInstance.start();
             drumHitSFXInstance.release();
+
+            if (_VFXController != null)
+            {
+                _VFXController.triggerOne(collision.transform);
+                _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
+            }
+            if (drumStick != null)
+            {
+                //_VFXController.triggerVibration(drumStick.getGrabber(), 0.1f, 0.1f, 1);
+            }
         }
 
-        if (_VFXController != null)
-        {
-            _VFXController.triggerOne(collision.transform);
-            _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
-        }
-        if (drumStick != null)
-        {
-            //_VFXController.triggerVibration(drumStick.getGrabber(), 0.1f, 0.1f, 1);
-        }
         //FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
 
     }
