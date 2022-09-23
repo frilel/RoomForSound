@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DrumSample : MonoBehaviour
 {
 
     FMOD.Studio.EventInstance drumHitSFXInstance;
+    public FMODUnity.EventReference eventPathInteractionSoundOne;
+    public FMODUnity.EventReference eventPathInteractionSoundTwo;
+    Text ImpactSpeedText;
     public FMODUnity.EventReference eventPath;
 
     [SerializeField] private VFXController _VFXController;
@@ -14,6 +18,7 @@ public class DrumSample : MonoBehaviour
     {
         if(_VFXController == null)
             _VFXController = GetComponentInParent<VFXController>();
+            // ImpactSpeedText = GameObject.Find("ImpactSpeedText").GetComponent<Text>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -35,24 +40,32 @@ public class DrumSample : MonoBehaviour
             // feedback to console
             Debug.Log($"You hit the {transform.name} with impact speed: {clampImpactSpeed}. Using {drumStick.GetGrabber()}");
 
+            // ImpactSpeedText.text = impactSpeed.ToString();
 
-            drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPath);
+
+            if(OVRInput.Get(OVRInput.Button.One))
+            {
+                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
+            } else 
+            {
+                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+            }
             drumHitSFXInstance.setParameterByName("Pitch", clampImpactSpeed);
             drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
             drumHitSFXInstance.start();
             drumHitSFXInstance.release();
-            //FMODUnity.RuntimeManager.PlayOneShot(eventPath, transform.position);
 
             if (_VFXController != null)
             {
                 _VFXController.triggerOne(collision.transform);
                 _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
             }
+            if (drumStick != null)
+            {
+                //_VFXController.triggerVibration(drumStick.getGrabber(), 0.1f, 0.1f, 1);
+            }
         }
-        if (drumStick != null)
-        {
-            //_VFXController.triggerVibration(drumStick.getGrabber(), 0.1f, 0.1f, 1);
-        }
+
         //FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
 
     }
