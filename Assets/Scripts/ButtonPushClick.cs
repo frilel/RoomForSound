@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -75,6 +76,28 @@ public class ButtonPushClick : MonoBehaviour
         transform.localPosition = NewDownPos;
         transform.parent.transform.parent.GetComponent<ButtonManager>().UnlockPreviousButton();
         transform.parent.transform.parent.GetComponent<ButtonManager>().activeButton = this.gameObject;
+        TriggerEvent();
+    }
+
+    private void TriggerEvent()
+    {
+        string buttonName = transform.parent.gameObject.name;
+
+        GameObject camera = GameObject.Find("OVRCameraRig"); 
+
+        AudioManager audioManager = camera.GetComponent<AudioManager>();
+
+        switch (buttonName)
+        {
+            case "Button01":
+                audioManager.PlaySong("Song1");
+                break;
+            case "Button02":
+                audioManager.StopSong();
+                break;
+            default: 
+                break;
+        }
     }
 
     // IEnumerator UnlockButton() 
