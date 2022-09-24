@@ -8,7 +8,6 @@ public class DrumSample : MonoBehaviour
     public FMODUnity.EventReference eventPathInteractionSoundOne;
     public FMODUnity.EventReference eventPathInteractionSoundTwo;
     Text ImpactSpeedText;
-    public FMODUnity.EventReference eventPath;
 
     [SerializeField] private VFXController _VFXController;
 
