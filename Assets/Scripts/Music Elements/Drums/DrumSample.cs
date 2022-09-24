@@ -8,7 +8,6 @@ public class DrumSample : MonoBehaviour
     public FMODUnity.EventReference eventPathInteractionSoundOne;
     public FMODUnity.EventReference eventPathInteractionSoundTwo;
     Text ImpactSpeedText;
-    public FMODUnity.EventReference eventPath;
 
     [SerializeField] private VFXController _VFXController;
 
@@ -26,8 +25,15 @@ public class DrumSample : MonoBehaviour
         // get the drum stick object if the interaction on the single drum is noticed = interaction
         if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick))
         {
-            impactSpeed = GameManager.Instance.ControllerTrackingSpace.transform.TransformVector(
-                OVRInput.GetLocalControllerVelocity(drumStick.GetGrabber())).magnitude;
+            if (drumStick.GetGrabber() != OVRInput.Controller.None)
+            {
+                impactSpeed = GameManager.Instance.Rig.transform.TransformVector(
+                    OVRInput.GetLocalControllerVelocity(drumStick.GetGrabber())).magnitude;
+            }
+            else
+            {
+                impactSpeed = collision.collider.attachedRigidbody.velocity.magnitude;
+            }
 
             //DebugInVR.Instance.text.text = $"impactSpeed: {impactSpeed}";
 

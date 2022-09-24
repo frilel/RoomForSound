@@ -4,9 +4,9 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager Instance;
 
-    public GameObject LeftHandControllerRoot;
-    public GameObject RightHandControllerRoot;
-    public GameObject ControllerTrackingSpace;
+    public GameObject LeftHandAnchor;
+    public GameObject RightHandAnchor;
+    public GameObject Rig;
 
     private void Awake()
     {
