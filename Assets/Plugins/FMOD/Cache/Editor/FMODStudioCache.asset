@@ -27,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7805739741071908509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cymbal1/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7674435086911360136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,6 +75,61 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6996258878270670034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Songs/Song1/Song1
+  m_EditorClassIdentifier: 
+  Path: event:/Songs/Song1/Song1
+  Guid:
+    Data1: -125974405
+    Data2: 1154745944
+    Data3: -975156303
+    Data4: 1872791798
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 120000
+--- !u!114 &-6343251868371185626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drum set/OpenHiHat
+  m_EditorClassIdentifier: 
+  Path: event:/Drum set/OpenHiHat
+  Guid:
+    Data1: 1951535732
+    Data2: 1155533219
+    Data3: -2117970043
+    Data4: -1446075934
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2879037128317892528}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -162,12 +241,14 @@ MonoBehaviour:
   - {fileID: -7674435086911360136}
   - {fileID: 6609275809091793105}
   - {fileID: -9036085705216978443}
+  - {fileID: -6343251868371185626}
+  - {fileID: -6996258878270670034}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1278483287379617233}
   StringsBanks:
   - {fileID: 3916383380135203157}
-  cacheTime: 637994548027581316
+  cacheTime: 637996508801381330
   cacheVersion: 131591
 --- !u!114 &881270879866492600
 MonoBehaviour:
@@ -211,12 +292,10 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637994548027571310
+  lastModified: 637996508801360505
   FileSizes:
   - Name: Desktop
-    Value: 1035712
-  - Name: Mobile
-    Value: 494016
+    Value: 2582592
   Exists: 1
 --- !u!114 &2420955890119167665
 MonoBehaviour:
@@ -245,6 +324,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2879037128317892528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/OpenHiHat/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2895194229106537032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,12 +414,12 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637994548027581316
+  lastModified: 637996508801381330
   FileSizes:
   - Name: Desktop
-    Value: 1210
+    Value: 1298
   - Name: Mobile
-    Value: 1210
+    Value: 1298
   Exists: 1
 --- !u!114 &6609275809091793105
 MonoBehaviour:
@@ -359,16 +462,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Drum set/Cymbal1
   Guid:
-    Data1: -1106919281
-    Data2: 1192445930
-    Data3: 1585134506
-    Data4: -451431526
+    Data1: 697112989
+    Data2: 1115624492
+    Data3: 1901835928
+    Data4: 254101765
   Banks:
   - {fileID: 1278483287379617233}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -7805739741071908509}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
