@@ -43,8 +43,16 @@ public class AudienceControl : MonoBehaviour
     }
     public void UpdateMessage()
     {
+        if(audience.messages[0].message==messageText.text)
+        {
+            return;
+        }
         string text = audience.messages[0].message;
         Debug.Log("got message from " + audience.name + ": " + text);
+        foreach(StandNoteControl snc in FindObjectsOfType<StandNoteControl>())
+        {
+            snc.UpdateChat(audience.name,audience.messages[0].message);
+        }
         StartCoroutine("DeleteMessage");
         switch (text)
         {
