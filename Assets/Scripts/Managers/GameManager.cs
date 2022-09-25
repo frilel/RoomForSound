@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject LeftHandAnchor;
     public GameObject RightHandAnchor;
+    public GameObject CenterEyeAnchor;
     public GameObject Rig;
 
     private void Awake()
