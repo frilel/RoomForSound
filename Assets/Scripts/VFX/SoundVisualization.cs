@@ -28,6 +28,7 @@ class SoundVisualization : MonoBehaviour
 
     private GameObject[] visualSamples = new GameObject[WindowSize];
     private Vector3 oneSampleScale;
+    public GameObject spherePrefab;
 #if UNITY_EDITOR
     void Reset()
     {
@@ -119,11 +120,14 @@ class SoundVisualization : MonoBehaviour
 
                     var pos = Vector3.zero;
                     pos.x = WIDTH * -0.5f;
-
+                    float total = 0;
                     for (int i = 0; i < WindowSize; ++i)
                     {
                         visualSamples[i].transform.localScale = new Vector3(0, 0, mFFTSpectrum[i] * 3.0f) + oneSampleScale;
+                        total += mFFTSpectrum[i] * 3.0f;
                     }
+                    total = total / WindowSize * 10;
+                    spherePrefab.transform.localScale = new Vector3(total, total, total); 
                 }
             }
         }
