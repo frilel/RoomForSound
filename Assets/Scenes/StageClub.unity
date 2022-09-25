@@ -20836,7 +20836,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1346942092}
+        m_TargetAssemblyTypeName: SpeechController, Assembly-CSharp
+        m_MethodName: StartSpeaking
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hello
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &828908894
 BoxCollider:
   m_ObjectHideFlags: 0
