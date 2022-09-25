@@ -31,6 +31,8 @@ public class TeleportPoint : MonoBehaviour {
     public Transform destTransform;
 
     public string PlayerTag = "Player";
+    public int IgnoreRaycastLayer = 2;
+    public int TeleportLayer = 6;
 
     private float lastLookAtTime = 0f;
 
@@ -44,6 +46,7 @@ public class TeleportPoint : MonoBehaviour {
         if (other.gameObject.CompareTag(PlayerTag))
         {
             this.GetComponent<MeshRenderer>().enabled = false;
+            this.gameObject.layer = IgnoreRaycastLayer;
         }
     }
 
@@ -52,6 +55,7 @@ public class TeleportPoint : MonoBehaviour {
         if (other.gameObject.CompareTag(PlayerTag))
         {
             this.GetComponent<MeshRenderer>().enabled = true;
+            this.gameObject.layer = TeleportLayer;
         }
     }
 
