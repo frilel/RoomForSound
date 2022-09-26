@@ -14,7 +14,7 @@ public class AudienceControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = transform.GetChild(0).GetChild(1).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,15 +43,16 @@ public class AudienceControl : MonoBehaviour
     }
     public void UpdateMessage()
     {
-        if(audience.messages[0].message==messageText.text)
+        animator = transform.GetChild(avatarIndex).GetChild(1).GetComponent<Animator>();
+        if (audience.messages[0].message == messageText.text)
         {
             return;
         }
         string text = audience.messages[0].message;
         Debug.Log("got message from " + audience.name + ": " + text);
-        foreach(StandNoteControl snc in FindObjectsOfType<StandNoteControl>())
+        foreach (StandNoteControl snc in FindObjectsOfType<StandNoteControl>())
         {
-            snc.UpdateChat(audience.name,audience.messages[0].message);
+            snc.UpdateChat(audience.name, audience.messages[0].message);
         }
         StartCoroutine("DeleteMessage");
         switch (text)
@@ -94,12 +95,14 @@ public class AudienceControl : MonoBehaviour
     IEnumerator DeleteMessage()
     {
         yield return new WaitForSeconds(2);
+        messageText.text="no message here, type something";
         messagePanel.SetActive(false);
         string url = "https://roomforsound-server.herokuapp.com/messages?id=" + audience.messages[0].id;
         UnityWebRequest www = UnityWebRequest.Delete(url);
         Debug.Log("Message Deleted");
         yield return www.SendWebRequest();
     }
+    
     public void ChangeAvatar(int index)
     {
         avatarIndex = index;
