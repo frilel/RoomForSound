@@ -315,11 +315,11 @@ public class LocomotionTeleport : MonoBehaviour
 				}
 				return Physics.CapsuleCast(start + new Vector3(0, r, 0),
 					start + new Vector3(0, h + r, 0), r, direction,
-					out hitInfo, distance, aimCollisionLayerMask, QueryTriggerInteraction.Ignore);
+					out hitInfo, distance, aimCollisionLayerMask, QueryTriggerInteraction.Collide);
 			}
 
 			case AimCollisionTypes.Point:
-				return Physics.Raycast(start, direction, out hitInfo, distance, aimCollisionLayerMask,QueryTriggerInteraction.Ignore);
+				return Physics.Raycast(start, direction, out hitInfo, distance, aimCollisionLayerMask,QueryTriggerInteraction.Collide);
 
 			case AimCollisionTypes.Sphere:
 			{
@@ -335,7 +335,7 @@ public class LocomotionTeleport : MonoBehaviour
 					r = AimCollisionRadius;
 				}
 				return Physics.SphereCast(start, r, direction, out hitInfo, distance, aimCollisionLayerMask,
-					QueryTriggerInteraction.Ignore);
+					QueryTriggerInteraction.Collide);
 			}
 		}
 
@@ -773,7 +773,7 @@ public class LocomotionTeleport : MonoBehaviour
 		var destTransform = _teleportDestination.OrientationIndicator;
 
 		Vector3 destPosition = destTransform.position;
-		destPosition.y += character.height * 0.5f;
+		//destPosition.y += character.height * 0.5f;
 		Quaternion destRotation = _teleportDestination.LandingRotation;// destTransform.rotation;
 #if false
 		Quaternion destRotation = destTransform.rotation;

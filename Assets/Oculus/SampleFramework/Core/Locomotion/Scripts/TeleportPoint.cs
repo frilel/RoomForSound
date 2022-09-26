@@ -24,31 +24,43 @@ using System.Collections;
 
 public class TeleportPoint : MonoBehaviour {
 
-    public float dimmingSpeed = 1;
-    public float fullIntensity = 1;
-    public float lowIntensity = 0.5f;
+    public float dimmingSpeed = 1f;
+    public float fullIntensity = 2.4f;
+    public float lowIntensity = 0.4f;
 
     public Transform destTransform;
 
-    private float lastLookAtTime = 0;
+    public string PlayerTag = "Player";
+    public int IgnoreRaycastLayer = 2;
+    public int TeleportLayer = 6;
 
-
-
-	// Use this for initialization
-	void Start () {
-
-	}
+    private float lastLookAtTime = 0f;
 
     public Transform GetDestTransform()
     {
         return destTransform;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag(PlayerTag))
+        {
+            this.GetComponent<MeshRenderer>().enabled = false;
+            this.gameObject.layer = IgnoreRaycastLayer;
+        }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag(PlayerTag))
+        {
+            this.GetComponent<MeshRenderer>().enabled = true;
+            this.gameObject.layer = TeleportLayer;
+        }
+    }
 
-
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         float intensity = Mathf.SmoothStep(fullIntensity, lowIntensity, (Time.time - lastLookAtTime) * dimmingSpeed);
         GetComponent<MeshRenderer>().material.SetFloat("_Intensity", intensity);
 	}
