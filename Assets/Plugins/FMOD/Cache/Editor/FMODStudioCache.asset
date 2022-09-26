@@ -502,8 +502,6 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1462
-  - Name: Mobile
-    Value: 1462
   Exists: 1
 --- !u!114 &4950022710509616201
 MonoBehaviour:
