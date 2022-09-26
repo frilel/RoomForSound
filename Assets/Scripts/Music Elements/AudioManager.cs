@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySong(string songName)
     {
-        song = FMODUnity.RuntimeManager.CreateInstance("event:/Songs/Song1/" + songName);
+        song = FMODUnity.RuntimeManager.CreateInstance("event:/Songs/" + songName);
         song.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         song.start();
         song.release();
@@ -16,5 +16,15 @@ public class AudioManager : MonoBehaviour
     public void StopSong()
     {
         song.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void AudienceCheer()
+    {
+
+    }
+
+    public void AudienceWhistle()
+    {
+
     }
 }

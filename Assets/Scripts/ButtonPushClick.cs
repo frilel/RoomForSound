@@ -90,9 +90,12 @@ public class ButtonPushClick : MonoBehaviour
         switch (buttonName)
         {
             case "Button01":
-                audioManager.PlaySong("Song1");
+                audioManager.PlaySong("Song1/Song1");
                 break;
             case "Button02":
+                audioManager.PlaySong("Song2/Song2");
+                break;
+            case "Button04":
                 audioManager.StopSong();
                 break;
             default: 
