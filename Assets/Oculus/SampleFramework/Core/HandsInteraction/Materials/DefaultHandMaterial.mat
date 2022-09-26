@@ -13,16 +13,12 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3001
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BaseMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -43,10 +39,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _FingerGlowMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,61 +55,30 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AlphaClip: 0
-    - _Blend: 0
     - _BumpScale: 1
-    - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EnableConfidence: 0
     - _FresnelPower: 0.215
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HandAlpha: 0.6
+    - _HandAlpha: 1
     - _Metallic: 0
     - _MinVisibleAlpha: 0.164
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.8
-    - _OutlineOpacity: 0.4
-    - _OutlineWidth: 0.00134
     - _Parallax: 0.02
-    - _QueueOffset: 0
     - _RimFactor: 0.922
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Surface: 0
     - _UVSec: 0
-    - _WristFade: 0.5
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorBottom: {r: 0.36154413, g: 0.560827, b: 0.8088235, a: 1}
     - _ColorPrimary: {r: 0.75735295, g: 0.75735295, b: 0.75735295, a: 1}
     - _ColorTop: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FingerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0.53773576, g: 0.53773576, b: 0.53773576, a: 1}
-    - _OutlineJointColor: {r: 1, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
