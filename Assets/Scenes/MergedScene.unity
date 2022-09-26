@@ -451,7 +451,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-130132
+  m_Name: pb_Mesh-25104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5651,7 +5651,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-130234
+  m_Name: pb_Mesh-25206
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11404,7 +11404,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-130200
+  m_Name: pb_Mesh-25172
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14143,7 +14143,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-130090
+  m_Name: pb_Mesh-25062
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19669,7 +19669,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-130166
+  m_Name: pb_Mesh-25138
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22042,6 +22042,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+--- !u!1 &3582077343691494420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7878318765722940364, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+  m_PrefabInstance: {fileID: 3582077343691494419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3582077343691494421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3582077343691494420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef07e5daf8d14b4419871266ec603add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6597803041987378556
 PrefabInstance:
   m_ObjectHideFlags: 0
