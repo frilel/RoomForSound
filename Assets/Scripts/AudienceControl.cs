@@ -43,6 +43,7 @@ public class AudienceControl : MonoBehaviour
     }
     public void UpdateMessage()
     {
+        animator = transform.GetChild(avatarIndex).GetChild(1).GetComponent<Animator>();
         if (audience.messages[0].message == messageText.text)
         {
             return;
@@ -94,12 +95,14 @@ public class AudienceControl : MonoBehaviour
     IEnumerator DeleteMessage()
     {
         yield return new WaitForSeconds(2);
+        messageText.text="no message here, type something";
         messagePanel.SetActive(false);
         string url = "https://roomforsound-server.herokuapp.com/messages?id=" + audience.messages[0].id;
         UnityWebRequest www = UnityWebRequest.Delete(url);
         Debug.Log("Message Deleted");
         yield return www.SendWebRequest();
     }
+    
     public void ChangeAvatar(int index)
     {
         avatarIndex = index;
