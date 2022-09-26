@@ -17,4 +17,14 @@ public class AudioManager : MonoBehaviour
     {
         song.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
+
+    public void AudienceCheer()
+    {
+
+    }
+
+    public void AudienceWhistle()
+    {
+
+    }
 }
