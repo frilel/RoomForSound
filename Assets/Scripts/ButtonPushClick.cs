@@ -93,6 +93,9 @@ public class ButtonPushClick : MonoBehaviour
                 audioManager.PlaySong("Song1");
                 break;
             case "Button02":
+                audioManager.PlaySong("Song2");
+                break;
+            case "Button04":
                 audioManager.StopSong();
                 break;
             default: 
