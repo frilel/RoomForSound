@@ -50,4 +50,9 @@ public class LocomotionController : MonoBehaviour
         OVRPlugin.SendEvent("locomotion_controller", (SceneManager.GetActiveScene().name == "Locomotion").ToString(), "sample_framework");
 #endif
 	}
+
+    private void Update()
+    {
+        //CharacterController.height = GameManager.Instance.CenterEyeAnchor.transform.position.y;
+    }
 }
