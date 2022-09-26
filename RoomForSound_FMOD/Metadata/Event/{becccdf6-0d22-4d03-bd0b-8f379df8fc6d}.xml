@@ -5,7 +5,7 @@
 			<value>HighTom</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{42f38ee2-1844-4335-988e-a73a7838d80a}</destination>
@@ -118,7 +118,7 @@
 	<object class="MixerBusEffectChain" id="{f1b38db9-b02f-4e01-bd48-af67418c1a27}">
 		<relationship name="effects">
 			<destination>{cec77f67-59fc-44b7-86a8-382888de72bc}</destination>
-			<destination>{72e0bc1a-c3f5-47b4-a83c-c3fb231db869}</destination>
+			<destination>{3d03abc9-6eb2-45e6-8833-392975a6dbe1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3e67272f-3f8c-4398-87f1-b8f06e40aa70}" />
@@ -135,103 +135,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{7a04d018-3f9a-41c3-87c7-81fb99ea2eb7}" />
 	<object class="MixerBusFader" id="{cec77f67-59fc-44b7-86a8-382888de72bc}" />
-	<object class="PluginEffect" id="{72e0bc1a-c3f5-47b4-a83c-c3fb231db869}">
-		<relationship name="plugin">
-			<destination>{abe9747f-43e9-4ba8-b679-60c205e743b8}</destination>
-		</relationship>
-	</object>
+	<object class="SpatialiserEffect" id="{3d03abc9-6eb2-45e6-8833-392975a6dbe1}" />
 	<object class="MixerBusFader" id="{eb0bfe69-962d-48f1-a5b5-1eea36567945}" />
-	<object class="Plugin" id="{abe9747f-43e9-4ba8-b679-60c205e743b8}">
-		<property name="identifier">
-			<value>Oculus Spatializer</value>
-		</property>
-		<relationship name="pluginParameters">
-			<destination>{36992cd9-d945-43d1-ae7f-fe00c4343451}</destination>
-			<destination>{a0c50f3e-0a1a-4235-8146-162f3ca6f412}</destination>
-			<destination>{38933f6e-94dc-4888-bcb8-e91e8bb7ce6a}</destination>
-			<destination>{5f9d349e-f29b-4c71-a24f-ca53b46a9f19}</destination>
-			<destination>{b6d7e6a6-08c5-4a02-864f-46ac9963b844}</destination>
-			<destination>{5bf97e71-2a7f-429a-aeb0-e6899898d372}</destination>
-			<destination>{686779cd-11c1-4580-813a-fd01387edba3}</destination>
-			<destination>{6bcc5e42-06d8-4e30-8ecb-da3b3b0fc4dd}</destination>
-		</relationship>
-	</object>
-	<object class="DataPluginParameter" id="{36992cd9-d945-43d1-ae7f-fe00c4343451}">
-		<property name="name">
-			<value>3D Attributes</value>
-		</property>
-		<property name="value" />
-		<property name="dataType">
-			<value>-2</value>
-		</property>
-	</object>
-	<object class="BoolPluginParameter" id="{a0c50f3e-0a1a-4235-8146-162f3ca6f412}">
-		<property name="name">
-			<value>Reflections</value>
-		</property>
-		<property name="value">
-			<value>true</value>
-		</property>
-	</object>
-	<object class="BoolPluginParameter" id="{38933f6e-94dc-4888-bcb8-e91e8bb7ce6a}">
-		<property name="name">
-			<value>Attenuation</value>
-		</property>
-		<property name="value">
-			<value>true</value>
-		</property>
-	</object>
-	<object class="FloatPluginParameter" id="{5f9d349e-f29b-4c71-a24f-ca53b46a9f19}">
-		<property name="name">
-			<value>V. Radius</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-		<property name="curve">
-			<value>{(0.000000,0.000000)(1.000000,1.000000)(2.000000,4.000000)(3.000000,11.000000)(4.000000,25.000000)(5.000000,100.000000)(6.000000,1000.000000)}</value>
-		</property>
-	</object>
-	<object class="FloatPluginParameter" id="{b6d7e6a6-08c5-4a02-864f-46ac9963b844}">
-		<property name="name">
-			<value>Range Min</value>
-		</property>
-		<property name="value">
-			<value>0.25</value>
-		</property>
-		<property name="curve">
-			<value>{(0.000000,0.000000)(1.000000,5.000000)(2.000000,10.000000)(3.000000,100.000000)(4.000000,1000.000000)(5.000000,10000.000000)}</value>
-		</property>
-	</object>
-	<object class="FloatPluginParameter" id="{5bf97e71-2a7f-429a-aeb0-e6899898d372}">
-		<property name="name">
-			<value>Range Max</value>
-		</property>
-		<property name="value">
-			<value>250</value>
-		</property>
-		<property name="curve">
-			<value>{(0.000000,0.000000)(1.000000,5.000000)(2.000000,10.000000)(3.000000,100.000000)(4.000000,1000.000000)(5.000000,10000.000000)}</value>
-		</property>
-	</object>
-	<object class="DataPluginParameter" id="{686779cd-11c1-4580-813a-fd01387edba3}">
-		<property name="name">
-			<value>Overall Gain</value>
-		</property>
-		<property name="value" />
-		<property name="dataType">
-			<value>-1</value>
-		</property>
-	</object>
-	<object class="FloatPluginParameter" id="{6bcc5e42-06d8-4e30-8ecb-da3b3b0fc4dd}">
-		<property name="name">
-			<value>Reverb Send</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-		<property name="curve">
-			<value>{(0.000000,-60.000000)(1.000000,-40.000000)(2.000000,-20.000000)(3.000000,-12.000000)(4.000000,-6.000000)(5.000000,-2.000000)(6.000000,0.000000)(7.000000,2.000000)(8.000000,6.000000)(9.000000,12.000000)(10.000000,20.000000)}</value>
-		</property>
-	</object>
 </objects>
