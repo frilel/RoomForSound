@@ -149,13 +149,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  eventPath:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &16677304
 MeshCollider:
@@ -1408,6 +1401,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioClips: []
+  _volume: 0.7
+  _volumeRandomization:
+    _useRandomRange: 0
+    _min: 0
+    _max: 0
+  _pitch: 1
+  _pitchRandomization:
+    _useRandomRange: 0
+    _min: 0
+    _max: 0
+  _spatialize: 1
+  _loop: 0
+  _chanceToPlay: 100
+  _playOnStart: 0
 --- !u!82 &340266535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1658,6 +1666,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioClips: []
+  _volume: 0.7
+  _volumeRandomization:
+    _useRandomRange: 0
+    _min: 0
+    _max: 0
+  _pitch: 1
+  _pitchRandomization:
+    _useRandomRange: 0
+    _min: 0
+    _max: 0
+  _spatialize: 1
+  _loop: 0
+  _chanceToPlay: 100
+  _playOnStart: 0
 --- !u!1 &362718796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,6 +2483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d98dc05a2d75d48badffa35a9e6192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usedController: 0
 --- !u!1001 &489938956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3918,13 +3942,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  eventPath:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &844854456
 MeshCollider:
@@ -4154,6 +4171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d98dc05a2d75d48badffa35a9e6192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usedController: 0
 --- !u!1 &863028364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5402,6 +5420,122 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5102c3d03510c4fb693bf3f159a2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1097161238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097161242}
+  - component: {fileID: 1097161241}
+  - component: {fileID: 1097161240}
+  - component: {fileID: 1097161239}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1097161239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097161238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!81 &1097161240
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097161238}
+  m_Enabled: 1
+--- !u!20 &1097161241
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097161238}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1097161242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097161238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.663, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1117913891
 GameObject:
   m_ObjectHideFlags: 0
@@ -6077,6 +6211,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioClips: []
+  _volume: 0.7
+  _volumeRandomization:
+    _useRandomRange: 0
+    _min: 0
+    _max: 0
+  _pitch: 1
+  _pitchRandomization:
+    _useRandomRange: 0
+    _min: 0
+    _max: 0
+  _spatialize: 1
+  _loop: 0
+  _chanceToPlay: 100
+  _playOnStart: 0
 --- !u!1001 &1251367011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6342,13 +6491,6 @@ MonoBehaviour:
       Data4: 0
     Path: 
   eventPathInteractionSoundTwo:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  eventPath:
     Guid:
       Data1: 0
       Data2: 0
@@ -6657,13 +6799,6 @@ MonoBehaviour:
       Data4: 0
     Path: 
   eventPathInteractionSoundTwo:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  eventPath:
     Guid:
       Data1: 0
       Data2: 0
@@ -7344,13 +7479,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  eventPath:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &1525152520
 MeshCollider:
@@ -7967,6 +8095,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925ef87c5bafc37469a2f7ec825dee4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioClips: []
+  _volume: 0.7
+  _volumeRandomization:
+    _useRandomRange: 0
+    _min: 0
+    _max: 0
+  _pitch: 1
+  _pitchRandomization:
+    _useRandomRange: 0
+    _min: 0
+    _max: 0
+  _spatialize: 1
+  _loop: 0
+  _chanceToPlay: 100
+  _playOnStart: 0
 --- !u!82 &1641977289
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9876,13 +10019,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  eventPath:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   _VFXController: {fileID: 0}
 --- !u!1 &2008457254
 GameObject:
@@ -10436,6 +10572,10 @@ PrefabInstance:
     - target: {fileID: 7681372687013864540, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_Name
       value: InteractionRigOVR-Synthetic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681372687013864540, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7681372687013864541, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_RootOrder
@@ -11037,13 +11177,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  eventPath:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   _VFXController: {fileID: 0}
 --- !u!59 &1417893711485352696
 HingeJoint:
@@ -11401,13 +11534,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  eventPath:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &3121186611604412717
 MeshCollider:
@@ -11750,13 +11876,6 @@ MonoBehaviour:
       Data4: 0
     Path: 
   eventPathInteractionSoundTwo:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  eventPath:
     Guid:
       Data1: 0
       Data2: 0
