@@ -7,6 +7,7 @@ public class DrumSample : MonoBehaviour
     FMOD.Studio.EventInstance drumHitSFXInstance;
     public FMODUnity.EventReference eventPathInteractionSoundOne;
     public FMODUnity.EventReference eventPathInteractionSoundTwo;
+    public FMODUnity.EventReference eventPathInteractionSoundThree;
     Text ImpactSpeedText;
 
     [SerializeField] private VFXController _VFXController;
@@ -52,7 +53,12 @@ public class DrumSample : MonoBehaviour
             if(OVRInput.Get(OVRInput.Button.One))
             {
                 drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
-            } else 
+            } 
+            else if(OVRInput.Get(OVRInput.Button.Two))
+            {
+                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundThree);
+            } 
+            else 
             {
                 drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
             }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{55f7bc89-4534-4742-80b2-50231e828825}">
+		<property name="name">
+			<value>Cymbal2</value>
+		</property>
+		<relationship name="folder">
+			<destination>{42f38ee2-1844-4335-988e-a73a7838d80a}</destination>
+		</relationship>
+	</object>
+</objects>

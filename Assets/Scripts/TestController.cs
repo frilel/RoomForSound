@@ -8,7 +8,7 @@ public class TestController : MonoBehaviour
     public Transform audienceParent;
     //public Transform lookAtTarget;
     //public List<string> IDs = new List<string>();
-    Dictionary<string,GameObject> idsStored=new Dictionary<string, GameObject>();
+    Dictionary<string, GameObject> idsStored = new Dictionary<string, GameObject>();
     string url;
     HttpClient httpClient = new HttpClient(new JsonSerializationOption());
     private void Start()
@@ -26,13 +26,14 @@ public class TestController : MonoBehaviour
         //string result="{\"data\":[{\"id\":\"audience-bwzrdu4l81ym2l8\",\"name\":\"ss\",\"messages\":[]},{\"id\":\"audience-bwzrdu4l81ymv5h\",\"name\":\"ss\",\"messages\":[]}]}";
         Audiences audiences = JsonUtility.FromJson<Audiences>(result);
         //Debug.Log(audiences.data[0].id+","+audiences.data[0].name+audiences.data[0].messages.Count);
-
+        List<string> remainingIDs = new List<string>();
         //Audiences audiences = JsonUtility.FromJson<Audiences>(result);
         //Debug.Log(objects.data.Length);
         if (audiences.data != null)
         {
             foreach (Audience aud in audiences.data)
             {
+                remainingIDs.Add(aud.id);
                 if (idsStored.Count <= 44)
                 {
                     if (!idsStored.ContainsKey(aud.id))
@@ -40,7 +41,7 @@ public class TestController : MonoBehaviour
                         //IDs.Add(aud.id);
                         Vector3 randomPos = audienceParent.GetChild(0).GetComponent<RandomPositionAllocator>().GenerateRandomPos();
                         GameObject go = Instantiate(audiencePrefab, randomPos, Quaternion.identity, audienceParent);
-                        idsStored.Add(aud.id,go);
+                        idsStored.Add(aud.id, go);
                         go.transform.LookAt(new Vector3(0, go.transform.position.y, 0));
                         go.GetComponent<AudienceControl>().UpdateAuience(aud);
                         go.GetComponent<AudienceControl>().ChangeAvatar(Random.Range(0, 4));
@@ -48,11 +49,11 @@ public class TestController : MonoBehaviour
                     }
                     else
                     {
-                        if(aud.messages.Count>0)
+                        if (aud.messages.Count > 0)
                         {
                             GameObject go;
-                            idsStored.TryGetValue(aud.id,out go);
-                            go.GetComponent<AudienceControl>().audience=aud;
+                            idsStored.TryGetValue(aud.id, out go);
+                            go.GetComponent<AudienceControl>().audience = aud;
                             go.GetComponent<AudienceControl>().UpdateMessage();
                         }
                     }
@@ -62,6 +63,28 @@ public class TestController : MonoBehaviour
         else
         {
             Debug.LogError("audiences.audiences is null");
+        }
+
+
+        List<string> idToRemove = new List<string>();
+        foreach (string id in idsStored.Keys)
+        {
+            if (remainingIDs.Contains(id))
+            {
+                continue;
+            }
+            else
+            {
+                idToRemove.Add(id);
+
+            }
+        }
+        foreach (string id in idToRemove)
+        {
+            GameObject temp;
+            idsStored.TryGetValue(id, out temp);
+            Destroy(temp);
+            idsStored.Remove(id);
         }
 
     }

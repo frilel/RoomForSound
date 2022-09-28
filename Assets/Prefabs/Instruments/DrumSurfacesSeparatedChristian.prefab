@@ -443,14 +443,21 @@ MonoBehaviour:
       Data2: 1296471657
       Data3: -890002242
       Data4: 1977388256
-    Path: event:/Drum set/Cymbal2
+    Path: event:/Drumset/Cymbal2/Cymbal2
   eventPathInteractionSoundTwo:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -590247715
+      Data2: 1296471657
+      Data3: -890002242
+      Data4: 1977388256
+    Path: event:/Drumset/Cymbal2/Cymbal2
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: -590247715
+      Data2: 1296471657
+      Data3: -890002242
+      Data4: 1977388256
+    Path: event:/Drumset/Cymbal2/Cymbal2
   _VFXController: {fileID: 7373640427623871725}
 --- !u!54 &7373640426825393732
 Rigidbody:
@@ -1086,18 +1093,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1106919281
-      Data2: 1192445930
-      Data3: 1585134506
-      Data4: -451431526
-    Path: event:/Drum set/Cymbal1
+      Data1: 697112989
+      Data2: 1115624492
+      Data3: 1901835928
+      Data4: 254101765
+    Path: event:/Drumset/Cymbal1/Cymbal1
   eventPathInteractionSoundTwo:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 697112989
+      Data2: 1115624492
+      Data3: 1901835928
+      Data4: 254101765
+    Path: event:/Drumset/Cymbal1/Cymbal1
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 697112989
+      Data2: 1115624492
+      Data3: 1901835928
+      Data4: 254101765
+    Path: event:/Drumset/Cymbal1/Cymbal1
   _VFXController: {fileID: 7373640427623871725}
 --- !u!54 &7373640427243903923
 Rigidbody:
@@ -2216,7 +2230,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1955
+  m_VersionIndex: 1970
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2348,14 +2362,21 @@ MonoBehaviour:
       Data2: 1080008524
       Data3: -1052476788
       Data4: 717657000
-    Path: event:/Drum set/MediumTom
+    Path: event:/Drumset/MediumTom
   eventPathInteractionSoundTwo:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 436201663
+      Data2: 1080008524
+      Data3: -1052476788
+      Data4: 717657000
+    Path: event:/Drumset/MediumTom
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 436201663
+      Data2: 1080008524
+      Data3: -1052476788
+      Data4: 717657000
+    Path: event:/Drumset/MediumTom
   _VFXController: {fileID: 7373640427623871725}
 --- !u!1 &7373640427446000482
 GameObject:
@@ -3422,7 +3443,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1958
+  m_VersionIndex: 1970
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3554,14 +3575,21 @@ MonoBehaviour:
       Data2: 1291575271
       Data3: -1479241821
       Data4: 226147470
-    Path: event:/Drum set/BassDrum
+    Path: event:/Drumset/BassDrum
   eventPathInteractionSoundTwo:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -903944124
+      Data2: 1291575271
+      Data3: -1479241821
+      Data4: 226147470
+    Path: event:/Drumset/BassDrum
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: -903944124
+      Data2: 1291575271
+      Data3: -1479241821
+      Data4: 226147470
+    Path: event:/Drumset/BassDrum
   _VFXController: {fileID: 7373640427623871725}
 --- !u!1 &7373640427449776138
 GameObject:
@@ -3676,18 +3704,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -41342470
-      Data2: 1109358836
-      Data3: -425426541
-      Data4: 771988884
-    Path: event:/Drum set/HiHat
+      Data1: 1951535732
+      Data2: 1155533219
+      Data3: -2117970043
+      Data4: -1446075934
+    Path: event:/Drumset/OpenHiHat/VeryOpenHiHat
   eventPathInteractionSoundTwo:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1615954945
+      Data2: 1204028092
+      Data3: -756481092
+      Data4: 1020326373
+    Path: event:/Drumset/OpenHiHat/HalfOpenHitHat
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: -1081705645
+      Data2: 1169507060
+      Data3: -1509961290
+      Data4: -1977676321
+    Path: event:/Drumset/OpenHiHat/ClosedHiHat
   _VFXController: {fileID: 7373640427623871725}
 --- !u!54 &7373640427449776149
 Rigidbody:
@@ -3767,7 +3802,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7373640427623871713}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: -1}
+  m_LocalRotation: {x: 0, y: 0, z: -0, w: -1}
   m_LocalPosition: {x: 0.007, y: 0, z: 0.671}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
@@ -3787,7 +3822,7 @@ Transform:
   - {fileID: 7373640426385642896}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 360, z: 0}
 --- !u!33 &7373640427623871715
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5082,7 +5117,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1955
+  m_VersionIndex: 1967
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5214,14 +5249,21 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1093874186
+      Data2: 1292045602
+      Data3: 932121533
+      Data4: 1845295261
+    Path: event:/Drumset/HighTom
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: -1093874186
+      Data2: 1292045602
+      Data3: 932121533
+      Data4: 1845295261
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 7373640427623871725}
 --- !u!1 &7373640428060403607
 GameObject:
@@ -6369,7 +6411,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1958
+  m_VersionIndex: 1967
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6501,14 +6543,21 @@ MonoBehaviour:
       Data2: 1337697103
       Data3: -972427889
       Data4: -509725279
-    Path: event:/Drum set/Snare
+    Path: event:/Drumset/Snare/Snare
   eventPathInteractionSoundTwo:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 753602548
+      Data2: 1337697103
+      Data3: -972427889
+      Data4: -509725279
+    Path: event:/Drumset/Snare/Snare
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 753602548
+      Data2: 1337697103
+      Data3: -972427889
+      Data4: -509725279
+    Path: event:/Drumset/Snare/Snare
   _VFXController: {fileID: 7373640427623871725}
 --- !u!1 &7373640428088173250
 GameObject:
@@ -7658,7 +7707,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1952
+  m_VersionIndex: 1967
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7790,14 +7839,21 @@ MonoBehaviour:
       Data2: 1319107013
       Data3: 2134569857
       Data4: 646834438
-    Path: event:/Drum set/FloorTom
+    Path: event:/Drumset/FloorTom
   eventPathInteractionSoundTwo:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1679546606
+      Data2: 1319107013
+      Data3: 2134569857
+      Data4: 646834438
+    Path: event:/Drumset/FloorTom
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: -1679546606
+      Data2: 1319107013
+      Data3: 2134569857
+      Data4: 646834438
+    Path: event:/Drumset/FloorTom
   _VFXController: {fileID: 7373640427623871725}
 --- !u!1 &7373640428208717270
 GameObject:

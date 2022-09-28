@@ -10,6 +10,16 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+# Log-files
+fmod.log
+fmod_editor.log
+
+# Ignore the Cache-file since it is updated locally either way
+/[Aa]ssets/**/FMODStudioCache.asset
+/[Aa]ssets/**/FMODStudioCache.asset.meta
+/[Aa]ssets/Plugins/FMOD/Cache.meta
+/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
