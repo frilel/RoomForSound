@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     private FMOD.Studio.EventInstance song;
     private string currentPosition;
 
-    public Text debugText;
+    // public Text debugText;
 
     public void PlaySong(string songName)
     {
@@ -42,7 +42,7 @@ public class AudioManager : MonoBehaviour
 
     public void TurnOffCurrentInstrument()
     {
-        debugText.text = currentPosition;
+        // debugText.text = currentPosition;
         float value;
         song.getParameterByName(currentPosition, out value);
 

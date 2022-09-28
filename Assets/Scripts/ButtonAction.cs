@@ -8,7 +8,7 @@ public class ButtonAction : MonoBehaviour
 {
     private GameObject cam;
     private AudioManager audioManager;
-    public Text debugText;
+    // public Text debugText;
     [SerializeField] public MeshRenderer ButtonMaterial;
     [SerializeField] public ButtonManager ButtonManager;
 
@@ -21,7 +21,7 @@ public class ButtonAction : MonoBehaviour
     public void TriggerAudio()
     {
         string buttonName = transform.parent.gameObject.name;
-        debugText.text = buttonName;
+        // debugText.text = buttonName;
 
         switch (buttonName)
         {
