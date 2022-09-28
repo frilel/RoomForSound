@@ -843,6 +843,7 @@ GameObject:
   - component: {fileID: 78489044}
   - component: {fileID: 78489043}
   - component: {fileID: 78489042}
+  - component: {fileID: 78489045}
   m_Layer: 0
   m_Name: LocDrums
   m_TagString: Untagged
@@ -926,6 +927,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78489040}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &78489045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78489040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4411bac3c88fd7479d6421acf84a386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 515115685}
 --- !u!1001 &82615011
 PrefabInstance:
   m_ObjectHideFlags: 0
