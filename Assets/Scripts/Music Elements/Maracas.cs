@@ -5,8 +5,8 @@ using System;
 
 public class Maracas : MonoBehaviour
 {
-    public FMODUnity.EventReference eventPathInteractionSoundOne;
-    public FMODUnity.EventReference eventPathInteractionSoundTwo;
+    // public FMODUnity.EventReference eventPathInteractionSoundOne;
+    public FMODUnity.EventReference eventPathInteractionSound;
     FMOD.Studio.EventInstance macaraInstance;
     private float moveSpeed = 0;
     private float lastSpeed = 0;
@@ -34,8 +34,8 @@ public class Maracas : MonoBehaviour
             acceleration = (moveSpeed - lastSpeed) / Time.deltaTime;
             if (acceleration > setTriggerSound)
             {
-                macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
-                Debug.Log("maraca make sound");
+                macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
+                // Debug.Log("maraca make sound");
                 macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
                 macaraInstance.start();
                 macaraInstance.release();
@@ -48,9 +48,6 @@ public class Maracas : MonoBehaviour
     }
     public void DetectGrabber()
     {
-        if (usedController != OVRInput.Controller.None)
-            return;
-
         // If both hands are within this overlap check we might save the wrong controller
         Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, 0.1f, Physics.AllLayers, QueryTriggerInteraction.Collide);
         for (int i = 0; i < hitColliders.Length; i++)
@@ -80,8 +77,8 @@ public class Maracas : MonoBehaviour
         if (Latest == guid)
         {
             // debounced input handler code here
-            macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
-            Debug.Log("maraca make sound");
+            macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
+            // Debug.Log("maraca make sound");
             macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
             macaraInstance.start();
             macaraInstance.release();

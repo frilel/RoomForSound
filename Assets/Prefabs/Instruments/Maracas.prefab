@@ -532,20 +532,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46a556d98ba69b42818c13eeaa98ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventPathInteractionSoundOne:
+  eventPathInteractionSound:
     Guid:
       Data1: 753602548
       Data2: 1337697103
       Data3: -972427889
       Data4: -509725279
     Path: event:/Drum set/Snare
-  eventPathInteractionSoundTwo:
-    Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drum set/HighTom
   setTriggerSound: 3
   usedController: 0
   maracaObj: {fileID: 0}

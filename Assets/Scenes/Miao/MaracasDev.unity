@@ -21964,6 +21964,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 17.421005
       objectReference: {fileID: 0}
+    - target: {fileID: 261427207462933742, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
+      propertyPath: eventPathInteractionSound.Path
+      value: event:/Drum set/Snare
+      objectReference: {fileID: 0}
+    - target: {fileID: 261427207462933742, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
+      propertyPath: eventPathInteractionSound.Guid.Data1
+      value: 753602548
+      objectReference: {fileID: 0}
+    - target: {fileID: 261427207462933742, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
+      propertyPath: eventPathInteractionSound.Guid.Data2
+      value: 1337697103
+      objectReference: {fileID: 0}
+    - target: {fileID: 261427207462933742, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
+      propertyPath: eventPathInteractionSound.Guid.Data3
+      value: -972427889
+      objectReference: {fileID: 0}
+    - target: {fileID: 261427207462933742, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
+      propertyPath: eventPathInteractionSound.Guid.Data4
+      value: -509725279
+      objectReference: {fileID: 0}
     - target: {fileID: 261427207462933743, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
       propertyPath: m_Name
       value: Maracas

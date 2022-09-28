@@ -160,6 +160,7 @@ namespace Oculus.Interaction
         {
             if (_activeTransformer == null)
             {
+                isGrabbed = false;
                 return;
             }
 
