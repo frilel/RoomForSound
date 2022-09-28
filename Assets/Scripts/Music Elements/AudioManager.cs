@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     private FMOD.Studio.EventInstance song;
+    private string currentPosition;
+
+    public Text debugText;
 
     public void PlaySong(string songName)
     {
@@ -13,6 +18,11 @@ public class AudioManager : MonoBehaviour
         song.start();
         song.release();
 
+    }
+
+    public void SetCurrentPosition(string currentPosition)
+    {
+       this.currentPosition = currentPosition;
     }
 
     public void StopSong()
@@ -27,6 +37,23 @@ public class AudioManager : MonoBehaviour
 
     public void AudienceWhistle()
     {
+
+    }
+
+    public void TurnOffCurrentInstrument()
+    {
+        debugText.text = currentPosition;
+        float value;
+        song.getParameterByName(currentPosition, out value);
+
+        if(value == 0) 
+        {
+            song.setParameterByName(currentPosition, 1f);
+        }
+        if(value == 1) 
+        {
+            song.setParameterByName(currentPosition, 0f);
+        }
 
     }
 }

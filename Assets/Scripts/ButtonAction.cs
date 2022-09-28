@@ -35,6 +35,12 @@ public class ButtonAction : MonoBehaviour
                 audioManager.PlaySong("Song2/Song2");
                 PlaceInMaterialArray();
                 break;
+            case "Button03":
+                audioManager.TurnOffCurrentInstrument();
+                // ChangePreviousButtonMaterial();
+                // audioManager.PlaySong("Song2/Song2");
+                // PlaceInMaterialArray();
+                break;
             case "Button04":
                 ChangePreviousButtonMaterial();
                 audioManager.StopSong();
