@@ -34,7 +34,7 @@ namespace Oculus.Interaction
 
         [SerializeField]
         private int _maxGrabPoints = -1;
-
+        public bool isGrabbed = false;
         public int MaxGrabPoints
         {
             get
@@ -128,7 +128,7 @@ namespace Oculus.Interaction
             // End the transform on any existing transformer before we
             // begin the new one
             EndTransform();
-
+            isGrabbed = true;
             int useGrabPoints = _selectingPoints.Count;
             if (_maxGrabPoints != -1)
             {
@@ -168,6 +168,7 @@ namespace Oculus.Interaction
 
         private void EndTransform()
         {
+            isGrabbed = false;
             if (_activeTransformer == null)
             {
                 return;

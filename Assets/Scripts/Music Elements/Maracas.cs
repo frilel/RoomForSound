@@ -1,36 +1,47 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Oculus.Interaction;
+using System;
 
 public class Maracas : MonoBehaviour
 {
     public FMODUnity.EventReference eventPathInteractionSoundOne;
     public FMODUnity.EventReference eventPathInteractionSoundTwo;
-
+    FMOD.Studio.EventInstance macaraInstance;
     private float moveSpeed = 0;
     private float lastSpeed = 0;
+    private float acceleration = 0;
+    public float setTriggerSound = 1.5f;
     public OVRInput.Controller usedController = OVRInput.Controller.None;
-    
+    public Grabbable maracaObj;
     public OVRInput.Controller GetGrabber() => usedController;
-
+    private Guid Latest;
+    private void Start()
+    {
+        maracaObj = GetComponent<Grabbable>();
+    }
     private void Update()
     {
         DetectGrabber();
-        if (usedController != OVRInput.Controller.None)
+        if (maracaObj.isGrabbed)
         {
             moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(usedController)).magnitude;
-            if (moveSpeed > 1)
+            if (moveSpeed > 0.001)
             {
-                FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
-                Debug.Log(moveSpeed);
+                // macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
             }
-            
-            if (moveSpeed - lastSpeed > 2)
+            acceleration = (moveSpeed - lastSpeed) / Time.deltaTime;
+            if (acceleration > setTriggerSound)
             {
-                FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
-                Debug.Log(moveSpeed - lastSpeed);
+                macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+                Debug.Log("maraca make sound");
+                macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                macaraInstance.start();
+                macaraInstance.release();
+
             }
             lastSpeed = moveSpeed;
+
         }
 
     }
@@ -47,9 +58,32 @@ public class Maracas : MonoBehaviour
                 usedController = OVRInput.Controller.LTouch;
             else if (hitColliders[i].transform.name == GameManager.Instance.RightHandAnchor.transform.name)
                 usedController = OVRInput.Controller.RTouch;
+            
         }
+
     }
 
 
     public void RemoveGrabber() => usedController = OVRInput.Controller.None;
+
+    private IEnumerator Debounced()
+    {
+        // generate a new id and set it as the latest one 
+        var guid = Guid.NewGuid();
+        Latest = guid;
+
+        // set the denounce duration here
+        yield return new WaitForSeconds(0.03f);
+
+        // check if this call is still the latest one
+        if (Latest == guid)
+        {
+            // debounced input handler code here
+            macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+            Debug.Log("maraca make sound");
+            macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+            macaraInstance.start();
+            macaraInstance.release();
+        }
+    }
 }
