@@ -1,83 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9036085705216978443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/HiHat
-  m_EditorClassIdentifier: 
-  Path: event:/Drum set/HiHat
-  Guid:
-    Data1: -41342470
-    Data2: 1109358836
-    Data3: -425426541
-    Data4: 771988884
-  Banks:
-  - {fileID: 1278483287379617233}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7805739741071908509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Cymbal1/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3740310311
-    data2: 1746301963
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-7674435086911360136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/HighTom
-  m_EditorClassIdentifier: 
-  Path: event:/Drum set/HighTom
-  Guid:
-    Data1: -1093874186
-    Data2: 1292045602
-    Data3: 932121533
-    Data4: 1845295261
-  Banks:
-  - {fileID: 1278483287379617233}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-6996258878270670034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 158549
---- !u!114 &-6343251868371185626
+--- !u!114 &-6919760833295164659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,25 +37,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/OpenHiHat
+  m_Name: event:/Drumset/OpenHiHat/HalfOpenHitHat
   m_EditorClassIdentifier: 
-  Path: event:/Drum set/OpenHiHat
+  Path: event:/Drumset/OpenHiHat/HalfOpenHitHat
   Guid:
-    Data1: 1951535732
-    Data2: 1155533219
-    Data3: -2117970043
-    Data4: -1446075934
+    Data1: 1615954945
+    Data2: 1204028092
+    Data3: -756481092
+    Data4: 1020326373
   Banks:
   - {fileID: 1278483287379617233}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 2879037128317892528}
+  - {fileID: 326683266661729844}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5764289917397028487
+--- !u!114 &-6435395487741813468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,25 +65,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/Cymbal2
+  m_Name: event:/Drumset/HighTom
   m_EditorClassIdentifier: 
-  Path: event:/Drum set/Cymbal2
+  Path: event:/Drumset/HighTom
   Guid:
-    Data1: -590247715
-    Data2: 1296471657
-    Data3: -890002242
-    Data4: 1977388256
+    Data1: -1093874186
+    Data2: 1292045602
+    Data3: 932121533
+    Data4: 1845295261
   Banks:
   - {fileID: 1278483287379617233}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 3840100275275975594}
+  - {fileID: 8556602459596693817}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5664548822376300507
+--- !u!114 &-6113205299436533161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,24 +92,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/MediumTom
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sticks/Pitch
   m_EditorClassIdentifier: 
-  Path: event:/Drum set/MediumTom
-  Guid:
-    Data1: 436201663
-    Data2: 1080008524
-    Data3: -1052476788
-    Data4: 717657000
-  Banks:
-  - {fileID: 1278483287379617233}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4901362813040367991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +134,78 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6000
+--- !u!114 &-4397440688336317220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cymbal2/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4108222164950950204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Snare/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3913462875564612943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/VeryOpenHiHat/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3385780560051107157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +233,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 39549
---- !u!114 &-2744839009470075817
+--- !u!114 &-3281453546719628997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,20 +243,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/Snare
+  m_Name: event:/Drumset/OpenHiHat/ClosedHiHat
   m_EditorClassIdentifier: 
-  Path: event:/Drum set/Snare
+  Path: event:/Drumset/OpenHiHat/ClosedHiHat
   Guid:
-    Data1: 753602548
-    Data2: 1337697103
-    Data3: -972427889
-    Data4: -509725279
+    Data1: -1081705645
+    Data2: 1169507060
+    Data3: -1509961290
+    Data4: -1977676321
   Banks:
   - {fileID: 1278483287379617233}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 6056458560064100091}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3259629610896387028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/OpenHiHat/VeryOpenHiHat
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/OpenHiHat/VeryOpenHiHat
+  Guid:
+    Data1: 1951535732
+    Data2: 1155533219
+    Data3: -2117970043
+    Data4: -1446075934
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3913462875564612943}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -296,6 +316,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 275
+--- !u!114 &-671411267369357733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/Sticks
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/Sticks
+  Guid:
+    Data1: -2086373514
+    Data2: 1123633621
+    Data3: -291621489
+    Data4: -1135838503
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6113205299436533161}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &-553678846387809314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,29 +387,110 @@ MonoBehaviour:
   - {fileID: 3916383380135203157}
   - {fileID: 1278483287379617233}
   EditorEvents:
-  - {fileID: 2895194229106537032}
-  - {fileID: 2420955890119167665}
-  - {fileID: 8967490801371417157}
-  - {fileID: -5664548822376300507}
-  - {fileID: -5764289917397028487}
-  - {fileID: -2744839009470075817}
-  - {fileID: -7674435086911360136}
-  - {fileID: -9036085705216978443}
-  - {fileID: -6343251868371185626}
   - {fileID: -6996258878270670034}
   - {fileID: -553678846387809314}
   - {fileID: 4950022710509616201}
   - {fileID: -3385780560051107157}
   - {fileID: -2058432523618543073}
   - {fileID: -4901362813040367991}
-  - {fileID: 1417663149757212521}
+  - {fileID: -6919760833295164659}
+  - {fileID: 937579986535423678}
+  - {fileID: 7602683481376795458}
+  - {fileID: -3281453546719628997}
+  - {fileID: -3259629610896387028}
+  - {fileID: -671411267369357733}
+  - {fileID: 8424272923219485901}
+  - {fileID: 4099776152855883723}
+  - {fileID: 720803215478486050}
+  - {fileID: 6607572056997353438}
+  - {fileID: -6435395487741813468}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1278483287379617233}
   StringsBanks:
   - {fileID: 3916383380135203157}
-  cacheTime: 637999586904664990
+  cacheTime: 637999905257520549
   cacheVersion: 131591
+--- !u!114 &326683266661729844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HalfOpenHitHat/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &720803215478486050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/Cymbal2/Cymbal2
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/Cymbal2/Cymbal2
+  Guid:
+    Data1: -590247715
+    Data2: 1296471657
+    Data3: -890002242
+    Data4: 1977388256
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4397440688336317220}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &937579986535423678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/FloorTom
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/FloorTom
+  Guid:
+    Data1: -1679546606
+    Data2: 1319107013
+    Data3: 2134569857
+    Data4: 646834438
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2841414299277477368}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1278483287379617233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,66 +506,12 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637999586904645064
+  lastModified: 637999905257500602
   FileSizes:
   - Name: Desktop
-    Value: 4809632
+    Value: 7029280
   Exists: 1
---- !u!114 &1417663149757212521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/Sticks
-  m_EditorClassIdentifier: 
-  Path: event:/Drum set/Sticks
-  Guid:
-    Data1: -2086373514
-    Data2: 1123633621
-    Data3: -291621489
-    Data4: -1135838503
-  Banks:
-  - {fileID: 1278483287379617233}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 500
---- !u!114 &2420955890119167665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/BassDrum
-  m_EditorClassIdentifier: 
-  Path: event:/Drum set/BassDrum
-  Guid:
-    Data1: -903944124
-    Data2: 1291575271
-    Data3: -1479241821
-    Data4: 226147470
-  Banks:
-  - {fileID: 1278483287379617233}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2879037128317892528
+--- !u!114 &2113918743125785185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,7 +521,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/OpenHiHat/Pitch
+  m_Name: parameter:/BassDrum/Pitch
   m_EditorClassIdentifier: 
   Name: Pitch
   StudioPath: 
@@ -460,34 +535,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &2895194229106537032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/FloorTom
-  m_EditorClassIdentifier: 
-  Path: event:/Drum set/FloorTom
-  Guid:
-    Data1: -1679546606
-    Data2: 1319107013
-    Data3: 2134569857
-    Data4: 646834438
-  Banks:
-  - {fileID: 1278483287379617233}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &3840100275275975594
+--- !u!114 &2841414299277477368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -497,7 +545,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Cymbal2/Pitch
+  m_Name: parameter:/FloorTom/Pitch
   m_EditorClassIdentifier: 
   Name: Pitch
   StudioPath: 
@@ -526,12 +574,64 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637999586904664990
+  lastModified: 637999905257520549
   FileSizes:
   - Name: Desktop
-    Value: 1510
+    Value: 1650
   - Name: Mobile
-    Value: 1510
+    Value: 1650
+  Exists: 1
+--- !u!114 &4099776152855883723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/MediumTom
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/MediumTom
+  Guid:
+    Data1: 436201663
+    Data2: 1080008524
+    Data3: -1052476788
+    Data4: 717657000
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4709630998009168362}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4709630998009168362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MediumTom/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &4950022710509616201
 MonoBehaviour:
@@ -556,11 +656,36 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 8847179123320764216}
   MinDistance: 1
   MaxDistance: 20
   Length: 191549
---- !u!114 &8967490801371417157
+--- !u!114 &6056458560064100091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ClosedHiHat/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6607572056997353438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -570,9 +695,89 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Drum set/Cymbal1
+  m_Name: event:/Drumset/Snare/Snare
   m_EditorClassIdentifier: 
-  Path: event:/Drum set/Cymbal1
+  Path: event:/Drumset/Snare/Snare
+  Guid:
+    Data1: 753602548
+    Data2: 1337697103
+    Data3: -972427889
+    Data4: -509725279
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4108222164950950204}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6687212248902730361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cymbal1/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7602683481376795458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/BassDrum
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/BassDrum
+  Guid:
+    Data1: -903944124
+    Data2: 1291575271
+    Data3: -1479241821
+    Data4: 226147470
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2113918743125785185}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8424272923219485901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/Cymbal1/Cymbal1
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/Cymbal1/Cymbal1
   Guid:
     Data1: 697112989
     Data2: 1115624492
@@ -584,7 +789,55 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -7805739741071908509}
+  - {fileID: 6687212248902730361}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8556602459596693817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HighTom/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3740310311
+    data2: 1746301963
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8847179123320764216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Song2/LocDrums
+  m_EditorClassIdentifier: 
+  Name: LocDrums
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3119524935
+    data2: 1393632135
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
