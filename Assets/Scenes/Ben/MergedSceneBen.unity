@@ -451,7 +451,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127566
+  m_Name: pb_Mesh-332132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5751,7 +5751,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh126220
+  m_Name: pb_Mesh-332234
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11733,7 +11733,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh132842
+  m_Name: pb_Mesh-332200
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14600,7 +14600,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh130770
+  m_Name: pb_Mesh-332090
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20134,7 +20134,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh131770
+  m_Name: pb_Mesh-332166
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22450,6 +22450,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1759373967, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: AimButton
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759373967, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: CapTouchButton
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 287578550255437038, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 0
@@ -22614,7 +22622,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundTwo.Path
-      value: event:/Drum set/Cymbal2
+      value: event:/Drumset/Cymbal2/Cymbal2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Path
+      value: event:/Drumset/Cymbal2/Cymbal2
       objectReference: {fileID: 0}
     - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundTwo.Guid.Data1
@@ -22632,9 +22644,33 @@ PrefabInstance:
       propertyPath: eventPathInteractionSoundTwo.Guid.Data4
       value: 1977388256
       objectReference: {fileID: 0}
+    - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data1
+      value: -590247715
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data2
+      value: 1296471657
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data3
+      value: -890002242
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data4
+      value: 1977388256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundOne.Path
+      value: event:/Drumset/Cymbal1/Cymbal1
+      objectReference: {fileID: 0}
     - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundTwo.Path
-      value: event:/Drum set/Cymbal1
+      value: event:/Drumset/Cymbal1/Cymbal1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Path
+      value: event:/Drumset/Cymbal1/Cymbal1
       objectReference: {fileID: 0}
     - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundOne.Guid.Data1
@@ -22668,13 +22704,69 @@ PrefabInstance:
       propertyPath: eventPathInteractionSoundTwo.Guid.Data4
       value: 254101765
       objectReference: {fileID: 0}
+    - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data1
+      value: 697112989
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data2
+      value: 1115624492
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data3
+      value: 1901835928
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data4
+      value: 254101765
+      objectReference: {fileID: 0}
     - target: {fileID: 7373640427332458054, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1112279369}
     - target: {fileID: 7373640427332458054, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_VersionIndex
-      value: 1964
+      value: 1970
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Path
+      value: event:/Drumset/MediumTom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Path
+      value: event:/Drumset/MediumTom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data1
+      value: 436201663
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data2
+      value: 1080008524
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data3
+      value: -1052476788
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data4
+      value: 717657000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data1
+      value: 436201663
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data2
+      value: 1080008524
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data3
+      value: -1052476788
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427332458168, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data4
+      value: 717657000
       objectReference: {fileID: 0}
     - target: {fileID: 7373640427332458170, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_Mesh
@@ -22690,7 +22782,47 @@ PrefabInstance:
       objectReference: {fileID: 541554410}
     - target: {fileID: 7373640427446000490, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_VersionIndex
-      value: 1964
+      value: 1970
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Path
+      value: event:/Drumset/BassDrum
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Path
+      value: event:/Drumset/BassDrum
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data1
+      value: -903944124
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data2
+      value: 1291575271
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data3
+      value: -1479241821
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data4
+      value: 226147470
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data1
+      value: -903944124
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data2
+      value: 1291575271
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data3
+      value: -1479241821
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427446000492, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data4
+      value: 226147470
       objectReference: {fileID: 0}
     - target: {fileID: 7373640427446000494, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_Mesh
@@ -22700,6 +22832,66 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 541554410}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundOne.Path
+      value: event:/Drumset/OpenHiHat/VeryOpenHiHat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Path
+      value: event:/Drumset/OpenHiHat/HalfOpenHitHat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Path
+      value: event:/Drumset/OpenHiHat/ClosedHiHat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundOne.Guid.Data1
+      value: 1951535732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundOne.Guid.Data2
+      value: 1155533219
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundOne.Guid.Data3
+      value: -2117970043
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundOne.Guid.Data4
+      value: -1446075934
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data1
+      value: 1615954945
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data2
+      value: 1204028092
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data3
+      value: -756481092
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data4
+      value: 1020326373
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data1
+      value: -1081705645
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data2
+      value: 1169507060
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data3
+      value: -1509961290
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427449776150, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data4
+      value: -1977676321
+      objectReference: {fileID: 0}
     - target: {fileID: 7373640427623871713, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_Name
       value: DrumSurfacesSeparatedChristian
@@ -22748,13 +22940,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Path
+      value: event:/Drumset/HighTom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Path
+      value: event:/Drumset/HighTom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data1
+      value: -1093874186
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data2
+      value: 1292045602
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data3
+      value: 932121533
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data4
+      value: 1845295261
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data1
+      value: -1093874186
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data2
+      value: 1292045602
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data3
+      value: 932121533
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428036194003, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data4
+      value: 1845295261
+      objectReference: {fileID: 0}
     - target: {fileID: 7373640428036194009, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1967860981}
     - target: {fileID: 7373640428036194009, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_VersionIndex
-      value: 1961
+      value: 1967
       objectReference: {fileID: 0}
     - target: {fileID: 7373640428036194013, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_Mesh
@@ -22764,6 +22996,46 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1967860981}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Path
+      value: event:/Drumset/Snare/Snare
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Path
+      value: event:/Drumset/Snare/Snare
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data1
+      value: 753602548
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data2
+      value: 1337697103
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data3
+      value: -972427889
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data4
+      value: -509725279
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data1
+      value: 753602548
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data2
+      value: 1337697103
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data3
+      value: -972427889
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428085132904, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data4
+      value: -509725279
+      objectReference: {fileID: 0}
     - target: {fileID: 7373640428085132906, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -22778,7 +23050,7 @@ PrefabInstance:
       objectReference: {fileID: 1432232655}
     - target: {fileID: 7373640428085132918, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_VersionIndex
-      value: 1961
+      value: 1967
       objectReference: {fileID: 0}
     - target: {fileID: 7373640428117441945, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_Mesh
@@ -22788,13 +23060,53 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 25960713}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Path
+      value: event:/Drumset/FloorTom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Path
+      value: event:/Drumset/FloorTom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data1
+      value: -1679546606
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data2
+      value: 1319107013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data3
+      value: 2134569857
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundTwo.Guid.Data4
+      value: 646834438
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data1
+      value: -1679546606
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data2
+      value: 1319107013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data3
+      value: 2134569857
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640428117441951, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundThree.Guid.Data4
+      value: 646834438
+      objectReference: {fileID: 0}
     - target: {fileID: 7373640428117441957, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 25960713}
     - target: {fileID: 7373640428117441957, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: m_VersionIndex
-      value: 1961
+      value: 1967
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}

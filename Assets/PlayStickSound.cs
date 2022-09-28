@@ -5,11 +5,9 @@ using UnityEngine;
 public class PlayStickSound : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("Collision");
         if(other.gameObject.tag == "Stick")
         {
-            Debug.Log("Stick");
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Drum set/Sticks");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Drumset/Sticks");
         }
     }
 

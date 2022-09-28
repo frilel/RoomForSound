@@ -131,14 +131,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &136310150955542440
 GameObject:
@@ -316,14 +316,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &387401624556784826
 GameObject:
@@ -456,14 +456,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &550464049062055292
 GameObject:
@@ -596,14 +596,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &627895487077300948
 GameObject:
@@ -736,14 +736,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &652465873548381634
 GameObject:
@@ -876,14 +876,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &873314801027212611
 GameObject:
@@ -1016,14 +1016,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &1708803641190252649
 GameObject:
@@ -1156,14 +1156,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &1869423481707437216
 GameObject:
@@ -1296,14 +1296,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &1917212896371595980
 GameObject:
@@ -1436,14 +1436,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &2290471688757556242
 GameObject:
@@ -1576,14 +1576,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &2654210073241730752
 GameObject:
@@ -1716,14 +1716,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &2727029886225455453
 GameObject:
@@ -1937,14 +1937,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &2824755485113661835
 GameObject:
@@ -2158,14 +2158,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &2923823804237609948
 GameObject:
@@ -2622,14 +2622,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &3443706466066249646
 GameObject:
@@ -2762,14 +2762,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &3507216065361116261
 GameObject:
@@ -2902,14 +2902,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &3641451902608020880
 GameObject:
@@ -3123,14 +3123,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &3713140860807648722
 GameObject:
@@ -3263,14 +3263,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &3795221469632755209
 GameObject:
@@ -3403,14 +3403,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &3806257682212439530
 GameObject:
@@ -3543,14 +3543,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &4096173225301783623
 GameObject:
@@ -3764,14 +3764,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &4392366697069709196
 GameObject:
@@ -3904,14 +3904,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &4485005973443996274
 GameObject:
@@ -4044,14 +4044,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &4857507544577845281
 GameObject:
@@ -4251,14 +4251,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &4963962871090989274
 GameObject:
@@ -4472,14 +4472,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &5091060969525647066
 GameObject:
@@ -4612,14 +4612,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &5216074574931312559
 GameObject:
@@ -4752,14 +4752,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &5332929339644549933
 GameObject:
@@ -4892,14 +4892,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &5604366151723054281
 GameObject:
@@ -5113,14 +5113,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &5980107183530564719
 GameObject:
@@ -5334,14 +5334,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &6528146310863219420
 GameObject:
@@ -5668,14 +5668,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &7182654739351230136
 GameObject:
@@ -5889,14 +5889,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &7881999437507842792
 GameObject:
@@ -6029,14 +6029,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &8040650680447495015
 GameObject:
@@ -6169,14 +6169,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &8301597907749228636
 GameObject:
@@ -6309,14 +6309,14 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}
 --- !u!1 &8330026717564518318
 GameObject:
@@ -6561,12 +6561,12 @@ MonoBehaviour:
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   eventPathInteractionSoundTwo:
     Guid:
       Data1: -1093874186
       Data2: 1292045602
       Data3: 932121533
       Data4: 1845295261
-    Path: event:/Drum set/HighTom
+    Path: event:/Drumset/HighTom
   _VFXController: {fileID: 0}

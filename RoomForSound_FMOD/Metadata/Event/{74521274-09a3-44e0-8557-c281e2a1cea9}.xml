@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{74521274-09a3-44e0-8557-c281e2a1cea9}">
 		<property name="name">
-			<value>OpenHiHat</value>
+			<value>VeryOpenHiHat</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{42f38ee2-1844-4335-988e-a73a7838d80a}</destination>
+			<destination>{c180d3e4-f527-4bdc-ab5c-a21aa48eb90d}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{41377e68-f1f9-44e9-815f-22af52b33847}</destination>

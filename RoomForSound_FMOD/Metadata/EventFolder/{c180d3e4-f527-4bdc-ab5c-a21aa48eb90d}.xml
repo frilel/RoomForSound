@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{c180d3e4-f527-4bdc-ab5c-a21aa48eb90d}">
+		<property name="name">
+			<value>OpenHiHat</value>
+		</property>
+		<relationship name="folder">
+			<destination>{42f38ee2-1844-4335-988e-a73a7838d80a}</destination>
+		</relationship>
+	</object>
+</objects>

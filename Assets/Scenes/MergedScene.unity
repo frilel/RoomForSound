@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -451,7 +451,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-118284
+  m_Name: pb_Mesh-267532
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5900,7 +5900,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-118386
+  m_Name: pb_Mesh-267634
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11921,7 +11921,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-118352
+  m_Name: pb_Mesh-267600
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14722,7 +14722,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-118242
+  m_Name: pb_Mesh-267490
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20256,7 +20256,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-118318
+  m_Name: pb_Mesh-267566
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22800,7 +22800,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundTwo.Path
-      value: event:/Drum set/Cymbal2
+      value: event:/Drumset/Cymbal2/Cymbal2
       objectReference: {fileID: 0}
     - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundTwo.Guid.Data1
@@ -22819,8 +22819,12 @@ PrefabInstance:
       value: 1977388256
       objectReference: {fileID: 0}
     - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+      propertyPath: eventPathInteractionSoundOne.Path
+      value: event:/Drumset/Cymbal1/Cymbal1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundTwo.Path
-      value: event:/Drum set/Cymbal1
+      value: event:/Drumset/Cymbal1/Cymbal1
       objectReference: {fileID: 0}
     - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundOne.Guid.Data1

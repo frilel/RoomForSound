@@ -8,7 +8,7 @@
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{42f38ee2-1844-4335-988e-a73a7838d80a}</destination>
+			<destination>{4d573f51-ac0e-4c42-91e0-4c567b36e5fa}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{065f8c7c-df52-43bf-9636-baaab4cdf017}</destination>
@@ -46,7 +46,7 @@
 	</object>
 	<object class="MasterTrack" id="{f15745fb-8830-49a6-b898-48075bd9a626}">
 		<relationship name="automationTracks">
-			<destination>{eb528dc5-7929-4682-82e6-8e7f0a61ef4d}</destination>
+			<destination>{1f2d3c8f-b046-4d1f-b3ed-a132d9d78664}</destination>
 		</relationship>
 		<relationship name="modules">
 			<destination>{ffad3d55-31c3-40b8-a6bf-2542a4f1b7b4}</destination>
@@ -99,7 +99,7 @@
 			<destination>{065f8c7c-df52-43bf-9636-baaab4cdf017}</destination>
 		</relationship>
 	</object>
-	<object class="AutomationTrack" id="{eb528dc5-7929-4682-82e6-8e7f0a61ef4d}">
+	<object class="AutomationTrack" id="{1f2d3c8f-b046-4d1f-b3ed-a132d9d78664}">
 		<relationship name="automator">
 			<destination>{c9431128-c2ca-41c0-b8d7-90c079d2f1f1}</destination>
 		</relationship>
