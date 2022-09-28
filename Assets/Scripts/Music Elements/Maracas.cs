@@ -22,10 +22,11 @@ public class Maracas : MonoBehaviour
     }
     private void Update()
     {
-        DetectGrabber();
+        
         if (maracaObj.isGrabbed)
         {
-            moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(usedController)).magnitude;
+            DetectGrabber();
+            moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber())).magnitude;
             if (moveSpeed > 0.001)
             {
                 // macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
