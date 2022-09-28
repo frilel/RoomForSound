@@ -2,18 +2,33 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    // public List<string> buttons = new List<string>();
-    public GameObject activeButton = null;
+    public Text ListShow;
+    public Material material;
+    public List<MeshRenderer> ActiveMesh = new List<MeshRenderer>();
 
-
-    internal void UnlockPreviousButton()
+    public void SaveMaterialOfButton(MeshRenderer ButtonMaterial)
     {
-        if(activeButton != null)
+        ActiveMesh.Add(ButtonMaterial);
+    }
+
+    private void Update() {
+        for (int i = 0; i < ActiveMesh.Count; i++)
         {
-            activeButton.GetComponent<ButtonPushClick>().resetButton = true;
+           ListShow.text = ActiveMesh[i].material.ToString();
+        }
+    }
+
+    public void ChangePreviousButtonMaterial()
+    {
+        if(!ActiveMesh.Count.Equals(0))
+        {
+            MeshRenderer mesh = ActiveMesh[0];
+            mesh.material = material;
+            ActiveMesh.Clear();
         }
     }
 }

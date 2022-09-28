@@ -94,9 +94,6 @@
 		<property name="length">
 			<value>158.11766666666668</value>
 		</property>
-		<relationship name="fadeOutCurve">
-			<destination>{4a72d2b2-2370-472e-9f37-c6fa5dd06688}</destination>
-		</relationship>
 		<relationship name="audioFile">
 			<destination>{8d70bb4f-031e-4f02-98ac-89bfd9d48afe}</destination>
 		</relationship>
@@ -108,9 +105,6 @@
 		<property name="length">
 			<value>39.549387755102039</value>
 		</property>
-		<relationship name="fadeInCurve">
-			<destination>{6179b732-3e4c-4495-add2-801fc76d79b4}</destination>
-		</relationship>
 		<relationship name="event">
 			<destination>{5e848c8a-8cee-4848-aa5a-32e594fc4738}</destination>
 		</relationship>
@@ -119,6 +113,9 @@
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{e2476267-58b4-4133-ab16-ad09c7f4b801}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{ebc14777-6d29-4b20-8b28-c990c1f31961}</destination>
 		</relationship>
@@ -137,27 +134,22 @@
 	</object>
 	<object class="MixerBusPanner" id="{d2a75578-870a-4f7c-874b-0342e76eea5e}" />
 	<object class="MixerBusFader" id="{84f20ecb-73cf-4298-b1d1-5bdcf225fc8c}" />
-	<object class="FadeCurve" id="{4a72d2b2-2370-472e-9f37-c6fa5dd06688}">
-		<relationship name="startPoint">
-			<destination>{10f1614f-8267-4001-9684-39504d69b856}</destination>
-		</relationship>
-		<relationship name="endPoint">
-			<destination>{20e58028-daa4-4020-a833-edd97f55f314}</destination>
-		</relationship>
-		<relationship name="relatedModule">
-			<destination>{f2869a8d-1183-48e8-82c7-9850ecf38187}</destination>
-		</relationship>
-	</object>
-	<object class="FadeCurve" id="{6179b732-3e4c-4495-add2-801fc76d79b4}">
-		<relationship name="startPoint">
-			<destination>{d900bd6b-a8e0-4a7c-9307-d1dc79298303}</destination>
-		</relationship>
-		<relationship name="endPoint">
-			<destination>{2f8df59a-69f7-40f9-a29f-0ec485969afe}</destination>
-		</relationship>
-		<relationship name="relatedModule">
-			<destination>{45777cc0-b297-4c6d-ba78-11498f0974ed}</destination>
-		</relationship>
+	<object class="ADSRModulator" id="{e2476267-58b4-4133-ab16-ad09c7f4b801}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>0</value>
+		</property>
+		<property name="releaseTime">
+			<value>4200</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{ebc14777-6d29-4b20-8b28-c990c1f31961}">
 		<relationship name="effects">
@@ -167,43 +159,5 @@
 	<object class="MixerBusPanner" id="{3129aec8-adb0-45bd-9f23-535d0274e7d4}" />
 	<object class="MixerBusFader" id="{b584d508-5d59-47ce-b58e-bec2bff37599}" />
 	<object class="SpatialiserEffect" id="{53a0786f-8c2b-4825-9861-f64f54f53918}" />
-	<object class="AutomationPoint" id="{10f1614f-8267-4001-9684-39504d69b856}">
-		<property name="position">
-			<value>152</value>
-		</property>
-		<property name="value">
-			<value>1</value>
-		</property>
-		<property name="curveShape">
-			<value>0.25471893</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{20e58028-daa4-4020-a833-edd97f55f314}">
-		<property name="position">
-			<value>158.11766666666668</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{d900bd6b-a8e0-4a7c-9307-d1dc79298303}">
-		<property name="position">
-			<value>152</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-		<property name="curveShape">
-			<value>-0.2547189</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{2f8df59a-69f7-40f9-a29f-0ec485969afe}">
-		<property name="position">
-			<value>158.11766666666668</value>
-		</property>
-		<property name="value">
-			<value>1</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{d3a64bf4-8577-4183-8f5e-90a5a09777ca}" />
 </objects>
