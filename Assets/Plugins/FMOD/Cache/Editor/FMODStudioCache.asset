@@ -354,12 +354,13 @@ MonoBehaviour:
   - {fileID: -3385780560051107157}
   - {fileID: -2058432523618543073}
   - {fileID: -4901362813040367991}
+  - {fileID: 1417663149757212521}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1278483287379617233}
   StringsBanks:
   - {fileID: 3916383380135203157}
-  cacheTime: 637999249595149701
+  cacheTime: 637999586904664990
   cacheVersion: 131591
 --- !u!114 &1278483287379617233
 MonoBehaviour:
@@ -376,11 +377,38 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637999249595129758
+  lastModified: 637999586904645064
   FileSizes:
   - Name: Desktop
-    Value: 4784800
+    Value: 4809632
   Exists: 1
+--- !u!114 &1417663149757212521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drum set/Sticks
+  m_EditorClassIdentifier: 
+  Path: event:/Drum set/Sticks
+  Guid:
+    Data1: -2086373514
+    Data2: 1123633621
+    Data3: -291621489
+    Data4: -1135838503
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &2420955890119167665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,12 +526,12 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637999249595149701
+  lastModified: 637999586904664990
   FileSizes:
   - Name: Desktop
-    Value: 1462
+    Value: 1510
   - Name: Mobile
-    Value: 1462
+    Value: 1510
   Exists: 1
 --- !u!114 &4950022710509616201
 MonoBehaviour:

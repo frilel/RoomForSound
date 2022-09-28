@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Push
   - BackButton
+  - Stick
   layers:
   - Default
   - TransparentFX
