@@ -38,7 +38,7 @@ public class TeleportationManager : MonoBehaviour
     {
         locomotionTeleport.enabled = true;
         //locomotionTeleport.EnableMovement(false, false, false, false);
-        //locomotionTeleport.EnableRotation(true, false, false, true);
+        //locomotionTeleport.EnableRotation(false, false, false, false);
 
         var input = locomotionTeleport.GetComponent<TeleportInputHandlerTouch>();
         input.AimingController = AimingController;
