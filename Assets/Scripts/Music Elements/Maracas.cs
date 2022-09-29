@@ -44,18 +44,18 @@ public class Maracas : MonoBehaviour
 
         if (maracaObj.isGrabbed)
         {
-
-
             DetectGrabber();
             moveSpeedVec = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber()));
             moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber())).magnitude;
             acceleration = (moveSpeed - lastSpeed) / Time.deltaTime;
             float clampAcceleration = Mathf.Clamp(acceleration / 10f, 0, 1);
+            float clampAccelerationForVolume=Mathf.Sqrt(clampAcceleration);
             clampAcceleration = Mathf.Pow(clampAcceleration, 3);
-            Debug.Log(acceleration);
-            if (Vector3.Angle(moveSpeedVec, lastSpeedVec) > 80)
+            //Debug.Log(acceleration);
+            if (Vector3.Angle(moveSpeedVec, lastSpeedVec) > 90)
             {
                 macaraInstance.setParameterByName("Pitch", clampAcceleration);
+                macaraInstance.setParameterByName("Volume", clampAccelerationForVolume);
                 macaraInstance.start();
                 
             }
@@ -66,6 +66,7 @@ public class Maracas : MonoBehaviour
                 if (state != FMOD.Studio.PLAYBACK_STATE.PLAYING)
                 {
                     macaraInstance2.setParameterByName("Pitch", clampAcceleration);
+                    macaraInstance.setParameterByName("Volume", clampAccelerationForVolume);
                     macaraInstance2.start();
                     //macaraInstance.release();
                 }
