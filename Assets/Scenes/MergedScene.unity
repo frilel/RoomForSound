@@ -22767,6 +22767,14 @@ PrefabInstance:
       propertyPath: EnableRotation
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1759373965, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: EnableRotationDuringReady
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759373965, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: EnableRotationDuringPostTeleport
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1759373967, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: AimButton
       value: 256

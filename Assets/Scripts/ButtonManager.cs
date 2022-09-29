@@ -16,10 +16,10 @@ public class ButtonManager : MonoBehaviour
     }
 
     private void Update() {
-        for (int i = 0; i < ActiveMesh.Count; i++)
+        /*for (int i = 0; i < ActiveMesh.Count; i++)
         {
            ListShow.text = ActiveMesh[i].material.ToString();
-        }
+        }*/
     }
 
     public void ChangePreviousButtonMaterial()
