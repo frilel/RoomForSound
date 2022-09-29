@@ -9,6 +9,8 @@ public class Maracas : MonoBehaviour
     public FMODUnity.EventReference eventPathInteractionSound;
     FMOD.Studio.EventInstance macaraInstance;
     private float moveSpeed = 0;
+    private Vector3 moveSpeedVec=Vector3.zero;
+    private Vector3 lastSpeedVec=Vector3.zero;
     private float lastSpeed = 0;
     private float acceleration = 0;
     private float lastAcceleration = 0;
@@ -33,15 +35,24 @@ public class Maracas : MonoBehaviour
     }
     private void Update()
     {
-        
+
         if (maracaObj.isGrabbed)
         {
-            DetectGrabber();
-            moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber())).magnitude;
 
+
+            DetectGrabber();
+            moveSpeedVec=GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber()));
+            moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber())).magnitude;
             acceleration = (moveSpeed - lastSpeed) / Time.deltaTime;
             float clampAcceleration = Mathf.Clamp(acceleration / 10f, 0, 1);
+            if(Vector3.Angle(moveSpeedVec,lastSpeedVec)>90)
+            {
+            macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
+            macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
             macaraInstance.setParameterByName("Pitch", clampAcceleration);
+            macaraInstance.start();
+            macaraInstance.release();
+            }
 
             // Debug.Log("maraca make sound");
             if (lastAcceleration > setTriggerVibration && acceleration == 0)
@@ -51,8 +62,10 @@ public class Maracas : MonoBehaviour
             }
             lastAcceleration = acceleration;
             lastSpeed = moveSpeed;
+            lastSpeedVec=moveSpeedVec;
 
-        } else
+        }
+        else
         {
             macaraInstance.setParameterByName("Pitch", 0);
         }
@@ -68,7 +81,7 @@ public class Maracas : MonoBehaviour
                 usedController = OVRInput.Controller.LTouch;
             else if (hitColliders[i].transform.name == GameManager.Instance.RightHandAnchor.transform.name)
                 usedController = OVRInput.Controller.RTouch;
-            
+
         }
 
     }
