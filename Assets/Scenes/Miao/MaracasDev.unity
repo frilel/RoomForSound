@@ -21901,7 +21901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 261427207462933742, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
       propertyPath: eventPathInteractionSound.Path
-      value: event:/Drum set/Snare
+      value: event:/Drumset/Snare/Snare
       objectReference: {fileID: 0}
     - target: {fileID: 261427207462933742, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
       propertyPath: eventPathInteractionSound.Guid.Data1
@@ -22235,7 +22235,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundTwo.Path
-      value: event:/Drum set/Cymbal2
+      value: event:/Drumset/Cymbal2/Cymbal2
       objectReference: {fileID: 0}
     - target: {fileID: 7373640426825393733, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundTwo.Guid.Data1
@@ -22255,7 +22255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundTwo.Path
-      value: event:/Drum set/Cymbal1
+      value: event:/Drumset/Cymbal1/Cymbal1
       objectReference: {fileID: 0}
     - target: {fileID: 7373640427243903932, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
       propertyPath: eventPathInteractionSoundOne.Guid.Data1

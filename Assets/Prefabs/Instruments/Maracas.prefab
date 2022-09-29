@@ -538,7 +538,7 @@ MonoBehaviour:
       Data2: 1337697103
       Data3: -972427889
       Data4: -509725279
-    Path: event:/Drum set/Snare
+    Path: event:/Drumset/Snare/Snare
   setTriggerSound: 3
   usedController: 0
   maracaObj: {fileID: 0}
