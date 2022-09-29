@@ -8,9 +8,10 @@ public class Maracas : MonoBehaviour
     // public FMODUnity.EventReference eventPathInteractionSoundOne;
     public FMODUnity.EventReference eventPathInteractionSound;
     FMOD.Studio.EventInstance macaraInstance;
+    FMOD.Studio.EventInstance macaraInstance2;
     private float moveSpeed = 0;
-    private Vector3 moveSpeedVec=Vector3.zero;
-    private Vector3 lastSpeedVec=Vector3.zero;
+    private Vector3 moveSpeedVec = Vector3.zero;
+    private Vector3 lastSpeedVec = Vector3.zero;
     private float lastSpeed = 0;
     private float acceleration = 0;
     private float lastAcceleration = 0;
@@ -22,16 +23,21 @@ public class Maracas : MonoBehaviour
     public OVRInput.Controller GetGrabber() => usedController;
     private Guid Latest;
     private VFXController _VFXController;
+    private bool isHighSpeed = false;
     private void Start()
     {
-        macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
+        /*macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
         macaraInstance.setParameterByName("Pitch", 0);
         macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         macaraInstance.start();
-        macaraInstance.release();
+        macaraInstance.release();*/
         maracaObj = GetComponent<Grabbable>();
         if (_VFXController == null)
             _VFXController = GetComponentInParent<VFXController>();
+        macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
+        macaraInstance2 = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
+        macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        macaraInstance2.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
     private void Update()
     {
@@ -41,17 +47,28 @@ public class Maracas : MonoBehaviour
 
 
             DetectGrabber();
-            moveSpeedVec=GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber()));
+            moveSpeedVec = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber()));
             moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber())).magnitude;
             acceleration = (moveSpeed - lastSpeed) / Time.deltaTime;
             float clampAcceleration = Mathf.Clamp(acceleration / 10f, 0, 1);
-            if(Vector3.Angle(moveSpeedVec,lastSpeedVec)>90)
+            clampAcceleration = Mathf.Pow(clampAcceleration, 3);
+            Debug.Log(acceleration);
+            if (Vector3.Angle(moveSpeedVec, lastSpeedVec) > 80)
             {
-            macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
-            macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-            macaraInstance.setParameterByName("Pitch", clampAcceleration);
-            macaraInstance.start();
-            macaraInstance.release();
+                macaraInstance.setParameterByName("Pitch", clampAcceleration);
+                macaraInstance.start();
+                
+            }
+            else if (Mathf.Abs(acceleration) > 15)
+            {
+                FMOD.Studio.PLAYBACK_STATE state;
+                macaraInstance2.getPlaybackState(out state);
+                if (state != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    macaraInstance2.setParameterByName("Pitch", clampAcceleration);
+                    macaraInstance2.start();
+                    //macaraInstance.release();
+                }
             }
 
             // Debug.Log("maraca make sound");
@@ -62,7 +79,7 @@ public class Maracas : MonoBehaviour
             }
             lastAcceleration = acceleration;
             lastSpeed = moveSpeed;
-            lastSpeedVec=moveSpeedVec;
+            lastSpeedVec = moveSpeedVec;
 
         }
         else
