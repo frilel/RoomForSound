@@ -11,14 +11,25 @@ public class Maracas : MonoBehaviour
     private float moveSpeed = 0;
     private float lastSpeed = 0;
     private float acceleration = 0;
+    private float lastAcceleration = 0;
+    private float setTriggerVibration = 3f;
+
     public float setTriggerSound = 1.5f;
     public OVRInput.Controller usedController = OVRInput.Controller.None;
     public Grabbable maracaObj;
     public OVRInput.Controller GetGrabber() => usedController;
     private Guid Latest;
+    private VFXController _VFXController;
     private void Start()
     {
+        macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
+        macaraInstance.setParameterByName("Pitch", 0);
+        macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        macaraInstance.start();
+        macaraInstance.release();
         maracaObj = GetComponent<Grabbable>();
+        if (_VFXController == null)
+            _VFXController = GetComponentInParent<VFXController>();
     }
     private void Update()
     {
@@ -27,22 +38,23 @@ public class Maracas : MonoBehaviour
         {
             DetectGrabber();
             moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber())).magnitude;
-            if (moveSpeed > 0.001)
-            {
-                // macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
-            }
-            acceleration = (moveSpeed - lastSpeed) / Time.deltaTime;
-            if (acceleration > setTriggerSound)
-            {
-                macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
-                // Debug.Log("maraca make sound");
-                macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-                macaraInstance.start();
-                macaraInstance.release();
 
+            acceleration = (moveSpeed - lastSpeed) / Time.deltaTime;
+            float clampAcceleration = Mathf.Clamp(acceleration / 10f, 0, 1);
+            macaraInstance.setParameterByName("Pitch", clampAcceleration);
+
+            // Debug.Log("maraca make sound");
+            if (lastAcceleration > setTriggerVibration && acceleration == 0)
+            {
+                // trigger vibration if the user quickly move the maraca and stop then 
+                _VFXController.triggerVibration(GetGrabber(), 0.1f, 0.1f, 1);
             }
+            lastAcceleration = acceleration;
             lastSpeed = moveSpeed;
 
+        } else
+        {
+            macaraInstance.setParameterByName("Pitch", 0);
         }
 
     }
