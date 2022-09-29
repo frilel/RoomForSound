@@ -1491,6 +1491,7 @@ MonoBehaviour:
   _oneGrabTransformer: {fileID: 0}
   _twoGrabTransformer: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!114 &121640439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,6 +1776,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   eventPathInteractionSoundTwo:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  eventPathInteractionSoundThree:
     Guid:
       Data1: 0
       Data2: 0
@@ -4384,6 +4392,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!23 &288591781
 MeshRenderer:
@@ -4820,6 +4835,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &308480333
 MeshCollider:
@@ -4969,6 +4991,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   eventPathInteractionSoundTwo:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  eventPathInteractionSoundThree:
     Guid:
       Data1: 0
       Data2: 0
@@ -13460,6 +13489,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &633786070
 MeshCollider:
@@ -13642,6 +13678,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!23 &646292894
 MeshRenderer:
@@ -13786,6 +13829,7 @@ MonoBehaviour:
   _oneGrabTransformer: {fileID: 0}
   _twoGrabTransformer: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!4 &658655218
 Transform:
   m_ObjectHideFlags: 0
@@ -19958,6 +20002,7 @@ MonoBehaviour:
   _oneGrabTransformer: {fileID: 0}
   _twoGrabTransformer: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!54 &770019067
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22318,6 +22363,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!23 &957459182
 MeshRenderer:
@@ -22689,6 +22741,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   eventPathInteractionSoundTwo:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  eventPathInteractionSoundThree:
     Guid:
       Data1: 0
       Data2: 0
@@ -23811,6 +23870,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   eventPathInteractionSoundTwo:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  eventPathInteractionSoundThree:
     Guid:
       Data1: 0
       Data2: 0
@@ -25588,6 +25654,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &1251858851
 MeshCollider:
@@ -26073,6 +26146,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   eventPathInteractionSoundTwo:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  eventPathInteractionSoundThree:
     Guid:
       Data1: 0
       Data2: 0
@@ -26841,6 +26921,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!1001 &1399384928
 PrefabInstance:
@@ -27194,6 +27281,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   eventPathInteractionSoundTwo:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  eventPathInteractionSoundThree:
     Guid:
       Data1: 0
       Data2: 0
@@ -30885,6 +30979,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &1673506757
 MeshCollider:
@@ -32728,6 +32829,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!23 &1801876147
 MeshRenderer:
@@ -33426,6 +33534,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &1875761204
 MeshCollider:
@@ -33673,7 +33788,7 @@ Transform:
   - {fileID: 1346942093}
   - {fileID: 828908892}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1918116721
 PrefabInstance:
@@ -39162,6 +39277,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!23 &1987114846
 MeshRenderer:
@@ -39974,6 +40096,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  eventPathInteractionSoundThree:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _VFXController: {fileID: 0}
 --- !u!64 &2045846473
 MeshCollider:
@@ -40467,7 +40596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681372687013864540, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681372687013864541, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_RootOrder
@@ -51610,6 +51739,7 @@ MonoBehaviour:
   _oneGrabTransformer: {fileID: 0}
   _twoGrabTransformer: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!82 &6435182109559670223
 AudioSource:
   m_ObjectHideFlags: 0
