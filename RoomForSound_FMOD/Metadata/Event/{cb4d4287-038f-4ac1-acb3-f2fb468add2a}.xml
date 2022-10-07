@@ -133,13 +133,16 @@
 		<property name="length">
 			<value>158.11766666666668</value>
 		</property>
+		<property name="name">
+			<value>Song2 as Basis</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{a4042d8f-21c6-4ef2-a411-74462f0a7649}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b45ee329-b224-4821-9af8-9dcf24fbdf51}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Song2</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{e2476267-58b4-4133-ab16-ad09c7f4b801}</destination>
@@ -160,6 +163,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{9e755748-d054-4220-88f2-355a6a431f00}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
 		<property name="length">
 			<value>158.11766666666668</value>
 		</property>
@@ -188,6 +194,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{386714bc-dd50-43c8-843f-fd77d4620b96}">
+		<property name="color">
+			<value>Magenta Light 1</value>
+		</property>
 		<property name="length">
 			<value>158.11766666666668</value>
 		</property>
