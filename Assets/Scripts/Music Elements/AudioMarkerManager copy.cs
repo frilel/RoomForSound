@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
 using System;
 
-public class TriggerFontain : MonoBehaviour
+public class AudioMarkerManagerCopy : MonoBehaviour
 {
-    ParticleSystem particles;
-    public bool partOnOff = false;
     FMOD.Studio.EVENT_CALLBACK markerCallback;
     FMOD.Studio.EventInstance musicInstance;
 
@@ -15,20 +11,18 @@ public class TriggerFontain : MonoBehaviour
 
      class TimelineInfo
     {
-        // public int currentMusicBar = 0;
         public FMOD.StringWrapper lastMarker = new FMOD.StringWrapper();
     }
 
     TimelineInfo timelineInfo;
     GCHandle timelineHandle;
 
+    public string broadcastMarker;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        particles = GetComponent<ParticleSystem>();
-        
-        
         timelineInfo = new TimelineInfo();
 
         // Explicitly create the delegate object and assign it to a member so it doesn't get freed
@@ -82,34 +76,10 @@ public class TriggerFontain : MonoBehaviour
                 {
                     var parameter = (FMOD.Studio.TIMELINE_MARKER_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_MARKER_PROPERTIES));
                     timelineInfo.lastMarker = parameter.name;
-                    StartParticles();
+                    broadcastMarker = (string)timelineInfo.lastMarker;
                 }
             }
         return FMOD.RESULT.OK;
     }
 
-    public void StartParticles()
-    {
-        particles.Play();
-    }
-
-    private void Update() {
-
-        // Debug.Log((string)timelineInfo.lastMarker);
-
-        // switch ((string)timelineInfo.lastMarker)
-        // {
-        //     case "e":
-        //         particles.Play();
-        //         break;
-        //     case "Marker A":
-        //         particles.Play();
-        //         break;
-        //     default:
-        //         break;
-        // }
-
-    }
-
-    
 }

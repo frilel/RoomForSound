@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4411bac3c88fd7479d6421acf84a386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 515115685}
+  audioManager: {fileID: 0}
 --- !u!65 &59832624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5331,6 +5331,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7878318765722940364, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
   m_PrefabInstance: {fileID: 3582077343691494419}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &515115678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515115677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8743a85cf59959d4382eae6b5d179107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName:
+    Guid:
+      Data1: -884129145
+      Data2: 1254163343
+      Data3: -67980372
+      Data4: 719161926
+    Path: event:/Songs/Song2/Song2
 --- !u!114 &515115685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18653,14 +18672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710c82be252259e4dbf6bcd7a4e51e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partOnOff: 0
-  eventName:
-    Guid:
-      Data1: -884129145
-      Data2: 1254163343
-      Data3: -67980372
-      Data4: 719161926
-    Path: event:/Songs/Song2/Song2
 --- !u!1001 &1297015316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19351,14 +19362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710c82be252259e4dbf6bcd7a4e51e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partOnOff: 0
-  eventName:
-    Guid:
-      Data1: -884129145
-      Data2: 1254163343
-      Data3: -67980372
-      Data4: 719161926
-    Path: event:/Songs/Song2/Song2
 --- !u!199 &1375145016
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -24143,7 +24146,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &1379786840
 PrefabInstance:
@@ -24447,7 +24450,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1399384928
 PrefabInstance:
@@ -32976,34 +32979,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 129357675, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: EnableRotation
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1759373965, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: EnableRotationDuringReady
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1759373965, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: EnableRotationDuringPostTeleport
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1759373967, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: AimButton
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 1759373967, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: CapTouchButton
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 287578550255437038, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573947991263111537, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 4868177967379328994, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -33051,38 +33026,6 @@ PrefabInstance:
     - target: {fileID: 4868177967379328995, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: m_Name
       value: InteractionRigRFS-ControllerHands-V2-Teleport
-      objectReference: {fileID: 0}
-    - target: {fileID: 5081614294111548614, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6911228474728733246, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7859455118946402430, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7859455120994525156, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: m_HDR
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7859455120994525156, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7878318765722709996, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.166
-      objectReference: {fileID: 0}
-    - target: {fileID: 7878318765722709996, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 7878318765722709996, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.981
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
