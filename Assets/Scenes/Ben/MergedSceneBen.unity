@@ -451,7 +451,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-136720
+  m_Name: pb_Mesh235124
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6400,10 +6400,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 750395609837324769, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 206710c72062c714794b81dcd655ba22, type: 2}
     - target: {fileID: 2014279455633101527, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
       propertyPath: m_Name
       value: XylophoneStick (3)
@@ -6452,14 +6448,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 17.906998
       objectReference: {fileID: 0}
-    - target: {fileID: 2014279455863900250, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014279455863900260, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 206710c72062c714794b81dcd655ba22, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
 --- !u!1 &560185288
@@ -32911,10 +32899,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 750395609837324769, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 206710c72062c714794b81dcd655ba22, type: 2}
     - target: {fileID: 2014279455633101527, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
       propertyPath: m_Name
       value: XylophoneStick (1)
@@ -32963,14 +32947,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 17.906998
       objectReference: {fileID: 0}
-    - target: {fileID: 2014279455863900250, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014279455863900260, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 206710c72062c714794b81dcd655ba22, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 693e69294e71c3140887ef1c8efc922b, type: 3}
 --- !u!1001 &3582077343691494419
