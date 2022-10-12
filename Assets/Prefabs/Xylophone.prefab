@@ -305,11 +305,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 716555785
+      Data2: 1269143897
+      Data3: 1588922505
+      Data4: -2074622541
+    Path: event:/Xylophone/3.2.C#3
   _VFXController: {fileID: 0}
 --- !u!1 &387401624556784826
 GameObject:
@@ -438,11 +438,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 793388213
+      Data2: 1074220603
+      Data3: 2002588337
+      Data4: -1210390825
+    Path: event:/Xylophone/3.10.A3
   _VFXController: {fileID: 0}
 --- !u!1 &550464049062055292
 GameObject:
@@ -571,11 +571,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 1426727422
+      Data2: 1239059165
+      Data3: 781252276
+      Data4: -494854740
+    Path: event:/Xylophone/4.1.C4
   _VFXController: {fileID: 0}
 --- !u!1 &627895487077300948
 GameObject:
@@ -704,11 +704,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 60991151
+      Data2: 1263617602
+      Data3: 749486230
+      Data4: -685348158
+    Path: event:/Xylophone/4.7.F#4
   _VFXController: {fileID: 0}
 --- !u!1 &652465873548381634
 GameObject:
@@ -970,11 +970,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 1103563282
+      Data2: 1233317256
+      Data3: 356523148
+      Data4: -1384520057
+    Path: event:/Xylophone/3.8.G3
   _VFXController: {fileID: 0}
 --- !u!1 &1708803641190252649
 GameObject:
@@ -1103,11 +1103,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -1766992622
+      Data2: 1205198447
+      Data3: 559487876
+      Data4: 200187963
+    Path: event:/Xylophone/4.5.E4
   _VFXController: {fileID: 0}
 --- !u!1 &1869423481707437216
 GameObject:
@@ -1236,11 +1236,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 1177250135
+      Data2: 1147898692
+      Data3: -658775674
+      Data4: 743156579
+    Path: event:/Xylophone/3.4.D#3
   _VFXController: {fileID: 0}
 --- !u!1 &1917212896371595980
 GameObject:
@@ -1369,11 +1369,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 1824801289
+      Data2: 1183470887
+      Data3: 1600856497
+      Data4: 1515260665
+    Path: event:/Xylophone/4.4.D#4
   _VFXController: {fileID: 0}
 --- !u!1 &2290471688757556242
 GameObject:
@@ -2063,11 +2063,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -1173198118
+      Data2: 1243707529
+      Data3: -1287790669
+      Data4: 1000005319
+    Path: event:/Xylophone/4.8.G4
   _VFXController: {fileID: 0}
 --- !u!1 &2923823804237609948
 GameObject:
@@ -2786,11 +2786,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -450544118
+      Data2: 1086419568
+      Data3: 211026603
+      Data4: -2085588062
+    Path: event:/Xylophone/3.7.F#3
   _VFXController: {fileID: 0}
 --- !u!1 &3641451902608020880
 GameObject:
@@ -3000,11 +3000,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 2060642640
+      Data2: 1273087310
+      Data3: 2134756526
+      Data4: 1300070342
+    Path: event:/Xylophone/4.9.G#4
   _VFXController: {fileID: 0}
 --- !u!1 &3713140860807648722
 GameObject:
@@ -3133,11 +3133,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -530402941
+      Data2: 1290823057
+      Data3: 1600416421
+      Data4: -632290469
+    Path: event:/Xylophone/3.12.B3
   _VFXController: {fileID: 0}
 --- !u!1 &3795221469632755209
 GameObject:
@@ -3266,11 +3266,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -841646868
+      Data2: 1341895233
+      Data3: -2072866127
+      Data4: 269262531
+    Path: event:/Xylophone/4.3.D4
   _VFXController: {fileID: 0}
 --- !u!1 &3806257682212439530
 GameObject:
@@ -3399,11 +3399,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -59162960
+      Data2: 1212213844
+      Data3: -238265457
+      Data4: 709407129
+    Path: event:/Xylophone/4.6.F4
   _VFXController: {fileID: 0}
 --- !u!1 &4096173225301783623
 GameObject:
@@ -3613,11 +3613,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 1434065019
+      Data2: 1336744060
+      Data3: 1857141128
+      Data4: -211841584
+    Path: event:/Xylophone/3.6.F3
   _VFXController: {fileID: 0}
 --- !u!1 &4392366697069709196
 GameObject:
@@ -3746,11 +3746,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -1736232708
+      Data2: 1103010284
+      Data3: 836318876
+      Data4: 1751897811
+    Path: event:/Xylophone/5.1.C5
   _VFXController: {fileID: 0}
 --- !u!1 &4485005973443996274
 GameObject:
@@ -4079,11 +4079,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -1919151421
+      Data2: 1275411011
+      Data3: 231522983
+      Data4: 776764819
+    Path: event:/Xylophone/4.10.A4
   _VFXController: {fileID: 0}
 --- !u!1 &4963962871090989274
 GameObject:
@@ -4426,11 +4426,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 1523706525
+      Data2: 1114877742
+      Data3: -1995632479
+      Data4: 811767371
+    Path: event:/Xylophone/4.11.A#4
   _VFXController: {fileID: 0}
 --- !u!1 &5216074574931312559
 GameObject:
@@ -4559,11 +4559,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 1105103190
+      Data2: 1340936110
+      Data3: -705347397
+      Data4: -1827440850
+    Path: event:/Xylophone/3.3.D3
   _VFXController: {fileID: 0}
 --- !u!1 &5332929339644549933
 GameObject:
@@ -4906,11 +4906,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -2072093560
+      Data2: 1079518447
+      Data3: -959472214
+      Data4: -1911188440
+    Path: event:/Xylophone/4.12.B4
   _VFXController: {fileID: 0}
 --- !u!1 &5980107183530564719
 GameObject:
@@ -5120,11 +5120,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: -256168435
+      Data2: 1202209659
+      Data3: 846728599
+      Data4: -1133804868
+    Path: event:/Xylophone/3.5.E3
   _VFXController: {fileID: 0}
 --- !u!1 &6528146310863219420
 GameObject:
@@ -5661,11 +5661,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 29412175
+      Data2: 1321891264
+      Data3: 244117408
+      Data4: -8549660
+    Path: event:/Xylophone/3.11.A#3
   _VFXController: {fileID: 0}
 --- !u!1 &7881999437507842792
 GameObject:
@@ -5794,11 +5794,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 312326235
+      Data2: 1333846642
+      Data3: -858417003
+      Data4: 2140513519
+    Path: event:/Xylophone/3.9.G#3
   _VFXController: {fileID: 0}
 --- !u!1 &8040650680447495015
 GameObject:
@@ -5927,11 +5927,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventPathInteractionSoundOne:
     Guid:
-      Data1: -1093874186
-      Data2: 1292045602
-      Data3: 932121533
-      Data4: 1845295261
-    Path: event:/Drumset/HighTom
+      Data1: 62310572
+      Data2: 1153683181
+      Data3: -206517867
+      Data4: 1145623156
+    Path: event:/Xylophone/4.2.C#4
   _VFXController: {fileID: 0}
 --- !u!1 &8301597907749228636
 GameObject:
