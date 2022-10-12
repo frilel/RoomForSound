@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class XylophoneKey : MonoBehaviour
 {
-    FMOD.Studio.EventInstance drumHitSFXInstance;
+    FMOD.Studio.EventInstance xylophoneHitSFXInstance;
     public FMODUnity.EventReference eventPathInteractionSoundOne;
-    public FMODUnity.EventReference eventPathInteractionSoundTwo;
+    // public FMODUnity.EventReference eventPathInteractionSoundTwo;
 
     [SerializeField] private VFXController _VFXController;
 
@@ -21,21 +21,14 @@ public class XylophoneKey : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // get the drum stick object if the interaction on the single drum is noticed = interaction
+        // get the xylophone stick object if the interaction on the single xylophone is noticed = interaction
         if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick))
         {
-            if (OVRInput.Get(OVRInput.Button.One))
-            {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
-            }
-            else
-            {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
-            }
-            drumHitSFXInstance.setParameterByName("Pitch", 1);
-            drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-            drumHitSFXInstance.start();
-            drumHitSFXInstance.release();
+            xylophoneHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+            xylophoneHitSFXInstance.setParameterByName("Volume", 1);
+            xylophoneHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+            xylophoneHitSFXInstance.start();
+            xylophoneHitSFXInstance.release();
             StartCoroutine("hitEffect");
             if (_VFXController != null)
             {
