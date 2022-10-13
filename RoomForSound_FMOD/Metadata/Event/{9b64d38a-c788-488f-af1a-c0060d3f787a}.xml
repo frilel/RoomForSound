@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{9b64d38a-c788-488f-af1a-c0060d3f787a}">
 		<property name="name">
-			<value>C3</value>
+			<value>3.1.C3</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -168,7 +168,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-16</value>
+			<value>-4</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{eef52a4f-eed4-4613-9b15-c6e95131b9a0}">

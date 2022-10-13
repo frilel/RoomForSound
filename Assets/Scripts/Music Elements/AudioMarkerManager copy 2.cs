@@ -2,16 +2,15 @@
 // using System.Runtime.InteropServices;
 // using System;
 
-// public class AudioMarkerManager : MonoBehaviour
+// public class AudioMarkerManager2 : MonoBehaviour
 // {
-//     FMOD.Studio.EVENT_CALLBACK beatCallback;
+//     FMOD.Studio.EVENT_CALLBACK markerCallback;
 //     FMOD.Studio.EventInstance musicInstance;
 
 //     public FMODUnity.EventReference eventName;
 
 //      class TimelineInfo
 //     {
-//         public int currentMusicBar = 0;
 //         public FMOD.StringWrapper lastMarker = new FMOD.StringWrapper();
 //     }
 
@@ -28,7 +27,7 @@
 
 //         // Explicitly create the delegate object and assign it to a member so it doesn't get freed
 //         // by the garbage collected while it's being used
-//         beatCallback = new FMOD.Studio.EVENT_CALLBACK(BeatEventCallback);
+//         markerCallback = new FMOD.Studio.EVENT_CALLBACK(MarkerEventCallback);
 
 //         musicInstance = FMODUnity.RuntimeManager.CreateInstance(eventName);
 
@@ -37,14 +36,9 @@
 //         // Pass the object through the userdata of the instance
 //         musicInstance.setUserData(GCHandle.ToIntPtr(timelineHandle));
 
-//         musicInstance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
+//         musicInstance.setCallback(markerCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
 //         musicInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
 //         musicInstance.start();
-//     }
-
-//     public void AudioMarkerManagerPlayAudio()
-//     {
-        
 //     }
 
 //     void OnDestroy()
@@ -61,9 +55,10 @@
 //     }
 
 //     [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
-//     static FMOD.RESULT BeatEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr)
+//     FMOD.RESULT MarkerEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr)
 //     {
 //         FMOD.Studio.EventInstance instance = new FMOD.Studio.EventInstance(instancePtr);
+
 //         // Retrieve the user data
 //         IntPtr timelineInfoPtr;
 //         FMOD.RESULT result = instance.getUserData(out timelineInfoPtr);
@@ -73,31 +68,18 @@
 //         }
 //         else if (timelineInfoPtr != IntPtr.Zero)
 //         {
-//             // Get the object to store beat and marker details
+//             // Get the object to store marker details
 //             GCHandle timelineHandle = GCHandle.FromIntPtr(timelineInfoPtr);
 //             TimelineInfo timelineInfo = (TimelineInfo)timelineHandle.Target;
 
-//             switch (type)
-//             {
-//                 case FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT:
-//                     {
-//                         var parameter = (FMOD.Studio.TIMELINE_BEAT_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_BEAT_PROPERTIES));
-//                         timelineInfo.currentMusicBar = parameter.bar;
-//                     }
-//                     break;
-//                 case FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER:
-//                     {
-//                         var parameter = (FMOD.Studio.TIMELINE_MARKER_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_MARKER_PROPERTIES));
-//                         timelineInfo.lastMarker = parameter.name;
-//                     }
-//                     break;
+//             if(type == FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER)
+//                 {
+//                     var parameter = (FMOD.Studio.TIMELINE_MARKER_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_MARKER_PROPERTIES));
+//                     timelineInfo.lastMarker = parameter.name;
+//                     broadcastMarker = (string)timelineInfo.lastMarker;
+//                 }
 //             }
-//         }
 //         return FMOD.RESULT.OK;
-//     }
-
-//     private void Update() {
-//         broadcastMarker = timelineInfo.lastMarker;
 //     }
 
 // }
