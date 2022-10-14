@@ -22,7 +22,7 @@ public class VFXController : MonoBehaviour
         this.CallWithDelay(stopVibration, delay);
 
     }
-    void stopVibration()
+    public void stopVibration()
     {
         OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
         OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);

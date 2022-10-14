@@ -7,15 +7,18 @@ using UnityEngine.UI;
 public class ButtonAction : MonoBehaviour
 {
     private GameObject cam;
-    private AudioManager audioManager;
+    // private AudioManager audioManager;
+    // private AudioMarkerManager audioMarkerManager;
     // public Text debugText;
     [SerializeField] public MeshRenderer ButtonMaterial;
     [SerializeField] public ButtonManager ButtonManager;
+    public GameObject Song2GO;
+    GameObject song2;
 
     private void Start() 
     {
             cam = GameObject.Find("OVRCameraRig"); 
-            audioManager = cam.GetComponent<AudioManager>();
+            // audioManager = cam.GetComponent<AudioManager>();
     }
 
     public void TriggerAudio()
@@ -27,23 +30,25 @@ public class ButtonAction : MonoBehaviour
         {
             case "Button01":
                 ChangePreviousButtonMaterial();
-                audioManager.PlaySong("Song1/Song1");
+                // audioManager.PlaySong("Song1/Song1");
                 PlaceInMaterialArray();
                 break;
             case "Button02":
                 ChangePreviousButtonMaterial();
-                audioManager.PlaySong("Song2/Song2");
+                // audioManager.PlaySong("Song2/Song2");
+                song2 = Instantiate(Song2GO);
                 PlaceInMaterialArray();
                 break;
             case "Button03":
-                audioManager.TurnOffCurrentInstrument();
+                // audioManager.TurnOffCurrentInstrument();
                 // ChangePreviousButtonMaterial();
                 // audioManager.PlaySong("Song2/Song2");
                 // PlaceInMaterialArray();
                 break;
             case "Button04":
                 ChangePreviousButtonMaterial();
-                audioManager.StopSong();
+                // audioManager.StopSong();
+                Destroy(song2);
                 break;
             default: 
                 break;

@@ -26,11 +26,6 @@ public class Maracas : MonoBehaviour
     private bool isHighSpeed = false;
     private void Start()
     {
-        /*macaraInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSound);
-        macaraInstance.setParameterByName("Pitch", 0);
-        macaraInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-        macaraInstance.start();
-        macaraInstance.release();*/
         maracaObj = GetComponent<Grabbable>();
         if (_VFXController == null)
             _VFXController = GetComponentInParent<VFXController>();
@@ -49,7 +44,7 @@ public class Maracas : MonoBehaviour
             moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber())).magnitude;
             acceleration = (moveSpeed - lastSpeed) / Time.deltaTime;
             float clampAcceleration = Mathf.Clamp(acceleration / 10f, 0, 1);
-            float clampAccelerationForVolume=Mathf.Sqrt(clampAcceleration);
+            float clampAccelerationForVolume = Mathf.Sqrt(clampAcceleration);
             clampAcceleration = Mathf.Pow(clampAcceleration, 3);
             //Debug.Log(acceleration);
             if (Vector3.Angle(moveSpeedVec, lastSpeedVec) > 90)
@@ -68,24 +63,22 @@ public class Maracas : MonoBehaviour
                     macaraInstance2.setParameterByName("Pitch", clampAcceleration);
                     macaraInstance.setParameterByName("Volume", clampAccelerationForVolume);
                     macaraInstance2.start();
+                    _VFXController.triggerVibration(GetGrabber(), 0.1f, 0.1f, 1);
                     //macaraInstance.release();
                 }
             }
 
-            // Debug.Log("maraca make sound");
-            if (lastAcceleration > setTriggerVibration && acceleration == 0)
-            {
-                // trigger vibration if the user quickly move the maraca and stop then 
-                _VFXController.triggerVibration(GetGrabber(), 0.1f, 0.1f, 1);
-            }
             lastAcceleration = acceleration;
             lastSpeed = moveSpeed;
             lastSpeedVec = moveSpeedVec;
-
         }
         else
         {
             macaraInstance.setParameterByName("Pitch", 0);
+            macaraInstance.setParameterByName("Volume", 0);
+            macaraInstance2.setParameterByName("Pitch", 0);
+            macaraInstance.setParameterByName("Volume", 0);
+            _VFXController.stopVibration();
         }
 
     }
