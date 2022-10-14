@@ -20,6 +20,14 @@ public class HandInstruction : MonoBehaviour
     {
         rightHandAnimator.SetInteger("motionID", instructionController.motionID);
         rightOculusHandAnimator.SetInteger("motionID", instructionController.motionID);
+        rightHandAnimator.SetBool("wait", instructionController.wait);
+        rightOculusHandAnimator.SetBool("wait", instructionController.wait);
+        /*        if (instructionController.changeInstruction)
+                {
+                    rightHandAnimator.SetInteger("motionID", instructionController.motionID);
+                    rightOculusHandAnimator.SetInteger("motionID", instructionController.motionID);
+                }*/
+
 
     }
 

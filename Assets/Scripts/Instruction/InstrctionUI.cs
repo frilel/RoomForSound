@@ -9,7 +9,8 @@ public class InstrctionUI : MonoBehaviour
     string[] instructionText =
 {
         "Welcome! Some useful tips would appear here",
-        "First, adjust your hand position to hold controller"
+        "First, adjust your hand position to hold controller",
+        "Select one music to play!"
     };
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class InstrctionUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tip.SetText(instructionText[instructionController.motionID]);
+        if (instructionController.motionID >= 0)
+            tip.SetText(instructionText[instructionController.motionID]);
     }
 }
