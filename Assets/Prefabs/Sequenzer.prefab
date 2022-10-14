@@ -750,9 +750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: {fileID: 0}
   ButtonMaterial: {fileID: 2834829763222199273}
   ButtonManager: {fileID: 7769636612826393244}
+  Song2GO: {fileID: 0}
 --- !u!1 &718503512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,9 +1532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: {fileID: 0}
   ButtonMaterial: {fileID: 547560072}
   ButtonManager: {fileID: 7769636612826393244}
+  Song2GO: {fileID: 5225755801503719693, guid: d44d832e5e1a2804b96d1c7ca262e745, type: 3}
 --- !u!1 &1540830915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,9 +1623,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: {fileID: 0}
   ButtonMaterial: {fileID: 84604723}
   ButtonManager: {fileID: 7769636612826393244}
+  Song2GO: {fileID: 0}
 --- !u!1 &1586052799
 GameObject:
   m_ObjectHideFlags: 0
@@ -6485,9 +6485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: {fileID: 0}
   ButtonMaterial: {fileID: 0}
   ButtonManager: {fileID: 0}
+  Song2GO: {fileID: 0}
 --- !u!1 &7565730756616281307
 GameObject:
   m_ObjectHideFlags: 0
@@ -6621,7 +6621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListShow: {fileID: 0}
-  material: {fileID: 2100000, guid: d534492611cc8a54b8cd656c3d205442, type: 2}
+  material: {fileID: 2100000, guid: 2cb6b3e7fedd1654b8373348dc73e037, type: 2}
   ActiveMesh: []
 --- !u!1 &7966199435319959294
 GameObject:
