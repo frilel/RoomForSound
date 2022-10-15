@@ -1039,6 +1039,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3556818849776593372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FlameThrow/FlameThrowShort
+  m_EditorClassIdentifier: 
+  Path: event:/FlameThrow/FlameThrowShort
+  Guid:
+    Data1: 2067621750
+    Data2: 1236168193
+    Data3: -1283179132
+    Data4: 1583120570
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 900
 --- !u!114 &-3472946857483378134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,6 +1428,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-1246386247636295271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FlameThrow/FlameThrowLong
+  m_EditorClassIdentifier: 
+  Path: event:/FlameThrow/FlameThrowLong
+  Guid:
+    Data1: -1340101095
+    Data2: 1106603170
+    Data3: 1050333349
+    Data4: -2063973798
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5351
 --- !u!114 &-671411267369357733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1555,6 +1609,9 @@ MonoBehaviour:
   - {fileID: -1276346677163776345}
   - {fileID: -2074272711866043983}
   - {fileID: -4594882577580237681}
+  - {fileID: -1246386247636295271}
+  - {fileID: -3556818849776593372}
+  - {fileID: 3424449672764231202}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1278483287379617233}
@@ -1848,7 +1905,7 @@ MonoBehaviour:
   lastModified: 638014499450381031
   FileSizes:
   - Name: Desktop
-    Value: 8358176
+    Value: 8489696
   Exists: 1
 --- !u!114 &1281051470542862836
 MonoBehaviour:
@@ -2134,6 +2191,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3424449672764231202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FlameThrow/FlameThrowMedium
+  m_EditorClassIdentifier: 
+  Path: event:/FlameThrow/FlameThrowMedium
+  Guid:
+    Data1: 462869391
+    Data2: 1159515465
+    Data3: 258765495
+    Data4: 503567479
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3278
 --- !u!114 &3482821228245385050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2200,9 +2284,9 @@ MonoBehaviour:
   lastModified: 638014499450401393
   FileSizes:
   - Name: Desktop
-    Value: 3144
+    Value: 3284
   - Name: Mobile
-    Value: 3144
+    Value: 3284
   Exists: 1
 --- !u!114 &4099776152855883723
 MonoBehaviour:
