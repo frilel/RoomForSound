@@ -2,14 +2,14 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 using System;
 
-public class Song2 : MonoBehaviour
+public class Song1 : MonoBehaviour
 {
     FMOD.Studio.EVENT_CALLBACK beatCallback;
     FMOD.Studio.EventInstance musicInstance;
 
     public FMODUnity.EventReference eventName;
 
-     class TimelineInfo
+     class TimelineInfo 
     {
         public int currentMusicBar = 0;
         public FMOD.StringWrapper lastMarker = new FMOD.StringWrapper();

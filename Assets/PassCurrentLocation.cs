@@ -1,17 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PassCurrentLocation : MonoBehaviour
 {
 
-    public AudioManager audioManager;
+    public ButtonManager buttonManager;
+
+    private void Start() {
+        buttonManager = GameObject.Find("Sequenzer").GetComponent<ButtonManager>();
+    }
 
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player"))
         {
-            audioManager.SetCurrentPosition(this.gameObject.name);
+            buttonManager.SetCurrentLocationName(this.gameObject.name);
         }
    }
 }
