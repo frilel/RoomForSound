@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class clapping : MonoBehaviour
+public class AudienceAudio : MonoBehaviour
 {
     FMOD.Studio.EventInstance clap;
 
