@@ -6488,11 +6488,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06fffad65a125fb40a88fa275c60daf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListShow: {fileID: 0}
   material: {fileID: 2100000, guid: 2cb6b3e7fedd1654b8373348dc73e037, type: 2}
-  ActiveMesh: []
   Song1GO: {fileID: 5225755801503719693, guid: 6760933a05bb56448aa8cca7574b9d6b, type: 3}
   Song2GO: {fileID: 5225755801503719693, guid: d44d832e5e1a2804b96d1c7ca262e745, type: 3}
+  button03MeshRenderer: {fileID: 64717143008825226}
+  red: {fileID: 2100000, guid: c93c3d21da2ec4145a158635b7208b8f, type: 2}
+  white: {fileID: 2100000, guid: b65ef5d9c1644914285febde502c6533, type: 2}
 --- !u!1 &7966199435319959294
 GameObject:
   m_ObjectHideFlags: 0
