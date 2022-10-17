@@ -45,15 +45,24 @@ public class Song2 : MonoBehaviour
     void OnDestroy()
     {
         musicInstance.setUserData(IntPtr.Zero);
-        musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         musicInstance.release();
         timelineHandle.Free();
     }
 
-    // void OnGUI()
-    // {
-    //     GUILayout.Box(String.Format("Last Marker = {0}", (string)timelineInfo.lastMarker));
-    // }
+    public void TurnOffCurrentInstrument(string currentLocation)
+    {
+        float value;
+        musicInstance.getParameterByName(currentLocation, out value);
+        // if(value == 0) 
+        // {
+        //     musicInstance.setParameterByName(currentLocation, 1f);
+        // }
+        if(value == 1) 
+        {
+            musicInstance.setParameterByName(currentLocation, 0f);
+        }
+    }
 
     [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
     static FMOD.RESULT BeatEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr)
