@@ -8,11 +8,11 @@ public class ButtonManager : MonoBehaviour
 
     public GameObject Song1GO;
     public GameObject Song2GO;
-    GameObject currentSong;
+    GameObject currentSong = null;
     string currentPosition;
     Song2 song2Script;
     Song1 song1Script;
-    MeshRenderer button03MeshRenderer;
+    public MeshRenderer button03MeshRenderer;
     public Material red;
     public Material white;
 
