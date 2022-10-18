@@ -24,12 +24,12 @@ class SoundToObjectVisualization : MonoBehaviour
     // public Color c1 = Color.yellow;
     // public Color c2 = Color.red;
 
-#if UNITY_EDITOR
-    void Reset()
-    {
-        eventName = FMODUnity.EventReference.Find("event:/BackgroundTrack");
-    }
-#endif
+// #if UNITY_EDITOR
+//     void Reset()
+//     {
+//         eventName = FMODUnity.EventReference.Find("event:/BackgroundTrack");
+//     }
+// #endif
 
     void Start()
     {
@@ -59,6 +59,7 @@ class SoundToObjectVisualization : MonoBehaviour
             FMOD.Studio.Bus selectedBus = FMODUnity.RuntimeManager.GetBus("bus:/");
             if (selectedBus.hasHandle())
             {
+
                 // Get the channel group
                 FMOD.ChannelGroup channelGroup;
                 if (selectedBus.getChannelGroup(out channelGroup) == FMOD.RESULT.OK)
@@ -135,7 +136,15 @@ class SoundToObjectVisualization : MonoBehaviour
                         // float level = lin2dB(mFFTSpectrum[i]);
                         // pos.y = (80 + level) * HEIGHT;
 
-                        Debug.Log(mFFTSpectrum[i]);
+                        // float level = lin2dB(mFFTSpectrum[i]);
+                        // Debug.Log(mFFTSpectrum[i]);
+
+                        
+                        // float previousX = transform.localScale.x;
+                        float level = lin2dB(mFFTSpectrum[i]);
+
+
+                        gameObject.transform.localRotation = Quaternion.Euler(transform.localRotation.x + Mathf.Abs(level), transform.localRotation.y, transform.localRotation.z);
 
                         // mLineRenderer.SetPosition(i, pos);
                     }
@@ -144,8 +153,8 @@ class SoundToObjectVisualization : MonoBehaviour
         }
     }
 
-    // private float lin2dB(float linear)
-    // {
-    //     return Mathf.Clamp(Mathf.Log10(linear) * 20.0f, -80.0f, 0.0f);
-    // }
+    private float lin2dB(float linear)
+    {
+        return Mathf.Clamp(Mathf.Log10(linear) * 20.0f, -80.0f, 0.0f);
+    }
 }
