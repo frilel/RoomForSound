@@ -5798,6 +5798,7 @@ Transform:
   m_Children:
   - {fileID: 1424864687}
   - {fileID: 975936126}
+  - {fileID: 1432969957}
   m_Father: {fileID: 522752896}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6922,7 +6923,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429928052}
-  - {fileID: 1432969957}
   m_Father: {fileID: 167424650}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16441,6 +16441,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motionID: 0
+  changeInstruction: 0
+  wait: 0
 --- !u!1 &1225503580
 GameObject:
   m_ObjectHideFlags: 0
@@ -18970,8 +18972,8 @@ Transform:
   m_Children:
   - {fileID: 3086976475446798357}
   - {fileID: 5816558531372956783}
-  m_Father: {fileID: 522752896}
-  m_RootOrder: 1
+  m_Father: {fileID: 429928052}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1434373545
 PrefabInstance:
