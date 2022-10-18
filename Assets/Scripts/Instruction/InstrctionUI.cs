@@ -10,7 +10,8 @@ public class InstrctionUI : MonoBehaviour
 {
         "Welcome! Some useful tips would appear here",
         "First, adjust your hand position to hold controller",
-        "Select one music to play!"
+        "Use middle finger to press trigger and select one music",
+        "Use index finger to press trigger and grab drumstick"
     };
 
     // Start is called before the first frame update

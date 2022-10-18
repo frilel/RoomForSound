@@ -7,6 +7,7 @@ public class InstructionController : MonoBehaviour
     public int motionID = 0;
     bool[] motionIDFinish = { false, false, false }; // holdcontroller, press button for sequencer, hold drumstick, teleport 
     bool enableInstruction = true;
+    public GameObject canvasTips;
     [HideInInspector]
     public bool changeInstruction = false;
     bool success = true; // check whether user successfully do the right control 
@@ -17,22 +18,34 @@ public class InstructionController : MonoBehaviour
         new Vector3(0.0f, 0.0f, 0.0f),
         new Vector3(0.0f, 0.0f, 0.0f),
         new Vector3(1.0f, 0.2f, -0.5f),
+        new Vector3(0.8f, -0.1f, 0.0f),
+
+    };
+    Quaternion[] canvasTipsRotation =
+    {
+
+        Quaternion.Euler(0, 0, 0),
+        Quaternion.Euler(0, 0, 0),
+        Quaternion.Euler(0, 90, 0),
+        Quaternion.Euler(0, 45, 0),
     };
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(MotionIDTimeCount(3f));
+        StartCoroutine(MotionIDTimeCount(3f));
         transform.position = instructionPositions[motionID];
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One))
+        if (OVRInput.GetDown(OVRInput.Button.One) && motionID < 3)
         {
             motionIDFinish[motionID] = true;
             motionID++;
             transform.position = instructionPositions[motionID];
+            canvasTips.transform.rotation = canvasTipsRotation[motionID];
         }
     }
     void ChangeInstruction(bool continueOrNot)

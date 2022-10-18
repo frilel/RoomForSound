@@ -14,9 +14,5 @@ public class HandAnimator : MonoBehaviour
     {
         instructionController.handleAnimationEnd();
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
