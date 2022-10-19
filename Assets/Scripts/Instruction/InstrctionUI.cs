@@ -11,7 +11,8 @@ public class InstrctionUI : MonoBehaviour
         "Welcome! Some useful tips would appear here",
         "First, adjust your hand position to hold controller",
         "Use middle finger to press trigger and select one music",
-        "Use index finger to press trigger and grab drumstick"
+        "Use index finger to press trigger and grab drumstick",
+        "Try teleport!"
     };
 
     // Start is called before the first frame update

@@ -5,7 +5,7 @@ using UnityEngine;
 public class InstructionController : MonoBehaviour
 {
     public int motionID = 0;
-    bool[] motionIDFinish = { false, false, false }; // holdcontroller, press button for sequencer, hold drumstick, teleport 
+    bool[] motionIDFinish = { false, false, false, false, false, false }; // holdcontroller, press button for sequencer, hold drumstick, teleport 
     bool enableInstruction = true;
     public GameObject canvasTips;
     public GameObject handL;
@@ -43,14 +43,14 @@ public class InstructionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One) && motionID < 4)
+        if (OVRInput.GetDown(OVRInput.RawButton.A) && motionID < instructionPositions.Length)
         {
             motionIDFinish[motionID] = true;
             motionID++;
             transform.position = instructionPositions[motionID];
             canvasTips.transform.rotation = canvasTipsRotation[motionID];
         }
-        if (motionID == 4)
+        if (motionID == instructionPositions.Length)
         {
             handL.SetActive(true);
         }
