@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MRDeskShadow_URP
+  m_Name: MRDeskShadow_URP 1
   m_Shader: {fileID: -6465566751694194690, guid: 0a29d84c783abf14ab3429769879fd4b, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -48,7 +48,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2536bd26b31282a44b56ae3fdafe7fed, type: 3}
+        m_Texture: {fileID: 2800000, guid: cfc43721dc1f76548bf28aac1055af33, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -115,7 +115,7 @@ Material:
     - _ColorLight: {r: 0.7, g: 0.6723164, b: 0.6169491, a: 0}
     - _DetailTexTiling: {r: 2, g: 2, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 1, g: 0.932047, b: 0, a: 1}
+    - _ShadowColor: {r: 1, g: 0.9791946, b: 0.1745283, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &7908436250688330460
