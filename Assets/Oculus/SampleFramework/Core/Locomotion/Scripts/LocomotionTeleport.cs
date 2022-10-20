@@ -770,9 +770,9 @@ public class LocomotionTeleport : MonoBehaviour
 	{
 		var character = LocomotionController.CharacterController;
 		var characterTransform = character.transform;
-		var destTransform = _teleportDestination.OrientationIndicator;
+		var destTransform = _teleportDestination.PositionIndicator; // was OrientationIndicator before
 
-		Vector3 destPosition = destTransform.position;
+        Vector3 destPosition = destTransform.position;
 		//destPosition.y += character.height * 0.5f;
 		Quaternion destRotation = _teleportDestination.LandingRotation;// destTransform.rotation;
 #if false
@@ -842,8 +842,8 @@ public class LocomotionTeleport : MonoBehaviour
 	/// <param name="positionPercent"></param>
 	public void DoWarp(Vector3 startPos, float positionPercent)
 	{
-		var destTransform = _teleportDestination.OrientationIndicator;
-		Vector3 destPosition = destTransform.position;
+		var destTransform = _teleportDestination.PositionIndicator; // was OrientationIndicator before
+        Vector3 destPosition = destTransform.position;
 		destPosition.y += LocomotionController.CharacterController.height/2.0f;
 
 		var character = LocomotionController.CharacterController;

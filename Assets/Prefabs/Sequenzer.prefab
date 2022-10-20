@@ -550,6 +550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 614100909}
+  - component: {fileID: 4119998189073657828}
   m_Layer: 0
   m_Name: Button02
   m_TagString: Untagged
@@ -570,11 +571,23 @@ Transform:
   m_Children:
   - {fileID: 1586052800}
   - {fileID: 1688312890}
-  - {fileID: 1488585117}
   - {fileID: 1025390557}
   m_Father: {fileID: 7769636612826393245}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4119998189073657828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614100908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonMeshRenderer: {fileID: 547560072}
 --- !u!1 &640866090
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,52 +720,6 @@ Transform:
   m_Father: {fileID: 915242695}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &674055765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 674055766}
-  - component: {fileID: 674055767}
-  m_Layer: 0
-  m_Name: ButtonAction
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &674055766
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674055765}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2834829761625354235}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &674055767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674055765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ButtonMaterial: {fileID: 2834829763222199273}
-  ButtonManager: {fileID: 7769636612826393244}
-  Song2GO: {fileID: 0}
 --- !u!1 &718503512
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +944,7 @@ Transform:
   - {fileID: 735674025}
   - {fileID: 1290340103}
   m_Father: {fileID: 1948699870}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &915242696
 MonoBehaviour:
@@ -1028,9 +995,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1578215493}
+      - m_Target: {fileID: 7695613728656336135}
         m_TargetAssemblyTypeName: ButtonAction, Assembly-CSharp
-        m_MethodName: TriggerAudio
+        m_MethodName: ForwardButtonPush
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1088,7 +1055,7 @@ Transform:
   - {fileID: 311901251}
   - {fileID: 406677635}
   m_Father: {fileID: 614100909}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1025390558
 MonoBehaviour:
@@ -1139,9 +1106,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1488585118}
+      - m_Target: {fileID: 4119998189073657828}
         m_TargetAssemblyTypeName: ButtonAction, Assembly-CSharp
-        m_MethodName: TriggerAudio
+        m_MethodName: ForwardButtonPush
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1489,52 +1456,6 @@ Transform:
   m_Father: {fileID: 1025390557}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1488585116
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1488585117}
-  - component: {fileID: 1488585118}
-  m_Layer: 0
-  m_Name: ButtonAction
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1488585117
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488585116}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 614100909}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1488585118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488585116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ButtonMaterial: {fileID: 547560072}
-  ButtonManager: {fileID: 7769636612826393244}
-  Song2GO: {fileID: 5225755801503719693, guid: d44d832e5e1a2804b96d1c7ca262e745, type: 3}
 --- !u!1 &1540830915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,52 +1501,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transform: {fileID: 1540830917}
   _radius: 0.05
---- !u!1 &1578215491
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1578215492}
-  - component: {fileID: 1578215493}
-  m_Layer: 0
-  m_Name: ButtonAction
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1578215492
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578215491}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1948699870}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1578215493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578215491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ButtonMaterial: {fileID: 84604723}
-  ButtonManager: {fileID: 7769636612826393244}
-  Song2GO: {fileID: 0}
 --- !u!1 &1586052799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,6 +1843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948699870}
+  - component: {fileID: 7695613728656336135}
   m_Layer: 0
   m_Name: Button04
   m_TagString: Untagged
@@ -1988,11 +1864,23 @@ Transform:
   m_Children:
   - {fileID: 545795767}
   - {fileID: 913014667}
-  - {fileID: 1578215492}
   - {fileID: 915242695}
   m_Father: {fileID: 7769636612826393245}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7695613728656336135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948699869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonMeshRenderer: {fileID: 84604723}
 --- !u!1 &359099928350548632
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,7 +2241,7 @@ Transform:
   - {fileID: 3866419192528048872}
   - {fileID: 6404932846653791308}
   m_Father: {fileID: 2136945999676046329}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &4563795262102454598
 MonoBehaviour:
@@ -2404,9 +2292,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7110134301094923773}
+      - m_Target: {fileID: 2810569058314295944}
         m_TargetAssemblyTypeName: ButtonAction, Assembly-CSharp
-        m_MethodName: TriggerAudio
+        m_MethodName: ForwardButtonPush
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3033,7 +2921,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your Instrument
+  m_Text: Turn Off current Instrument
 --- !u!1 &2325407983919666492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3500,6 +3388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2834829761625354235}
+  - component: {fileID: 2314332570071259279}
   m_Layer: 0
   m_Name: Button01
   m_TagString: Untagged
@@ -3520,11 +3409,23 @@ Transform:
   m_Children:
   - {fileID: 2834829761713303919}
   - {fileID: 2834829761837467379}
-  - {fileID: 674055766}
   - {fileID: 2834829762019349178}
   m_Father: {fileID: 7769636612826393245}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2314332570071259279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2834829761625354229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonMeshRenderer: {fileID: 2834829763222199273}
 --- !u!1 &2834829761713303918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,7 +3653,7 @@ Transform:
   - {fileID: 2834829762280195979}
   - {fileID: 2787288378990446758}
   m_Father: {fileID: 2834829761625354235}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &2834829762019349179
 MonoBehaviour:
@@ -3803,9 +3704,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 674055767}
+      - m_Target: {fileID: 2314332570071259279}
         m_TargetAssemblyTypeName: ButtonAction, Assembly-CSharp
-        m_MethodName: TriggerAudio
+        m_MethodName: ForwardButtonPush
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4731,6 +4632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2136945999676046329}
+  - component: {fileID: 2810569058314295944}
   m_Layer: 0
   m_Name: Button03
   m_TagString: Untagged
@@ -4751,11 +4653,23 @@ Transform:
   m_Children:
   - {fileID: 3756386515469354732}
   - {fileID: 526679749473375727}
-  - {fileID: 1016002918917965321}
   - {fileID: 8417888383690905888}
   m_Father: {fileID: 7769636612826393245}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2810569058314295944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5026959740454256922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonMeshRenderer: {fileID: 64717143008825226}
 --- !u!1 &5080096457214880040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6442,52 +6356,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7373125110934222276
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1016002918917965321}
-  - component: {fileID: 7110134301094923773}
-  m_Layer: 0
-  m_Name: ButtonAction
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1016002918917965321
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7373125110934222276}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2136945999676046329}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7110134301094923773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7373125110934222276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6dbe3081b002b46b9b70517ac9a9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ButtonMaterial: {fileID: 0}
-  ButtonManager: {fileID: 0}
-  Song2GO: {fileID: 0}
 --- !u!1 &7565730756616281307
 GameObject:
   m_ObjectHideFlags: 0
@@ -6620,9 +6488,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06fffad65a125fb40a88fa275c60daf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListShow: {fileID: 0}
   material: {fileID: 2100000, guid: 2cb6b3e7fedd1654b8373348dc73e037, type: 2}
-  ActiveMesh: []
+  Song1GO: {fileID: 5225755801503719693, guid: 6760933a05bb56448aa8cca7574b9d6b, type: 3}
+  Song2GO: {fileID: 5225755801503719693, guid: d44d832e5e1a2804b96d1c7ca262e745, type: 3}
+  button03MeshRenderer: {fileID: 64717143008825226}
+  red: {fileID: 2100000, guid: c93c3d21da2ec4145a158635b7208b8f, type: 2}
+  white: {fileID: 2100000, guid: b65ef5d9c1644914285febde502c6533, type: 2}
 --- !u!1 &7966199435319959294
 GameObject:
   m_ObjectHideFlags: 0

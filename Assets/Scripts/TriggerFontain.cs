@@ -7,8 +7,12 @@ public class TriggerFontain : MonoBehaviour
     string triggerState;
     bool songActiveBool = false;
 
+    FMOD.Studio.EventInstance flameThrowShort;
+    
+
     private void Start() {
         particles = GetComponent<ParticleSystem>();
+        flameThrowShort = FMODUnity.RuntimeManager.CreateInstance("event:/FlameThrow/FlameThrowShort");
     }
 
     public void InitiateSong2()
@@ -29,12 +33,13 @@ public class TriggerFontain : MonoBehaviour
         // Debug.Log(song2);
         if(song2 != null) 
         {
-            Debug.Log(song2.broadcastMarker);
-            Debug.Log(triggerState);
             if(triggerState != song2.broadcastMarker)
             {
+                flameThrowShort.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+                flameThrowShort.start();
                 triggerState = song2.broadcastMarker;
                 StartParticles();
+
             }
         }
 
