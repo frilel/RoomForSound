@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9125204456654765067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Gong/GongCenter
+  m_EditorClassIdentifier: 
+  Path: event:/Gong/GongCenter
+  Guid:
+    Data1: 1106898579
+    Data2: 1256536551
+    Data3: 1795498114
+    Data4: 1594759457
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4710
+--- !u!114 &-8986636272182869834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Gong/GongOuter
+  m_EditorClassIdentifier: 
+  Path: event:/Gong/GongOuter
+  Guid:
+    Data1: 2047167617
+    Data2: 1117815959
+    Data3: 1148813195
+    Data4: -869763088
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10455
 --- !u!114 &-8492869478379565308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +206,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-7812740125714254079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Songs/Kall ft. BenG/Kall ft. BenG
+  m_EditorClassIdentifier: 
+  Path: event:/Songs/Kall ft. BenG/Kall ft. BenG
+  Guid:
+    Data1: 316460875
+    Data2: 1136203471
+    Data3: 1892223407
+    Data4: 1891315796
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 179512
 --- !u!114 &-7400252534855013200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,12 +1694,17 @@ MonoBehaviour:
   - {fileID: -3512891166489636755}
   - {fileID: -949703858989825250}
   - {fileID: 4160569890286882981}
+  - {fileID: 8418890040213917001}
+  - {fileID: -8986636272182869834}
+  - {fileID: -9125204456654765067}
+  - {fileID: -7812740125714254079}
+  - {fileID: 3469587014785051382}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1278483287379617233}
   StringsBanks:
   - {fileID: 3916383380135203157}
-  cacheTime: 638017247413010045
+  cacheTime: 638017905241477985
   cacheVersion: 131591
 --- !u!114 &12281985263074687
 MonoBehaviour:
@@ -1903,10 +1989,10 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638017247412970403
+  lastModified: 638017905241438100
   FileSizes:
   - Name: Desktop
-    Value: 8520320
+    Value: 26299040
   Exists: 1
 --- !u!114 &1281051470542862836
 MonoBehaviour:
@@ -2219,6 +2305,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3278
+--- !u!114 &3469587014785051382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Songs/Vini Weedi Whiskey/Vini Weedi Whiskey
+  m_EditorClassIdentifier: 
+  Path: event:/Songs/Vini Weedi Whiskey/Vini Weedi Whiskey
+  Guid:
+    Data1: -1803140767
+    Data2: 1325968115
+    Data3: -1258103662
+    Data4: 1834840805
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 193411
 --- !u!114 &3482821228245385050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2282,12 +2395,12 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638017247413010045
+  lastModified: 638017905241477985
   FileSizes:
   - Name: Desktop
-    Value: 3398
+    Value: 3652
   - Name: Mobile
-    Value: 3398
+    Value: 3652
   Exists: 1
 --- !u!114 &4099776152855883723
 MonoBehaviour:
@@ -2861,6 +2974,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8418890040213917001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Gong/GongMid
+  m_EditorClassIdentifier: 
+  Path: event:/Gong/GongMid
+  Guid:
+    Data1: -2005652207
+    Data2: 1183648032
+    Data3: -1411071592
+    Data4: 2048032050
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10570
 --- !u!114 &8424272923219485901
 MonoBehaviour:
   m_ObjectHideFlags: 0
