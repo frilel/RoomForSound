@@ -55,6 +55,7 @@ public class AudienceControl : MonoBehaviour
             snc.UpdateChat(audience.name, audience.messages[0].message);
         }
         StartCoroutine("DeleteMessage");
+        messagePanel.SetActive(false);
         switch (text)
         {
             case "Dance":
@@ -84,25 +85,30 @@ public class AudienceControl : MonoBehaviour
             case "cheer":
                 animator.Play("Cheer");
                 break;
+            case "Firework":
+            case "firework":
+                animator.Play("Firework");
+                break;
 
             default:
+                messagePanel.SetActive(true);
+                messageText.text = text;
                 break;
         }
-        messagePanel.SetActive(true);
-        messageText.text = text;
+
 
     }
     IEnumerator DeleteMessage()
     {
         yield return new WaitForSeconds(2);
-        messageText.text="no message here, type something";
+        messageText.text = "no message here, type something";
         messagePanel.SetActive(false);
         string url = "https://roomforsound-server.herokuapp.com/messages?id=" + audience.messages[0].id;
         UnityWebRequest www = UnityWebRequest.Delete(url);
         Debug.Log("Message Deleted");
         yield return www.SendWebRequest();
     }
-    
+
     public void ChangeAvatar(int index)
     {
         avatarIndex = index;
