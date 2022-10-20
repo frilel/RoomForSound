@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 206710c72062c714794b81dcd655ba22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,8 +93,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.23989639
+  m_Center: {x: 3.5812745e-11, y: -1.0671356e-11, z: -0.0041799247}
 --- !u!1 &2014279455600391699
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014279455633101527}
-  m_LocalRotation: {x: 0.70955324, y: -0.29572046, z: -0.6260126, w: -0.13111809}
+  m_LocalRotation: {x: 0.7095529, y: -0.2957237, z: -0.62601125, w: -0.13111909}
   m_LocalPosition: {x: 2.8862026, y: 0.91580236, z: -1.2836461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -326,6 +326,7 @@ MonoBehaviour:
   _oneGrabTransformer: {fileID: 0}
   _twoGrabTransformer: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!114 &2014279455633101521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +481,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3856830374845270463, guid: d4fe44d19cb18da44a5ded48dbc55fd3, type: 3}
+  - {fileID: 2100000, guid: 206710c72062c714794b81dcd655ba22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -518,12 +519,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014279455863900249}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.008020784
-  m_Height: 0.27618837
+  m_Height: 0.26182234
   m_Direction: 2
-  m_Center: {x: -0.00041363286, y: 0.00015930335, z: -0.007889197}
+  m_Center: {x: -0.00041357704, y: 0.00015916955, z: -0.0007071048}
 --- !u!1 &2014279456059201587
 GameObject:
   m_ObjectHideFlags: 0
