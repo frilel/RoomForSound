@@ -18,12 +18,16 @@ public class Song2 : MonoBehaviour
     TimelineInfo timelineInfo;
     GCHandle timelineHandle;
 
+    Transform cam;
+
     public string broadcastMarker;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        cam = GameObject.Find("OVRCameraRig").transform;
+
         timelineInfo = new TimelineInfo();
 
         // Explicitly create the delegate object and assign it to a member so it doesn't get freed
@@ -38,7 +42,7 @@ public class Song2 : MonoBehaviour
         musicInstance.setUserData(GCHandle.ToIntPtr(timelineHandle));
 
         musicInstance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
-        musicInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        musicInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(cam));
         musicInstance.start();
     }
 
