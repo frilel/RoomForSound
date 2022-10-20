@@ -89,6 +89,10 @@ public class AudienceControl : MonoBehaviour
             case "firework":
                 animator.Play("Firework");
                 break;
+            case "Heart":
+            case "heart":
+                animator.Play("Heart");
+                break;
 
             default:
                 messagePanel.SetActive(true);
