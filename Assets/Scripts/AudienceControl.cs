@@ -11,10 +11,13 @@ public class AudienceControl : MonoBehaviour
     public Audience audience;
     public Animator animator;
     private int avatarIndex;
+    private Color nameColor;
     // Start is called before the first frame update
     void Start()
     {
         animator = transform.GetChild(0).GetChild(1).GetComponent<Animator>();
+        nameColor=new Color(Random.Range(0,1f),Random.Range(0,1f),Random.Range(0,1f),1);
+        nameText.color=nameColor;
     }
 
     // Update is called once per frame
@@ -52,10 +55,11 @@ public class AudienceControl : MonoBehaviour
         Debug.Log("got message from " + audience.name + ": " + text);
         foreach (StandNoteControl snc in FindObjectsOfType<StandNoteControl>())
         {
-            snc.UpdateChat(audience.name, audience.messages[0].message);
+            snc.UpdateChat(audience.name, audience.messages[0].message,nameColor);
         }
         StartCoroutine("DeleteMessage");
         messagePanel.SetActive(false);
+        messageText.text = text;
         switch (text)
         {
             case "Dance":
