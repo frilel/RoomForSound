@@ -232,7 +232,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 179565
+  Length: 183565
 --- !u!114 &-7400252534855013200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,7 +1704,7 @@ MonoBehaviour:
   - {fileID: 1278483287379617233}
   StringsBanks:
   - {fileID: 3916383380135203157}
-  cacheTime: 638017918397214432
+  cacheTime: 638018648067689900
   cacheVersion: 131591
 --- !u!114 &12281985263074687
 MonoBehaviour:
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638017918397168459
+  lastModified: 638018648067669937
   FileSizes:
   - Name: Desktop
     Value: 26334656
@@ -2395,11 +2395,9 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638017918397214432
+  lastModified: 638018648067689900
   FileSizes:
   - Name: Desktop
-    Value: 3652
-  - Name: Mobile
     Value: 3652
   Exists: 1
 --- !u!114 &4099776152855883723
