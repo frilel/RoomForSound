@@ -36,7 +36,7 @@ public class AudienceAudio : MonoBehaviour
     }
     public void SendHeart()
     {
-        GameObject heart = Instantiate(heartPrefab, transform.position+Vector3.up*1.8f, Quaternion.identity);
+        GameObject heart = Instantiate(heartPrefab, transform.position+Vector3.up*2.2f, Quaternion.identity);
         heart.transform.LookAt(heart.transform.position + parentObejct.forward);
         //firework.GetComponent<Rigidbody>().AddForce(firework.transform.forward * fireworkForce, ForceMode.Impulse);
         //Invoke("DisableTrail", 2f);
