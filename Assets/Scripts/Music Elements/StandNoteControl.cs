@@ -5,58 +5,68 @@ public class StandNoteControl : MonoBehaviour
 {
     public Text chatText;
     //public Tex
+    public TMP_Text chatTextTmp;
     string chatContent;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void UpdateChat(string name, string newText,Color nameColor)
+    public void UpdateChat(string name, string newText, Color nameColor)
     {
-        string nameToAdd=$"【<color=#{ColorUtility.ToHtmlStringRGBA( nameColor )}>{name}</color>】";
-        string messageToAdd="";
-        switch(newText)
+        string nameToAdd = $"[<color=#{ColorUtility.ToHtmlStringRGBA(nameColor)}>{name}</color>]";
+        string messageToAdd = "";
+        switch (newText)
         {
             case "Dance":
             case "dance":
-                messageToAdd=" is dancing!";
+                messageToAdd = " is dancing!";
                 break;
             case "Clap":
             case "clap":
-                messageToAdd=" is clapping!";
+                messageToAdd = " is clapping!";
                 break;
             case "Idle":
             case "idle":
-                messageToAdd=" is causally standing now.";
+                messageToAdd = " is causally standing now.";
                 break;
             case "Wave":
             case "wave":
-                messageToAdd=" is waving!";
+                messageToAdd = " is waving!";
                 break;
             case "Cheer":
             case "cheer":
-                messageToAdd=" is cheering!";
+                messageToAdd = " is cheering!";
                 break;
             case "Firework":
             case "firework":
-                messageToAdd=" sent a firework!";
+                messageToAdd = " sent a firework!";
                 break;
             case "Heart":
             case "heart":
-                messageToAdd=" sent a heart!";
+                messageToAdd = " sent a heart!";
                 break;
             default:
-                messageToAdd=": "+newText;
+                messageToAdd = ": " + newText;
                 break;
         }
-        
-        chatContent=nameToAdd+messageToAdd+"\n"+chatContent;
-        chatText.text=chatContent;
+
+        chatContent = nameToAdd + messageToAdd + "\n" + chatContent;
+        if (chatText)
+        {
+            chatText.text = chatContent;
+        }
+        if (chatTextTmp)
+        {
+            chatTextTmp.text = chatContent;
+        }
+
+
     }
 }
