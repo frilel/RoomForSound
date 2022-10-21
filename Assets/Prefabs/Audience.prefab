@@ -254,6 +254,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireworks: {fileID: 7058031951913826931, guid: 970c82c12231fc2488d8ef550bbd8214, type: 3}
   heartPrefab: {fileID: 385252033520640231, guid: 7ec152b28b897754588fc730ffe44356, type: 3}
+  fireworksSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!95 &7186970181697740947
 Animator:
   serializedVersion: 3
@@ -287,6 +294,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireworks: {fileID: 7058031951913826931, guid: 970c82c12231fc2488d8ef550bbd8214, type: 3}
   heartPrefab: {fileID: 385252033520640231, guid: 7ec152b28b897754588fc730ffe44356, type: 3}
+  fireworksSound:
+    Guid:
+      Data1: 117881556
+      Data2: 1154308321
+      Data3: 659728044
+      Data4: -1306050429
+    Path: event:/Audience/Fireworks
 --- !u!95 &7186970180601583291
 Animator:
   serializedVersion: 3
@@ -320,6 +334,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireworks: {fileID: 7058031951913826931, guid: 970c82c12231fc2488d8ef550bbd8214, type: 3}
   heartPrefab: {fileID: 385252033520640231, guid: 7ec152b28b897754588fc730ffe44356, type: 3}
+  fireworksSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &5265842962007802702
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +419,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireworks: {fileID: 7058031951913826931, guid: 970c82c12231fc2488d8ef550bbd8214, type: 3}
   heartPrefab: {fileID: 385252033520640231, guid: 7ec152b28b897754588fc730ffe44356, type: 3}
+  fireworksSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &7186970180591672583
 GameObject:
   m_ObjectHideFlags: 0
