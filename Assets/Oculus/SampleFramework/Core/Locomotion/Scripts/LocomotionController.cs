@@ -53,6 +53,6 @@ public class LocomotionController : MonoBehaviour
 
     private void Update()
     {
-        //CharacterController.height = GameManager.Instance.CenterEyeAnchor.transform.position.y;
+        CharacterController.height = GameManager.Instance.CenterEyeAnchor.transform.position.y;
     }
 }
