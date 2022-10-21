@@ -232,7 +232,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 183565
+  Length: 179565
 --- !u!114 &-7400252534855013200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,6 +1278,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3125075460585826165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audience/Fireworks
+  m_EditorClassIdentifier: 
+  Path: event:/Audience/Fireworks
+  Guid:
+    Data1: 117881556
+    Data2: 1154308321
+    Data3: 659728044
+    Data4: -1306050429
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2391
 --- !u!114 &-2900396902605646091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1699,12 +1726,13 @@ MonoBehaviour:
   - {fileID: -9125204456654765067}
   - {fileID: -7812740125714254079}
   - {fileID: 3469587014785051382}
+  - {fileID: -3125075460585826165}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1278483287379617233}
   StringsBanks:
   - {fileID: 3916383380135203157}
-  cacheTime: 638019442263406362
+  cacheTime: 638019497007897256
   cacheVersion: 131591
 --- !u!114 &12281985263074687
 MonoBehaviour:
@@ -1989,10 +2017,10 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638019442263406362
+  lastModified: 638019497007856601
   FileSizes:
   - Name: Desktop
-    Value: 26334656
+    Value: 26366784
   Exists: 1
 --- !u!114 &1281051470542862836
 MonoBehaviour:
@@ -2395,12 +2423,12 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638018986938479982
+  lastModified: 638019497007897256
   FileSizes:
   - Name: Desktop
-    Value: 3652
+    Value: 3692
   - Name: Mobile
-    Value: 3652
+    Value: 3692
   Exists: 1
 --- !u!114 &4099776152855883723
 MonoBehaviour:

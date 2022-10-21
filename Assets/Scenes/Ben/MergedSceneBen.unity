@@ -28255,13 +28255,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9adc38dbd367924f98abaeb6e855a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventPathInteractionSoundOne:
+  gongOuter:
     Guid:
       Data1: 2047167617
       Data2: 1117815959
       Data3: 1148813195
       Data4: -869763088
     Path: event:/Gong/GongOuter
+  gongMid:
+    Guid:
+      Data1: -2005652207
+      Data2: 1183648032
+      Data3: -1411071592
+      Data4: 2048032050
+    Path: event:/Gong/GongMid
+  gongCenter:
+    Guid:
+      Data1: 1106898579
+      Data2: 1256536551
+      Data3: 1795498114
+      Data4: 1594759457
+    Path: event:/Gong/GongCenter
 --- !u!64 &6061124861210467798
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28764,13 +28778,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9adc38dbd367924f98abaeb6e855a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventPathInteractionSoundOne:
+  gongOuter:
     Guid:
-      Data1: 1106898579
-      Data2: 1256536551
-      Data3: 1795498114
-      Data4: 1594759457
-    Path: event:/Gong/GongCenter
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  gongMid:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  gongCenter:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!64 &8074836687581946673
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28902,13 +28930,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9adc38dbd367924f98abaeb6e855a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventPathInteractionSoundOne:
+  gongOuter:
     Guid:
-      Data1: -2005652207
-      Data2: 1183648032
-      Data3: -1411071592
-      Data4: 2048032050
-    Path: event:/Gong/GongMid
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  gongMid:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  gongCenter:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!54 &8284572620770866718
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -6,14 +6,20 @@ public class AudienceAudio : MonoBehaviour
     public GameObject fireworks;
     public GameObject heartPrefab;
     private Transform fireworksSpawnPos;
-    private float fireworkForce = 1f;
+    private float fireworkForce = 1.7f;
     private Transform parentObejct;
+
+    FMOD.Studio.EventInstance fireworksInstance;
 
     private void Start()
     {
         
         parentObejct=transform.parent.parent;
         fireworksSpawnPos =parentObejct.GetChild(5);
+
+        fireworksInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Audience/Fireworks");
+
+        fireworksInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
     public void StartClap()
     {
@@ -24,12 +30,19 @@ public class AudienceAudio : MonoBehaviour
     }
     public void SendFirework()
     {
+        Invoke("PlayFireworksSound", 0f);
         GameObject firework = Instantiate(fireworks, fireworksSpawnPos.position, Quaternion.identity);
         firework.transform.LookAt(firework.transform.position + parentObejct.forward + parentObejct.up * 2);
         firework.GetComponent<Rigidbody>().AddForce(firework.transform.forward * fireworkForce, ForceMode.Impulse);
         //Invoke("DisableTrail", 2f);
-        Destroy(firework, 3.5f);
+        Destroy(firework, 2.5f);
     }
+
+    private void PlayFireworksSound()
+    {
+        fireworksInstance.start();
+    }
+
     private void DisableTrail()
     {
         GetComponent<TrailRenderer>().enabled = false;
@@ -48,5 +61,9 @@ public class AudienceAudio : MonoBehaviour
         clap.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         clap.start();
         clap.release();
+    }
+
+    private void OnDestroy() {
+        fireworksInstance.release();
     }
 }
