@@ -35,25 +35,31 @@ public class InstructionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        motionID = 0;
         StartCoroutine(MotionIDTimeCount(3f));
         transform.position = instructionPositions[motionID];
-        
+        enableInstruction = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.A) && motionID < instructionPositions.Length)
+        if (enableInstruction)
         {
-            motionIDFinish[motionID] = true;
-            motionID++;
-            transform.position = instructionPositions[motionID];
-            canvasTips.transform.rotation = canvasTipsRotation[motionID];
+            if (OVRInput.GetDown(OVRInput.RawButton.A) && motionID < instructionPositions.Length)
+            {
+                motionIDFinish[motionID] = true;
+                if (motionIDFinish[motionID + 1] == true) motionID++; // skip the one that already finished 
+                motionID++;
+                transform.position = instructionPositions[motionID];
+                canvasTips.transform.rotation = canvasTipsRotation[motionID];
+            }
+            if (motionID == instructionPositions.Length - 1)
+            {
+                handL.SetActive(true);
+            }
         }
-        if (motionID == instructionPositions.Length)
-        {
-            handL.SetActive(true);
-        }
+
     }
     void ChangeInstruction(bool continueOrNot)
     {
@@ -82,6 +88,6 @@ public class InstructionController : MonoBehaviour
         //wait = true;
         //if (motionID == 1) success = true;
         //StartCoroutine(MotionIDTimeCount(3f));
-
+        if (motionID == instructionPositions.Length - 1) enableInstruction = false;
     }
 }
