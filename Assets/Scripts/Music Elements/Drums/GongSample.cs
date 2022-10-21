@@ -2,13 +2,23 @@ using UnityEngine;
 
 public class GongSample : MonoBehaviour
 {
-    FMOD.Studio.EventInstance GongHitSFXInstance;
-    public FMODUnity.EventReference eventPathInteractionSoundOne;
+    FMOD.Studio.EventInstance gongOuterInstance;
+    FMOD.Studio.EventInstance gongMidInstance;
+    FMOD.Studio.EventInstance gongCenterInstance;
+    public FMODUnity.EventReference gongOuter;
+    public FMODUnity.EventReference gongMid;
+    public FMODUnity.EventReference gongCenter;
     private Transform centerPos;
 
     private void Start() {
-        GongHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
-        GongHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        gongOuterInstance = FMODUnity.RuntimeManager.CreateInstance(gongOuter);
+        gongMidInstance = FMODUnity.RuntimeManager.CreateInstance(gongMid);
+        gongCenterInstance = FMODUnity.RuntimeManager.CreateInstance(gongCenter);
+
+        gongOuterInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        gongMidInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        gongCenterInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
         centerPos=transform.GetChild(1).transform;
     }
 
@@ -16,14 +26,24 @@ public class GongSample : MonoBehaviour
     {
         if (collision.transform.TryGetComponent<DrumStick>(out DrumStick drumStick))
         {
-            Debug.Log(CalculateDistance( collision.GetContact(0).point,centerPos.position));
-            //if( collision.GetContact(0).point)
-            GongHitSFXInstance.start();
+            float hitMark = CalculateDistance(collision.GetContact(0).point,centerPos.position);
+            if(hitMark <= 1.3f)
+            {
+                gongCenterInstance.start();
+            } else if(hitMark > 1.3f && hitMark < 2.6f) 
+            {
+                gongMidInstance.start();
+            } else if(hitMark > 2.6f && hitMark < 5f)
+            {
+                gongOuterInstance.start();
+            }
         }
     }
 
     private void OnDestroy() {
-        GongHitSFXInstance.release();
+        gongCenterInstance.release();
+        gongMidInstance.release();
+        gongOuterInstance.release();
     }
     private float CalculateDistance(Vector3 a, Vector3 b)
     {
