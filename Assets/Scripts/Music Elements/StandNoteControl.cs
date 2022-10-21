@@ -6,7 +6,8 @@ public class StandNoteControl : MonoBehaviour
     public Text chatText;
     //public Tex
     public TMP_Text chatTextTmp;
-    string chatContent;
+    string chatContentTMp;
+    string chatContentNormalText;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,14 +58,15 @@ public class StandNoteControl : MonoBehaviour
                 break;
         }
 
-        chatContent = nameToAdd + messageToAdd + "\n" + chatContent;
+        chatContentNormalText = nameToAdd + messageToAdd + "\n" + chatContentNormalText;
+        chatContentTMp=chatContentTMp+ "\n" +nameToAdd + messageToAdd;
         if (chatText)
         {
-            chatText.text = chatContent;
+            chatText.text = chatContentNormalText;
         }
         if (chatTextTmp)
         {
-            chatTextTmp.text = chatContent;
+            chatTextTmp.text = chatContentTMp;
         }
 
 
