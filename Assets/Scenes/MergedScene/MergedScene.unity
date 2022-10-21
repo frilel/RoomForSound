@@ -12056,6 +12056,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 835872755735883076, guid: 39129dbe07001bc48971e542b338cc9d, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 835872755791511997, guid: 39129dbe07001bc48971e542b338cc9d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -12132,7 +12136,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chatText: {fileID: 0}
-  chatTextTmp: {fileID: 0}
+  chatTextTmp: {fileID: 958504825}
+--- !u!114 &958504825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 835872755735883076, guid: 39129dbe07001bc48971e542b338cc9d, type: 3}
+  m_PrefabInstance: {fileID: 958504821}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958504822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &958550600
 GameObject:
   m_ObjectHideFlags: 0

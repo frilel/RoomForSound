@@ -12,12 +12,13 @@ public class AudienceControl : MonoBehaviour
     public Animator animator;
     private int avatarIndex;
     private Color nameColor;
+    private bool isDisplayingMessage = false;
     // Start is called before the first frame update
     void Start()
     {
         animator = transform.GetChild(0).GetChild(1).GetComponent<Animator>();
-        nameColor=new Color(Random.Range(0,1f),Random.Range(0,1f),Random.Range(0,1f),1);
-        nameText.color=nameColor;
+        nameColor = new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f), 1);
+        nameText.color = nameColor;
     }
 
     // Update is called once per frame
@@ -35,8 +36,9 @@ public class AudienceControl : MonoBehaviour
     {
         audience = a;
         UpdateDisplay();
-        if (audience.messages.Count > 0)
+        if (audience.messages.Count > 0 && !isDisplayingMessage)
         {
+            isDisplayingMessage = true;
             UpdateMessage();
         }
     }
@@ -52,10 +54,10 @@ public class AudienceControl : MonoBehaviour
             return;
         }
         string text = audience.messages[0].message;
-        Debug.Log("got message from " + audience.name + ": " + text);
+        //Debug.Log("got message from " + audience.name + ": " + text);
         foreach (StandNoteControl snc in FindObjectsOfType<StandNoteControl>())
         {
-            snc.UpdateChat(audience.name, audience.messages[0].message,nameColor);
+            snc.UpdateChat(audience.name, audience.messages[0].message, nameColor);
         }
         StartCoroutine("DeleteMessage");
         messagePanel.SetActive(false);
@@ -108,12 +110,14 @@ public class AudienceControl : MonoBehaviour
     }
     IEnumerator DeleteMessage()
     {
-        yield return new WaitForSeconds(2);
-        messageText.text = "no message here, type something";
-        messagePanel.SetActive(false);
+        //yield return new WaitForSeconds(1.5f);
         string url = "https://roomforsound-server.herokuapp.com/messages?id=" + audience.messages[0].id;
         UnityWebRequest www = UnityWebRequest.Delete(url);
-        Debug.Log("Message Deleted");
+        //Debug.Log("Message Deleted");
+        yield return new WaitForSeconds(1.5f);
+        messageText.text = "no message here, type something";
+        messagePanel.SetActive(false);
+        isDisplayingMessage = false;
         yield return www.SendWebRequest();
     }
 
