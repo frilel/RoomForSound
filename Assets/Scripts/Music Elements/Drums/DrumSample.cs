@@ -1,9 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DrumSample : MonoBehaviour
 {
-
     FMOD.Studio.EventInstance drumHitSFXInstance;
     public FMODUnity.EventReference eventPathInteractionSoundOne;
     public FMODUnity.EventReference eventPathInteractionSoundTwo;
@@ -33,10 +33,9 @@ public class DrumSample : MonoBehaviour
             }
             else
             {
+                // won't work with drumstick but maybe something else hits the drum?
                 impactSpeed = collision.collider.attachedRigidbody.velocity.magnitude;
             }
-
-            //DebugInVR.Instance.text.text = $"impactSpeed: {impactSpeed}";
 
             // normalize the impact speed to get a range approx. between 0 and 1
             //x normalized = (x / x minimum) / (x maximum / x minimum)
@@ -44,38 +43,64 @@ public class DrumSample : MonoBehaviour
 
             // limit the min value to 0 and max value to 1 
             float clampImpactSpeed = Mathf.Clamp(normalizedImpactSpeed, 0, 1);
+
             // feedback to console
-            Debug.Log($"You hit the {transform.name} with impact speed: {clampImpactSpeed}. Using {drumStick.GetGrabber()}");
+            //Debug.Log($"You hit the {transform.name} with impact speed: {clampImpactSpeed}. Using {drumStick.GetGrabber()}");
 
-            // ImpactSpeedText.text = impactSpeed.ToString();
-
-
-            if(OVRInput.Get(OVRInput.Button.One))
-            {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
-            } 
-            else if(OVRInput.Get(OVRInput.Button.Two))
-            {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundThree);
-            } 
-            else 
-            {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
-            }
-            drumHitSFXInstance.setParameterByName("Pitch", clampImpactSpeed);
-            drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-            drumHitSFXInstance.start();
-            drumHitSFXInstance.release();
-
-            if (_VFXController != null)
-            {
-                _VFXController.triggerOne(collision.transform);
-                _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
-            }
-
+            PlaySFX(clampImpactSpeed);
+            PlayVFX(collision.transform, drumStick.GetGrabber());
         }
 
-        //FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
+    }
 
+    /// <summary>
+    /// Executed when pressing bass drum pedal
+    /// </summary>
+    public void PlayKickPedal(InputAction.CallbackContext context)
+    {
+        if(context.action.phase == InputActionPhase.Performed)
+        {
+            PlaySFX(1);
+        }
+    }
+
+    /// <summary>
+    /// Executed when pressing HiHat pedal.
+    /// </summary>
+    public void PlayHiHatPedal(InputAction.CallbackContext context)
+    {
+        if (context.action.phase == InputActionPhase.Performed)
+        {
+            PlaySFX(1);
+        }
+    }
+
+    public void PlaySFX(float clampImpactSpeed01)
+    {
+        if (OVRInput.Get(OVRInput.Button.One))
+        {
+            drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
+        }
+        else if (OVRInput.Get(OVRInput.Button.Two))
+        {
+            drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundThree);
+        }
+        else
+        {
+            drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+        }
+        drumHitSFXInstance.setParameterByName("Pitch", clampImpactSpeed01);
+        drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        drumHitSFXInstance.start();
+        drumHitSFXInstance.release();
+    }
+
+    public void PlayVFX(Transform spawnLoc, OVRInput.Controller usedController)
+    {
+        if (_VFXController == null)
+            return;
+
+        _VFXController.triggerOne(spawnLoc);
+        _VFXController.triggerVibration(usedController, 0.1f, 0.1f, 1);
     }
 }
