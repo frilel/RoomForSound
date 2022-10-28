@@ -9,18 +9,20 @@ public class InstructionController : MonoBehaviour
     bool enableInstruction = true;
     public GameObject canvasTips;
     public GameObject handL;
+    public GameObject handR;
     [HideInInspector]
     public bool changeInstruction = false;
+    public GameObject instructionCursor;
     bool success = true; // check whether user successfully do the right control 
     public bool wait = false; // wait to check whether user follows the instruction
     Vector3[] instructionPositions =
     {
 
+        new Vector3(0.0f, 0f, 0.0f),
         new Vector3(0.0f, 0.0f, 0.0f),
-        new Vector3(0.0f, 0.0f, 0.0f),
-        new Vector3(1.0f, 0.2f, -0.5f),
+        new Vector3(0.92f, 0.228f, -0.742f),
         new Vector3(0.8f, -0.1f, 0.0f),
-        new Vector3(-1.0f, 0.06f, -0.8f),
+        new Vector3(-0.5868f, -0.149f, -0.6812f),
 
     };
     Quaternion[] canvasTipsRotation =
@@ -46,24 +48,35 @@ public class InstructionController : MonoBehaviour
     {
         if (enableInstruction)
         {
-            if (OVRInput.GetDown(OVRInput.RawButton.A) && motionID < instructionPositions.Length)
+            if ((OVRInput.GetDown(OVRInput.RawButton.A)))
             {
-                motionIDFinish[motionID] = true;
-                if (motionIDFinish[motionID + 1] == true) motionID++; // skip the one that already finished 
-                motionID++;
-                transform.position = instructionPositions[motionID];
-                canvasTips.transform.rotation = canvasTipsRotation[motionID];
+                if (motionID < instructionPositions.Length-1)
+                {
+                    //Debug.Log("ss");
+                    motionIDFinish[motionID] = true;
+                    if (motionIDFinish[motionID + 1] == true) motionID++; // skip the one that already finished 
+                    motionID++;
+                    transform.position = instructionPositions[motionID];
+                    canvasTips.transform.rotation = canvasTipsRotation[motionID];
+                }
+                else
+                {
+                    instructionCursor.SetActive(false);
+                    transform.gameObject.SetActive(false);
+                }
+
             }
             if (motionID == instructionPositions.Length - 1)
             {
                 handL.SetActive(true);
+                handR.SetActive(false);
             }
         }
 
     }
     void ChangeInstruction(bool continueOrNot)
     {
-        
+
         if (continueOrNot && motionID < 2)
         {
             // changeInstruction = true;
@@ -77,7 +90,7 @@ public class InstructionController : MonoBehaviour
     }
     public IEnumerator MotionIDTimeCount(float delay)
     {
-        
+
         yield return new WaitForSeconds(delay);
         ChangeInstruction(success);
     }
