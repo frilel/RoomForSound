@@ -612,8 +612,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 1300.0,
-            "y": 580.0
+            "x": 934.0,
+            "y": 591.9999389648438
         },
         "m_Blocks": [
             {
@@ -629,8 +629,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 1300.0,
-            "y": 780.0
+            "x": 934.0,
+            "y": 791.9999389648438
         },
         "m_Blocks": [
             {
@@ -1184,8 +1184,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 2223.0,
-            "y": 1837.0,
+            "x": 2104.000244140625,
+            "y": 1711.0,
             "width": 208.0,
             "height": 302.0
         }
@@ -3241,8 +3241,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 2223.0,
-            "y": 1238.0,
+            "x": 2194.0,
+            "y": 1349.0,
             "width": 208.0,
             "height": 326.0
         }
@@ -3401,8 +3401,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1108.0,
-            "y": 763.0,
+            "x": 742.0,
+            "y": 775.0,
             "width": 107.0,
             "height": 34.0
         }
