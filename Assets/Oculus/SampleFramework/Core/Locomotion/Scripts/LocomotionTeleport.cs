@@ -41,12 +41,16 @@ public class LocomotionTeleport : MonoBehaviour
 		Teleporting,
 		PostTeleport
 	}
-
-	#region Linear movement control booleans.
-	/// <summary>
-	/// Allow linear movement prior to the teleport system being activated.
-	/// </summary>
-	[Tooltip("Allow linear movement prior to the teleport system being activated.")]
+	InstructionController instructionController;
+    public void Start()
+    {
+		instructionController = FindObjectOfType<InstructionController>();
+    }
+    #region Linear movement control booleans.
+    /// <summary>
+    /// Allow linear movement prior to the teleport system being activated.
+    /// </summary>
+    [Tooltip("Allow linear movement prior to the teleport system being activated.")]
 	public bool EnableMovementDuringReady = true;
 
 	/// <summary>
@@ -786,7 +790,8 @@ public class LocomotionTeleport : MonoBehaviour
 		{
 			Teleported(characterTransform, destPosition, destRotation);
 		}
-
+		instructionController.motionIDFinish[1] = true;
+		instructionController.motionIDFinish[4] = true;
 		characterTransform.position = destPosition;
 		characterTransform.rotation = destRotation;
 	}
