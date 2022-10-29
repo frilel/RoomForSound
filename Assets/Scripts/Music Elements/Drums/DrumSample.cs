@@ -4,7 +4,9 @@ using UnityEngine.UI;
 public class DrumSample : MonoBehaviour
 {
 
-    FMOD.Studio.EventInstance drumHitSFXInstance;
+    FMOD.Studio.EventInstance drumInstanceOne;
+    FMOD.Studio.EventInstance drumInstanceTwo;
+    FMOD.Studio.EventInstance drumInstanceThree;
     public FMODUnity.EventReference eventPathInteractionSoundOne;
     public FMODUnity.EventReference eventPathInteractionSoundTwo;
     public FMODUnity.EventReference eventPathInteractionSoundThree;
@@ -19,6 +21,15 @@ public class DrumSample : MonoBehaviour
         if(_VFXController == null)
             _VFXController = GetComponentInParent<VFXController>();
             // ImpactSpeedText = GameObject.Find("ImpactSpeedText").GetComponent<Text>();
+
+        drumInstanceTwo = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
+        drumInstanceTwo.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
+        drumInstanceThree = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundThree);
+        drumInstanceThree.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
+        drumInstanceOne = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+        drumInstanceOne.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -52,20 +63,20 @@ public class DrumSample : MonoBehaviour
 
             if(OVRInput.Get(OVRInput.Button.One))
             {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
+                drumInstanceTwo.setParameterByName("Pitch", clampImpactSpeed);
+                drumInstanceTwo.start();
             } 
             else if(OVRInput.Get(OVRInput.Button.Two))
             {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundThree);
+                drumInstanceThree.setParameterByName("Pitch", clampImpactSpeed);
+                drumInstanceThree.start();
             } 
             else 
             {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+                drumInstanceOne.setParameterByName("Pitch", clampImpactSpeed);
+                drumInstanceOne.start();
             }
-            drumHitSFXInstance.setParameterByName("Pitch", clampImpactSpeed);
-            drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-            drumHitSFXInstance.start();
-            drumHitSFXInstance.release();
+            
 
             if (_VFXController != null)
             {
@@ -75,7 +86,11 @@ public class DrumSample : MonoBehaviour
 
         }
 
-        //FMODUnity.RuntimeManager.PlayOneShot(_eventPath, transform.position);
 
     }
+        private void OnDestroy() {
+            drumInstanceOne.release();
+            drumInstanceTwo.release();
+            drumInstanceThree.release();
+        }
 }
