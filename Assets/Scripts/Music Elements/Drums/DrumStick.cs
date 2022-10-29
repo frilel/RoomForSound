@@ -15,7 +15,7 @@ public class DrumStick : MonoBehaviour
     }
     public void Update()
     {
-        if (grabbable.isGrabbed) {
+        if (grabbable.isGrabbed && instructionController != null) {
             instructionController.motionIDFinish[1] = true;
             instructionController.motionIDFinish[3] = true;
         }

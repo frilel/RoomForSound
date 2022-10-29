@@ -1,0 +1,52 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Default map",
+            "id": "e6da9492-44d0-42e9-ae7d-69e2d907eff4",
+            "actions": [
+                {
+                    "name": "Kick Pedal",
+                    "type": "Button",
+                    "id": "d5197c99-c8a7-4fab-9f7f-19da297d3827",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "HiHat Pedal",
+                    "type": "Button",
+                    "id": "7e3779af-858b-409a-beea-ec617f28ee44",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "650e9bd8-d802-4a25-927b-0a07816745bf",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Kick Pedal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90a0d458-cdd1-49d5-9c57-439100f8a7de",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HiHat Pedal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

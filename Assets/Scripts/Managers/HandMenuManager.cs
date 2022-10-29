@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UImanager : MonoBehaviour
+public class HandMenuManager : MonoBehaviour
 {
 
     public GameObject HandMenu;

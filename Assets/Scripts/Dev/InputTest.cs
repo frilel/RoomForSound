@@ -3,29 +3,31 @@ using UnityEngine.InputSystem;
 
 public class InputTest : MonoBehaviour
 {
-    Gamepad gamepad;
+    Joystick joystick;
 
     private void Start()
     {
         GUI.enabled = true;
     }
 
-    void Update()
+    void Update2()
     {
-        DebugInVR.Instance.text.text = "Accel: " + Input.acceleration.ToString() + "\n";
-
-
-        gamepad = Gamepad.current;
-        if (gamepad == null)
-            return; // No gamepad connected.
-
-        if (gamepad.rightTrigger.wasPressedThisFrame)
+        joystick = Joystick.current;
+        if (joystick == null)
         {
-            DebugInVR.Instance.text.text = "gamepad.rightTrigger.wasPressedThisFrame";
+            if ((int)Time.realtimeSinceStartup % 2 == 0)
+                Debug.Log("No joystick");
+            return; // No gamepad connected.
         }
 
-        Vector2 move = gamepad.leftStick.ReadValue();
-        DebugInVR.Instance.text.text = "leftstick: " + move.ToString();
+        if (joystick.stick.left.wasPressedThisFrame)
+        {
+            Debug.Log("pressed" + (int)Time.realtimeSinceStartup);
+            DebugInVR.Instance.text.text = "joystick.stick.left.wasPressedThisFrame " + (int)Time.realtimeSinceStartup;
+        }
+
+        //Vector2 move = gamepad.leftStick.ReadValue();
+        //DebugInVR.Instance.text.text = "leftstick: " + move.ToString();
     }
 
     private void OnGUI()

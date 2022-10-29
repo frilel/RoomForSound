@@ -35,7 +35,7 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-        public void ManageButtonPush(string buttonName, MeshRenderer buttonMeshRenderer)
+    public void ManageButtonPush(string buttonName, MeshRenderer buttonMeshRenderer)
     {
         instructionController.motionIDFinish[1] = true;
         instructionController.motionIDFinish[2] = true;
@@ -43,18 +43,12 @@ public class ButtonManager : MonoBehaviour
         {
             // Play Song1
             case "Button01":
-                StopAndCheckStopSong();
-                currentSong = Instantiate(Song1GO);
-                song1Script = currentSong.GetComponent<Song1>();
-                SaveMaterialOfButton(buttonMeshRenderer);
+                PlaySong1(buttonMeshRenderer);
                 break;
-            
+
             //  Play Song2
             case "Button02":
-                StopAndCheckStopSong();
-                currentSong = Instantiate(Song2GO);
-                song2Script = currentSong.GetComponent<Song2>();
-                SaveMaterialOfButton(buttonMeshRenderer);
+                PlaySong2(buttonMeshRenderer);
                 break;
 
             // Turn current instrument Off 
@@ -79,6 +73,36 @@ public class ButtonManager : MonoBehaviour
             default: 
                 break;
         }
+    }
+
+    private void PlaySong2(MeshRenderer buttonMeshRenderer)
+    {
+        StopAndCheckStopSong();
+        currentSong = Instantiate(Song2GO);
+        song2Script = currentSong.GetComponent<Song2>();
+        SaveMaterialOfButton(buttonMeshRenderer);
+        GameManager.Instance.UpdateCurrentSong(GameManager.Song.Song2);
+    }
+
+    private void PlaySong1(MeshRenderer buttonMeshRenderer)
+    {
+        StopAndCheckStopSong();
+        currentSong = Instantiate(Song1GO);
+        song1Script = currentSong.GetComponent<Song1>();
+        SaveMaterialOfButton(buttonMeshRenderer);
+        GameManager.Instance.UpdateCurrentSong(GameManager.Song.Song1);
+    }
+
+    public void PlayKall()
+    {
+        // Whatever code needed to play this song
+        GameManager.Instance.UpdateCurrentSong(GameManager.Song.Kall);
+    }
+
+    public void PlayViniWeediWhiskey()
+    {
+        // Whatever code needed to play this song
+        GameManager.Instance.UpdateCurrentSong(GameManager.Song.ViniWeediWhiskey);
     }
 
     public void StopAndCheckStopSong() 
