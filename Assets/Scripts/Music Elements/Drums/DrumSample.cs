@@ -80,6 +80,13 @@ public class DrumSample : MonoBehaviour
             }
             
 
+            if (_VFXController != null)
+            {
+                _VFXController.triggerOne(collision.transform);
+                _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
+            }
+            
+
     /// <summary>
     /// Executed when pressing HiHat pedal.
     /// </summary>
@@ -110,13 +117,10 @@ public class DrumSample : MonoBehaviour
         drumHitSFXInstance.start();
         drumHitSFXInstance.release();
     }
-
-        _VFXController.triggerOne(spawnLoc);
-        _VFXController.triggerVibration(usedController, 0.1f, 0.1f, 1);
+    
+    private void OnDestroy() {
+        drumInstanceOne.release();
+        drumInstanceTwo.release();
+        drumInstanceThree.release();
     }
-        private void OnDestroy() {
-            drumInstanceOne.release();
-            drumInstanceTwo.release();
-            drumInstanceThree.release();
-        }
 }
