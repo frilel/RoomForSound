@@ -21,6 +21,15 @@ public class DrumSample : MonoBehaviour
         if(_VFXController == null)
             _VFXController = GetComponentInParent<VFXController>();
             // ImpactSpeedText = GameObject.Find("ImpactSpeedText").GetComponent<Text>();
+
+        drumInstanceTwo = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
+        drumInstanceTwo.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
+        drumInstanceThree = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundThree);
+        drumInstanceThree.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
+        drumInstanceOne = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+        drumInstanceOne.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,20 +65,20 @@ public class DrumSample : MonoBehaviour
     }
             if(OVRInput.Get(OVRInput.Button.One))
             {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
+                drumInstanceTwo.setParameterByName("Pitch", clampImpactSpeed);
+                drumInstanceTwo.start();
             } 
             else if(OVRInput.Get(OVRInput.Button.Two))
             {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundThree);
+                drumInstanceThree.setParameterByName("Pitch", clampImpactSpeed);
+                drumInstanceThree.start();
             } 
             else 
             {
-                drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
+                drumInstanceOne.setParameterByName("Pitch", clampImpactSpeed);
+                drumInstanceOne.start();
             }
-            drumHitSFXInstance.setParameterByName("Pitch", clampImpactSpeed);
-            drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-            drumHitSFXInstance.start();
-            drumHitSFXInstance.release();
+            
 
     /// <summary>
     /// Executed when pressing HiHat pedal.
@@ -101,7 +110,13 @@ public class DrumSample : MonoBehaviour
         drumHitSFXInstance.start();
         drumHitSFXInstance.release();
     }
+
         _VFXController.triggerOne(spawnLoc);
         _VFXController.triggerVibration(usedController, 0.1f, 0.1f, 1);
     }
+        private void OnDestroy() {
+            drumInstanceOne.release();
+            drumInstanceTwo.release();
+            drumInstanceThree.release();
+        }
 }
