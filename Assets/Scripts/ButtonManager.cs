@@ -15,7 +15,11 @@ public class ButtonManager : MonoBehaviour
     public MeshRenderer button03MeshRenderer;
     public Material red;
     public Material white;
-
+    InstructionController instructionController;
+    public void Start()
+    {
+        instructionController = FindObjectOfType<InstructionController>();
+    }
     public void SaveMaterialOfButton(MeshRenderer buttonMaterial)
     {
         ActiveMesh.Add(buttonMaterial);
@@ -33,7 +37,8 @@ public class ButtonManager : MonoBehaviour
 
     public void ManageButtonPush(string buttonName, MeshRenderer buttonMeshRenderer)
     {
-
+        instructionController.motionIDFinish[1] = true;
+        instructionController.motionIDFinish[2] = true;
         switch (buttonName)
         {
             // Play Song1
