@@ -18,10 +18,24 @@ public class ButtonManager : MonoBehaviour
     public Material red;
     public Material white;
     InstructionController instructionController;
+    public string deleteMarker;
     public void Start()
     {
         instructionController = FindObjectOfType<InstructionController>();
     }
+
+    private void Update() {
+        if(deleteMarker == "DELETE")
+        {
+            Invoke("ResetDeleteMarker", 2);
+        }
+    }
+
+    void ResetDeleteMarker()
+    {
+        deleteMarker = null;
+    }
+
     public void SaveMaterialOfButton(MeshRenderer buttonMaterial)
     {
         ActiveMesh.Add(buttonMaterial);
@@ -39,8 +53,11 @@ public class ButtonManager : MonoBehaviour
 
     public void ManageButtonPush(string buttonName, MeshRenderer buttonMeshRenderer)
     {
-        instructionController.motionIDFinish[1] = true;
-        instructionController.motionIDFinish[2] = true;
+        if (instructionController != null)
+        {
+            instructionController.motionIDFinish[1] = true;
+            instructionController.motionIDFinish[2] = true;
+        }
         switch (buttonName)
         {
             // Play Song1
@@ -83,7 +100,7 @@ public class ButtonManager : MonoBehaviour
         currentSong = Instantiate(Song2GO);
         song2Script = currentSong.GetComponent<Song2>();
         SaveMaterialOfButton(buttonMeshRenderer);
-        GameManager.Instance.UpdateCurrentSong(GameManager.Song.Song2);
+        GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Song2);
     }
 
     private void PlaySong1(MeshRenderer buttonMeshRenderer)
@@ -92,19 +109,19 @@ public class ButtonManager : MonoBehaviour
         currentSong = Instantiate(Song1GO);
         song1Script = currentSong.GetComponent<Song1>();
         SaveMaterialOfButton(buttonMeshRenderer);
-        GameManager.Instance.UpdateCurrentSong(GameManager.Song.Song1);
+        GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Song1);
     }
 
     public void PlayKall()
     {
         // Whatever code needed to play this song
-        GameManager.Instance.UpdateCurrentSong(GameManager.Song.Kall);
+        GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Kall);
     }
 
     public void PlayViniWeediWhiskey()
     {
         // Whatever code needed to play this song
-        GameManager.Instance.UpdateCurrentSong(GameManager.Song.ViniWeediWhiskey);
+        GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.ViniWeediWhiskey);
     }
 
     public void StopAndCheckStopSong()

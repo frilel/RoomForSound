@@ -19,6 +19,7 @@ public class Song2 : MonoBehaviour
     GCHandle timelineHandle;
 
     Transform cam;
+    ButtonManager buttonManager;
 
     public string broadcastMarker;
 
@@ -27,6 +28,7 @@ public class Song2 : MonoBehaviour
     void Start()
     {
         cam = GameObject.Find("OVRCameraRig").transform;
+        buttonManager = GameObject.Find("Sequenzer").GetComponent<ButtonManager>();
 
         timelineInfo = new TimelineInfo();
 
@@ -48,6 +50,7 @@ public class Song2 : MonoBehaviour
 
     void OnDestroy()
     {
+        buttonManager.deleteMarker = "DELETE";
         musicInstance.setUserData(IntPtr.Zero);
         musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         musicInstance.release();
