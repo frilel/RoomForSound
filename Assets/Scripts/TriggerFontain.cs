@@ -4,10 +4,10 @@ using UnityEngine;
 public class TriggerFontain : MonoBehaviour
 {
     ParticleSystem particles;
-    Song1 song1;
-    Song2 song2;
-    SongKall songKall;
-    SongViniWeediWhiskey songViniWeediWhiskey;
+    SongBase song1;
+    SongBase song2;
+    SongBase songKall;
+    SongBase songViniWeediWhiskey;
 
     string triggerState;
     ButtonManager buttonManager;
@@ -27,57 +27,54 @@ public class TriggerFontain : MonoBehaviour
 
     private void OnEnable()
     {
-        Song2.OnSong2Start += OnSong2Start;
+        SongBase.OnSongStart += OnSongStart;
     }
 
     private void OnDestroy()
     {
-        Song2.OnSong2Start -= OnSong2Start;
+        SongBase.OnSongStart -= OnSongStart;
     }
 
-    private void OnSong2Start(Song2 song2fromEvent)
+    private void OnSongStart(SongBase songFromEvent)
     {
-        triggerState = song2fromEvent.broadcastMarker;
-        song2 = song2fromEvent;
-    }
 
-    public void InitiateSong2()
-    {
-        song2 = GameObject.Find("Song2GO(Clone)").GetComponent<Song2>();
-        triggerState = song2.broadcastMarker;
+        Debug.Log(songFromEvent.eventName.ToString());
+        DebugInVR.Instance.text.text = songFromEvent.eventName.ToString();
+        triggerState = songFromEvent.broadcastMarker;
+
+        switch (songFromEvent.eventName.ToString())
+        {
+            #if UNITY_EDITOR
+                case "{925f5ce9-c73e-4584-a6d7-faa26dc74321} (event:/Songs/Song1/Song1)":
+                    song1 = songFromEvent;
+                break;
+                case "{cb4d4287-038f-4ac1-acb3-f2fb468add2a} (event:/Songs/Song2/Song2)":
+                    song2 = songFromEvent;
+                break;
+                case "{94864161-aaf3-4f08-92dc-02b5e5725d6d} (event:/Songs/Vini Weedi Whiskey/Vini Weedi Whiskey)":
+                    songViniWeediWhiskey = songFromEvent;
+                break;            
+                case "{12dccf4b-16cf-43b9-af09-c9705430bb70} (event:/Songs/Kall ft. BenG/Kall ft. BenG)":
+                    songKall = songFromEvent;
+                break;            
+            #else
+                case "{925f5ce9-c73e-4584-a6d7-faa26dc74321}":
+                    song1 = songFromEvent;
+                break;
+                case "{cb4d4287-038f-4ac1-acb3-f2fb468add2a}":
+                    song2 = songFromEvent;
+                break;
+                case "{94864161-aaf3-4f08-92dc-02b5e5725d6d}":
+                    songViniWeediWhiskey = songFromEvent;
+                break;            
+                case "{12dccf4b-16cf-43b9-af09-c9705430bb70}":
+                    songKall = songFromEvent;
+                break;
+            #endif
+        }
     }
 
     private void Update() {
-
-        // check if one of the songs is deleted
-        // as the song object will be destroyed, he passes this information to the button manager
-        // songActiveBool is necessary only ONCE a song gameobject is detected
-        // therefore the "gatekeeper" will be set back to false
-        if(buttonManager.deleteMarker == "DELETE")
-        {
-            songActiveBool = false;
-        }
-
-
-        if (GameObject.Find("Song1GO(Clone)") != null && !songActiveBool)
-        {
-            song1 = GameObject.Find("Song1GO(Clone)").GetComponent<Song1>();
-            triggerState = song1.broadcastMarker;
-            songActiveBool = true;
-        }
-        if (GameObject.Find("SongKallGO(Clone)") != null && !songActiveBool)
-        {
-            songKall = GameObject.Find("SongKallGO(Clone)").GetComponent<SongKall>();
-            triggerState = songKall.broadcastMarker;
-            songActiveBool = true;
-        }
-        if (GameObject.Find("SongViniWeediWhiskeyGO(Clone)") != null && !songActiveBool)
-        {
-            songViniWeediWhiskey = GameObject.Find("SongViniWeediWhiskeyGO(Clone)").GetComponent<SongViniWeediWhiskey>();
-            triggerState = songViniWeediWhiskey.broadcastMarker;
-            songActiveBool = true;
-        }
-
 
         // if the song is not null
         // check if a new marker is reached (changes in the triggerState)
@@ -93,6 +90,7 @@ public class TriggerFontain : MonoBehaviour
         // Debug.Log(song2);
         if(song2 != null) 
         {
+            Debug.Log(song2.broadcastMarker);
             if(triggerState != song2.broadcastMarker)
             {
                 triggerState = song2.broadcastMarker;

@@ -15,13 +15,13 @@ public class ButtonManager : MonoBehaviour
     [HideInInspector]
     string currentPosition;
     [HideInInspector]
-    public Song2 song2Script;
+    public SongBase song2Script;
     [HideInInspector]
-    public Song1 song1Script;
+    public SongBase song1Script;
     [HideInInspector]
-    public SongKall songKallScript;
+    public SongBase songKallScript;
     [HideInInspector]
-    public SongViniWeediWhiskey songViniWeediWhiskeyScript;
+    public SongBase songViniWeediWhiskeyScript;
     public MeshRenderer button03MeshRenderer;
     [HideInInspector]
     public Material red;
@@ -33,18 +33,6 @@ public class ButtonManager : MonoBehaviour
     public void Start()
     {
         instructionController = FindObjectOfType<InstructionController>();
-    }
-
-    private void Update() {
-        if(deleteMarker == "DELETE")
-        {
-            Invoke("ResetDeleteMarker", 2);
-        }
-    }
-
-    void ResetDeleteMarker()
-    {
-        deleteMarker = null;
     }
 
     public void SaveMaterialOfButton(MeshRenderer buttonMaterial)
@@ -98,6 +86,14 @@ public class ButtonManager : MonoBehaviour
                 {
                     song2Script.TurnOffCurrentInstrument(currentPosition);
                 }
+                else if (songViniWeediWhiskeyScript != null)
+                {
+                    songViniWeediWhiskeyScript.TurnOffCurrentInstrument(currentPosition);
+                }
+                else if (songKallScript != null)
+                {
+                    songKallScript.TurnOffCurrentInstrument(currentPosition);
+                }                                
                 button03MeshRenderer = buttonMeshRenderer;
                 button03MeshRenderer.material = red;
                 break;
@@ -115,7 +111,7 @@ public class ButtonManager : MonoBehaviour
     {
         StopAndCheckStopSong();
         currentSong = Instantiate(Song1GO);
-        song1Script = currentSong.GetComponent<Song1>();
+        song1Script = currentSong.GetComponent<SongBase>();
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Song1);
     }
 
@@ -124,7 +120,7 @@ public class ButtonManager : MonoBehaviour
     {
         StopAndCheckStopSong();
         currentSong = Instantiate(Song2GO);
-        song2Script = currentSong.GetComponent<Song2>();
+        song2Script = currentSong.GetComponent<SongBase>();
         SaveMaterialOfButton(buttonMeshRenderer);
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Song2);
     }
@@ -133,7 +129,7 @@ public class ButtonManager : MonoBehaviour
     {
         StopAndCheckStopSong();
         currentSong = Instantiate(SongKallGO);
-        songKallScript = currentSong.GetComponent<SongKall>();
+        songKallScript = currentSong.GetComponent<SongBase>();
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Kall);
     }
 
@@ -141,7 +137,7 @@ public class ButtonManager : MonoBehaviour
     {
         StopAndCheckStopSong();
         currentSong = Instantiate(SongViniWeediWhiskeyGO);
-        songViniWeediWhiskeyScript = currentSong.GetComponent<SongViniWeediWhiskey>();
+        songViniWeediWhiskeyScript = currentSong.GetComponent<SongBase>();
         SaveMaterialOfButton(buttonMeshRenderer);
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.ViniWeediWhiskey);
     }
@@ -161,5 +157,4 @@ public class ButtonManager : MonoBehaviour
     {
         this.currentPosition = currentPosition;
     }
-
 }

@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     internal void UpdateCurrentSongImage(Song song)
     {
-        // SongImageDisplay.sprite = songImages[(int)song];
+        SongImageDisplay.sprite = songImages[(int)song];
     }
     public void PlayerToDownStage()
     {
@@ -59,9 +59,8 @@ public class GameManager : MonoBehaviour
         ButtonManager buttonManager = FindObjectOfType<ButtonManager>();
         if (buttonManager.currentSong == null)
         {
-            buttonManager.currentSong = Instantiate(Song2GO);
-            buttonManager.song2Script = buttonManager.currentSong.GetComponent<Song2>();
-            UpdateCurrentSongImage(GameManager.Song.Song1);
+            buttonManager.PlaySong2(null);
+            UpdateCurrentSongImage(GameManager.Song.Song2);
         }
     }
     public void PlayerExitDownStage()

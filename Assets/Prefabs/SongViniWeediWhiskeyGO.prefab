@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3539119229112719681}
-  - component: {fileID: -2293739285782227919}
+  - component: {fileID: -1708640569421485098}
   m_Layer: 0
   m_Name: SongViniWeediWhiskeyGO
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2293739285782227919
+--- !u!114 &-1708640569421485098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5225755801503719693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56ad4077c546cbb4e81df68ea312f083, type: 3}
+  m_Script: {fileID: 11500000, guid: 98810bb5c9712d94ba19d4d135ba60f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventName:

@@ -25972,6 +25972,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 497350, guid: f64caa1f6b2de2c48a85fa00e6f8ed84, type: 3}
   m_PrefabInstance: {fileID: 1593282694}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1603201219 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 547560072, guid: 9c7461fa9cf341e4389c6bf469b13552, type: 3}
+  m_PrefabInstance: {fileID: 2146424282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1603970155
 GameObject:
   m_ObjectHideFlags: 0
@@ -27429,6 +27434,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc2568a3bf116cf43ad34454b200dd2c, type: 3}
+--- !u!23 &1715624626 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2834829763222199273, guid: 9c7461fa9cf341e4389c6bf469b13552, type: 3}
+  m_PrefabInstance: {fileID: 2146424282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1719695611
 GameObject:
   m_ObjectHideFlags: 0
@@ -32570,6 +32580,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2834829761625354229, guid: 9c7461fa9cf341e4389c6bf469b13552, type: 3}
+      propertyPath: m_Name
+      value: ButtonViniWeediWhiskey
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834829761625354229, guid: 9c7461fa9cf341e4389c6bf469b13552, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
@@ -34115,7 +34129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 383284841302380249, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 383284841302380249, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -34127,15 +34141,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 383284841302380249, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayViniWeediWhiskey
+      value: PlaySongViniWeediWhiskey
       objectReference: {fileID: 0}
     - target: {fileID: 383284841302380249, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ButtonManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 383284841302380249, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1715624626}
+    - target: {fileID: 383284841302380249, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.MeshRenderer, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3338478926132538502, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: m_IsActive
@@ -34213,6 +34231,18 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 8190406731975762680, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2146424284}
+    - target: {fileID: 8190406731975762680, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySong2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190406731975762680, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1603201219}
     - target: {fileID: 8190406732518667573, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -34231,13 +34261,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8190406732518667573, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayKall
+      value: PlaySongKall
       objectReference: {fileID: 0}
     - target: {fileID: 8190406732518667573, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ButtonManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8190406732518667573, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190406732855578258, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190406732855578258, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2146424284}
+    - target: {fileID: 8190406732855578258, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySong1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190406732855578258, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
