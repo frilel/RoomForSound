@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public GameObject CenterEyeAnchor;
     public GameObject Rig;
     public Image SongImageDisplay;
+    public Transform audiencesParent;
+    public GameObject[] musicians;
 
     [Tooltip("Order this array with how the public enum Song is ordered. The song Enum 0 will correspond to position 0 in this array.")]
     [SerializeField] Sprite[] songImages;
@@ -37,5 +39,23 @@ public class GameManager : MonoBehaviour
     internal void UpdateCurrentSong(Song song)
     {
         SongImageDisplay.sprite = songImages[(int)song];
+    }
+    public void PlayerToDownStage()
+    {
+        foreach (GameObject go in musicians)
+        {
+            go.SetActive(true);
+        }
+        for (int i = 1; i < audiencesParent.childCount; i++)
+        {
+            audiencesParent.GetChild(i).GetComponent<AudienceControl>().animator.Play("Cheer");
+        }
+    }
+    public void PlayerExitDownStage()
+    {
+        foreach (GameObject go in musicians)
+        {
+            go.SetActive(false);
+        }
     }
 }

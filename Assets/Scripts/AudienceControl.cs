@@ -90,6 +90,7 @@ public class AudienceControl : MonoBehaviour
             case "Cheer":
             case "cheer":
                 animator.Play("Cheer");
+                animator.GetComponent<AudienceAudio>().StartCheering();
                 break;
             case "Firework":
             case "firework":
