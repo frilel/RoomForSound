@@ -1,2 +1,2 @@
 # RoomForSound
-AGI 2022 project 1
+AGI 2022 - Advanced Graphics and Interaction
