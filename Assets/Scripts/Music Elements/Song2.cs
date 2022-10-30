@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Runtime.InteropServices;
 using System;
+using UnityEngine.Assertions;
 
 public class Song2 : MonoBehaviour
 {
@@ -9,7 +10,11 @@ public class Song2 : MonoBehaviour
 
     public FMODUnity.EventReference eventName;
 
-     class TimelineInfo
+    // C# EVENTS
+    public delegate void SongStart(Song2 song2);
+    public static event SongStart OnSong2Start;
+
+    class TimelineInfo
     {
         public int currentMusicBar = 0;
         public FMOD.StringWrapper lastMarker = new FMOD.StringWrapper();
@@ -26,7 +31,8 @@ public class Song2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cam = GameObject.Find("OVRCameraRig").transform;
+        cam = GameManager.Instance?.Rig.transform.Find("OVRCameraRig");
+        Assert.IsNotNull(cam, "Please add the prefab GameManager to your scene!");
 
         timelineInfo = new TimelineInfo();
 
@@ -44,6 +50,8 @@ public class Song2 : MonoBehaviour
         musicInstance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
         musicInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(cam));
         musicInstance.start();
+
+        OnSong2Start(this);
     }
 
     void OnDestroy()
