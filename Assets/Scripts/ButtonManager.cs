@@ -8,16 +8,27 @@ public class ButtonManager : MonoBehaviour
 
     public GameObject Song1GO;
     public GameObject Song2GO;
+    public GameObject SongKallGO;
+    public GameObject SongViniWeediWhiskeyGO;
+    [HideInInspector]
     public GameObject currentSong = null;
+    [HideInInspector]
     string currentPosition;
     [HideInInspector]
     public Song2 song2Script;
     [HideInInspector]
     public Song1 song1Script;
+    [HideInInspector]
+    public SongKall songKallScript;
+    [HideInInspector]
+    public SongViniWeediWhiskey songViniWeediWhiskeyScript;
     public MeshRenderer button03MeshRenderer;
+    [HideInInspector]
     public Material red;
+    [HideInInspector]
     public Material white;
     InstructionController instructionController;
+    [HideInInspector]
     public string deleteMarker;
     public void Start()
     {
@@ -69,6 +80,12 @@ public class ButtonManager : MonoBehaviour
             case "Button02":
                 PlaySong2(buttonMeshRenderer);
                 break;
+            case "ButtonKall":
+                PlaySongKall(buttonMeshRenderer);
+                break;   
+            case "ButtonViniWeediWhiskey":
+                PlaySongViniWeediWhiskey(buttonMeshRenderer);
+                break;                          
 
             // Turn current instrument Off 
             // (Once its off, it can't be turned on, there is a synchronisation issue wich causes the layers to unalign)
@@ -112,15 +129,21 @@ public class ButtonManager : MonoBehaviour
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Song1);
     }
 
-    public void PlayKall()
+    public void PlaySongKall(MeshRenderer buttonMeshRenderer)
     {
-        // Whatever code needed to play this song
+        StopAndCheckStopSong();
+        currentSong = Instantiate(SongKallGO);
+        songKallScript = currentSong.GetComponent<SongKall>();
+        SaveMaterialOfButton(buttonMeshRenderer);
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Kall);
     }
 
-    public void PlayViniWeediWhiskey()
+    public void PlaySongViniWeediWhiskey(MeshRenderer buttonMeshRenderer)
     {
-        // Whatever code needed to play this song
+        StopAndCheckStopSong();
+        currentSong = Instantiate(SongViniWeediWhiskeyGO);
+        songViniWeediWhiskeyScript = currentSong.GetComponent<SongViniWeediWhiskey>();
+        SaveMaterialOfButton(buttonMeshRenderer);
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.ViniWeediWhiskey);
     }
 

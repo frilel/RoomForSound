@@ -22012,7 +22012,7 @@ GameObject:
   - component: {fileID: 1698085687}
   - component: {fileID: 1698085686}
   m_Layer: 5
-  m_Name: Button02
+  m_Name: ButtonViniWeediWhiskey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23774,7 +23774,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88428
+  m_Name: pb_Mesh303630
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27136,17 +27136,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7769636612826393244, guid: 9c7461fa9cf341e4389c6bf469b13552, type: 3}
-      propertyPath: red
+      propertyPath: SongViniWeediWhiskeyGO
       value: 
-      objectReference: {fileID: 2100000, guid: c93c3d21da2ec4145a158635b7208b8f, type: 2}
-    - target: {fileID: 7769636612826393244, guid: 9c7461fa9cf341e4389c6bf469b13552, type: 3}
-      propertyPath: white
-      value: 
-      objectReference: {fileID: 2100000, guid: b65ef5d9c1644914285febde502c6533, type: 2}
-    - target: {fileID: 7769636612826393244, guid: 9c7461fa9cf341e4389c6bf469b13552, type: 3}
-      propertyPath: button03MeshRenderer
-      value: 
-      objectReference: {fileID: 1792778428}
+      objectReference: {fileID: 5225755801503719693, guid: 4b218f471e978c74788b67e882dc34f8, type: 3}
     - target: {fileID: 7769636612826393245, guid: 9c7461fa9cf341e4389c6bf469b13552, type: 3}
       propertyPath: m_RootOrder
       value: 22

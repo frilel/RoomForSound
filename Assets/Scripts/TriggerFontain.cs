@@ -3,7 +3,11 @@ using UnityEngine;
 public class TriggerFontain : MonoBehaviour
 {
     ParticleSystem particles;
+    Song1 song1;
     Song2 song2;
+    SongKall songKall;
+    SongViniWeediWhiskey songViniWeediWhiskey;
+
     string triggerState;
     ButtonManager buttonManager;
     public bool songActiveBool = false;
@@ -40,10 +44,37 @@ public class TriggerFontain : MonoBehaviour
             triggerState = song2.broadcastMarker;
             songActiveBool = true;
         }
+        if (GameObject.Find("Song1GO(Clone)") != null && !songActiveBool)
+        {
+            song1 = GameObject.Find("Song1GO(Clone)").GetComponent<Song1>();
+            triggerState = song1.broadcastMarker;
+            songActiveBool = true;
+        }
+        if (GameObject.Find("SongKallGO(Clone)") != null && !songActiveBool)
+        {
+            songKall = GameObject.Find("SongKallGO(Clone)").GetComponent<SongKall>();
+            triggerState = songKall.broadcastMarker;
+            songActiveBool = true;
+        }
+        if (GameObject.Find("SongViniWeediWhiskeyGO(Clone)") != null && !songActiveBool)
+        {
+            songViniWeediWhiskey = GameObject.Find("SongViniWeediWhiskeyGO(Clone)").GetComponent<SongViniWeediWhiskey>();
+            triggerState = songViniWeediWhiskey.broadcastMarker;
+            songActiveBool = true;
+        }
+
 
         // if the song is not null
         // check if a new marker is reached (changes in the triggerState)
         // start the particles and sound effect
+        if(song1 != null) 
+        {
+            if(triggerState != song1.broadcastMarker)
+            {
+                triggerState = song1.broadcastMarker;
+                StartParticles();
+            }
+        }
         if(song2 != null) 
         {
             if(triggerState != song2.broadcastMarker)
@@ -52,7 +83,22 @@ public class TriggerFontain : MonoBehaviour
                 StartParticles();
             }
         }
-
+        if(songKall != null) 
+        {
+            if(triggerState != songKall.broadcastMarker)
+            {
+                triggerState = songKall.broadcastMarker;
+                StartParticles();
+            }
+        }
+        if(songViniWeediWhiskey != null) 
+        {
+            if(triggerState != songViniWeediWhiskey.broadcastMarker)
+            {
+                triggerState = songViniWeediWhiskey.broadcastMarker;
+                StartParticles();
+            }
+        }        
     }
 
     public void StartParticles()
