@@ -413,6 +413,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6894736257904812648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/Ride
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/Ride
+  Guid:
+    Data1: -975130609
+    Data2: 1182509584
+    Data3: 1034808735
+    Data4: 1943920515
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7619
 --- !u!114 &-6681297926185839220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,6 +1428,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2107438071655122985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/China
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/China
+  Guid:
+    Data1: 1696792113
+    Data2: 1216504839
+    Data3: 1217225869
+    Data4: -1317579762
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7619
 --- !u!114 &-2074272711866043983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,12 +1781,15 @@ MonoBehaviour:
   - {fileID: -7812740125714254079}
   - {fileID: 3469587014785051382}
   - {fileID: -3125075460585826165}
+  - {fileID: -6894736257904812648}
+  - {fileID: -2107438071655122985}
+  - {fileID: 2979488188552864935}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1278483287379617233}
   StringsBanks:
   - {fileID: 3916383380135203157}
-  cacheTime: 638019537754402755
+  cacheTime: 638027144042524067
   cacheVersion: 131591
 --- !u!114 &12281985263074687
 MonoBehaviour:
@@ -2017,10 +2074,10 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638019537754342933
+  lastModified: 638027144042504194
   FileSizes:
   - Name: Desktop
-    Value: 26366784
+    Value: 26612640
   Exists: 1
 --- !u!114 &1281051470542862836
 MonoBehaviour:
@@ -2282,6 +2339,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2979488188552864935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drumset/CymbalM
+  m_EditorClassIdentifier: 
+  Path: event:/Drumset/CymbalM
+  Guid:
+    Data1: 460784113
+    Data2: 1313547282
+    Data3: -45070680
+    Data4: -700551571
+  Banks:
+  - {fileID: 1278483287379617233}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7619
 --- !u!114 &3170776939957482979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2423,10 +2507,10 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638019537754402755
+  lastModified: 638027144042524067
   FileSizes:
   - Name: Desktop
-    Value: 3692
+    Value: 3806
   Exists: 1
 --- !u!114 &4099776152855883723
 MonoBehaviour:

@@ -1,11 +1,25 @@
 using UnityEngine;
+using Oculus.Interaction;
 
 public class DrumStick : MonoBehaviour
 {
     public OVRInput.Controller usedController = OVRInput.Controller.None;
     
     public OVRInput.Controller GetGrabber() => usedController;
-
+    InstructionController instructionController;
+    Grabbable grabbable;
+    public void Start()
+    {
+        instructionController = FindObjectOfType<InstructionController>();
+        grabbable = GetComponent<Grabbable>();
+    }
+    public void Update()
+    {
+        if (grabbable.isGrabbed && instructionController != null) {
+            instructionController.motionIDFinish[1] = true;
+            instructionController.motionIDFinish[3] = true;
+        }
+    }
     public void DetectGrabber()
     {
         if (usedController != OVRInput.Controller.None)

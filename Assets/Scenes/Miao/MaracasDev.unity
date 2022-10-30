@@ -4679,6 +4679,17 @@ Transform:
   m_Father: {fileID: 1424864687}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &349274445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 762968167680207435, guid: 976e369becaf8604fa58921b36ea76d7, type: 3}
+  m_PrefabInstance: {fileID: 762968167728022493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &352766803
 GameObject:
   m_ObjectHideFlags: 0
@@ -5119,6 +5130,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d453c9db6c9b94eb0826be8f8544c6, type: 3}
+--- !u!1001 &372795920
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3191401439595073578, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: drumStick
+      value: 
+      objectReference: {fileID: 349274445}
+    - target: {fileID: 3191401439595073578, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: drumStickL
+      value: 
+      objectReference: {fileID: 349274445}
+    - target: {fileID: 3191401439595073578, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: drumStickR
+      value: 
+      objectReference: {fileID: 1024304744}
+    - target: {fileID: 3191401439595073579, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_Name
+      value: --- INSTRUCTION --- (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5868
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6812
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191401439595073589, guid: cde56622c16be474cac2d97995c8714d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cde56622c16be474cac2d97995c8714d, type: 3}
 --- !u!1001 &380719876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16361,7 +16441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1224181080
 Transform:
   m_ObjectHideFlags: 0
@@ -16393,8 +16473,12 @@ MonoBehaviour:
   motionID: 0
   canvasTips: {fileID: 734813987}
   handL: {fileID: 522752895}
+  handR: {fileID: 0}
   changeInstruction: 0
+  instructionCursor: {fileID: 0}
   wait: 0
+  drumStickL: {fileID: 0}
+  drumStickR: {fileID: 0}
 --- !u!1 &1225503580
 GameObject:
   m_ObjectHideFlags: 0
