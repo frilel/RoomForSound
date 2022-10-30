@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public Image SongImageDisplay;
     public Transform audiencesParent;
     public GameObject[] musicians;
+    public Transform[] grabbables;
 
     [Tooltip("Order this array with how the public enum Song is ordered. The song Enum 0 will correspond to position 0 in this array.")]
     [SerializeField] Sprite[] songImages;
@@ -42,13 +43,17 @@ public class GameManager : MonoBehaviour
     }
     public void PlayerToDownStage()
     {
-        foreach (GameObject go in musicians)
+        foreach (GameObject go in musicians) //enable musicians
         {
             go.SetActive(true);
         }
-        for (int i = 1; i < audiencesParent.childCount; i++)
+        for (int i = 1; i < audiencesParent.childCount; i++)// make audiences cheer
         {
-            audiencesParent.GetChild(i).GetComponent<AudienceControl>().animator.Play("Cheer");
+            audiencesParent.GetChild(i).GetComponent<AudienceControl>().ReturnAnimator().Play("Cheer");
+        }
+        foreach (Transform go in grabbables)// not show outline when downstage
+        {
+            go.GetComponent<Outline>().enabled = false;
         }
     }
     public void PlayerExitDownStage()
@@ -56,6 +61,10 @@ public class GameManager : MonoBehaviour
         foreach (GameObject go in musicians)
         {
             go.SetActive(false);
+        }
+        foreach (Transform go in grabbables)
+        {
+            go.GetComponent<Outline>().enabled = true;
         }
     }
 }

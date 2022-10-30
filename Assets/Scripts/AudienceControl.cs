@@ -46,6 +46,10 @@ public class AudienceControl : MonoBehaviour
     {
         nameText.text = audience.name;
     }
+    public Animator ReturnAnimator()
+    {
+        return transform.GetChild(avatarIndex).GetChild(1).GetComponent<Animator>();
+    }
     public void UpdateMessage()
     {
         animator = transform.GetChild(avatarIndex).GetChild(1).GetComponent<Animator>();
