@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     internal void UpdateCurrentSongImage(Song song)
     {
-        SongImageDisplay.sprite = songImages[(int)song];
+        // SongImageDisplay.sprite = songImages[(int)song];
     }
     public void PlayerToDownStage()
     {

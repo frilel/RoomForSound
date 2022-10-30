@@ -73,7 +73,7 @@ public class ButtonManager : MonoBehaviour
         {
             // Play Song1
             case "Button01":
-                PlaySong1(buttonMeshRenderer);
+                PlaySong1();
                 break;
 
             //  Play Song2
@@ -81,7 +81,7 @@ public class ButtonManager : MonoBehaviour
                 PlaySong2(buttonMeshRenderer);
                 break;
             case "ButtonKall":
-                PlaySongKall(buttonMeshRenderer);
+                PlaySongKall();
                 break;   
             case "ButtonViniWeediWhiskey":
                 PlaySongViniWeediWhiskey(buttonMeshRenderer);
@@ -111,7 +111,16 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    private void PlaySong2(MeshRenderer buttonMeshRenderer)
+    public void PlaySong1()
+    {
+        StopAndCheckStopSong();
+        currentSong = Instantiate(Song1GO);
+        song1Script = currentSong.GetComponent<Song1>();
+        GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Song1);
+    }
+
+
+    public void PlaySong2(MeshRenderer buttonMeshRenderer)
     {
         StopAndCheckStopSong();
         currentSong = Instantiate(Song2GO);
@@ -120,21 +129,11 @@ public class ButtonManager : MonoBehaviour
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Song2);
     }
 
-    private void PlaySong1(MeshRenderer buttonMeshRenderer)
-    {
-        StopAndCheckStopSong();
-        currentSong = Instantiate(Song1GO);
-        song1Script = currentSong.GetComponent<Song1>();
-        SaveMaterialOfButton(buttonMeshRenderer);
-        GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Song1);
-    }
-
-    public void PlaySongKall(MeshRenderer buttonMeshRenderer)
+    public void PlaySongKall()
     {
         StopAndCheckStopSong();
         currentSong = Instantiate(SongKallGO);
         songKallScript = currentSong.GetComponent<SongKall>();
-        SaveMaterialOfButton(buttonMeshRenderer);
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Kall);
     }
 
@@ -154,6 +153,8 @@ public class ButtonManager : MonoBehaviour
         button03MeshRenderer.material = white;
         song2Script = null;
         song1Script = null;
+        songViniWeediWhiskeyScript = null;
+        songKallScript = null;
     }
 
     public void SetCurrentLocationName(string currentPosition)
