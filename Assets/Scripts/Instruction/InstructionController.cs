@@ -22,7 +22,7 @@ public class InstructionController : MonoBehaviour
 
         new Vector3(0.0f, 0f, 0.0f),
         new Vector3(0.0f, 0.0f, 0.0f),
-        new Vector3(0.92f, 0.228f, -0.742f),
+        new Vector3(0.585f, 0.16f, -0.831f),
         new Vector3(0.8f, -0.1f, 0.0f),
         new Vector3(-0.5868f, -0.149f, -0.6812f),
 

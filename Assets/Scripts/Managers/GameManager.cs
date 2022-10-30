@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Order this array with how the public enum Song is ordered. The song Enum 0 will correspond to position 0 in this array.")]
     [SerializeField] Sprite[] songImages;
+    public GameObject Song2GO;
 
     public enum Song
     {
@@ -54,6 +55,13 @@ public class GameManager : MonoBehaviour
         foreach (Transform go in grabbables)// not show outline when downstage
         {
             go.GetComponent<Outline>().enabled = false;
+        }
+        ButtonManager buttonManager = FindObjectOfType<ButtonManager>();
+        if (buttonManager.currentSong == null)
+        {
+            buttonManager.currentSong = Instantiate(Song2GO);
+            buttonManager.song2Script = buttonManager.currentSong.GetComponent<Song2>();
+            UpdateCurrentSong(GameManager.Song.Song1);
         }
     }
     public void PlayerExitDownStage()
