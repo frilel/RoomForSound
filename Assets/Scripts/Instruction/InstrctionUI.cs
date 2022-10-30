@@ -8,7 +8,7 @@ public class InstrctionUI : MonoBehaviour
     InstructionController instructionController;
     string[] instructionText =
 {
-        "Welcome! Some useful tips would appear here",
+        "Welcome! Some useful tips will appear here",
         "First, adjust your hand position to hold controller",
         "Use middle finger to press [Grab button] and poke with your index finger to select one music",
         "Use middle finger to press [Grab button] to grab the drumstick",

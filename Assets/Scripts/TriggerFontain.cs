@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 public class TriggerFontain : MonoBehaviour
@@ -15,12 +16,35 @@ public class TriggerFontain : MonoBehaviour
     FMOD.Studio.EventInstance flameThrowShort;
     
 
+
     private void Start() {
         buttonManager = GameObject.Find("Sequenzer").GetComponent<ButtonManager>();
 
         particles = GetComponent<ParticleSystem>();
         flameThrowShort = FMODUnity.RuntimeManager.CreateInstance("event:/FlameThrow/FlameThrowShort");
         flameThrowShort.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+    }
+
+    private void OnEnable()
+    {
+        Song2.OnSong2Start += OnSong2Start;
+    }
+
+    private void OnDestroy()
+    {
+        Song2.OnSong2Start -= OnSong2Start;
+    }
+
+    private void OnSong2Start(Song2 song2fromEvent)
+    {
+        triggerState = song2fromEvent.broadcastMarker;
+        song2 = song2fromEvent;
+    }
+
+    public void InitiateSong2()
+    {
+        song2 = GameObject.Find("Song2GO(Clone)").GetComponent<Song2>();
+        triggerState = song2.broadcastMarker;
     }
 
     private void Update() {
@@ -34,16 +58,7 @@ public class TriggerFontain : MonoBehaviour
             songActiveBool = false;
         }
 
-        // this has to be done ONCE for each single song
-        // as soon as we detect a song gameobject, we can get the script
-        // further, we need once the state of the broadcast marker to compare it later if changes occured
-        // we set the "gatekeeper" to true
-        if (GameObject.Find("Song2GO(Clone)") != null && !songActiveBool)
-        {
-            song2 = GameObject.Find("Song2GO(Clone)").GetComponent<Song2>();
-            triggerState = song2.broadcastMarker;
-            songActiveBool = true;
-        }
+
         if (GameObject.Find("Song1GO(Clone)") != null && !songActiveBool)
         {
             song1 = GameObject.Find("Song1GO(Clone)").GetComponent<Song1>();
@@ -75,6 +90,7 @@ public class TriggerFontain : MonoBehaviour
                 StartParticles();
             }
         }
+        // Debug.Log(song2);
         if(song2 != null) 
         {
             if(triggerState != song2.broadcastMarker)
