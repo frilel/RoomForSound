@@ -1789,7 +1789,7 @@ MonoBehaviour:
   - {fileID: 1278483287379617233}
   StringsBanks:
   - {fileID: 3916383380135203157}
-  cacheTime: 638025655062341322
+  cacheTime: 638027144042524067
   cacheVersion: 131591
 --- !u!114 &12281985263074687
 MonoBehaviour:
@@ -2074,7 +2074,7 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638025655062331953
+  lastModified: 638027144042504194
   FileSizes:
   - Name: Desktop
     Value: 26612640
@@ -2507,11 +2507,9 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638025655062341322
+  lastModified: 638027144042524067
   FileSizes:
   - Name: Desktop
-    Value: 3806
-  - Name: Mobile
     Value: 3806
   Exists: 1
 --- !u!114 &4099776152855883723
