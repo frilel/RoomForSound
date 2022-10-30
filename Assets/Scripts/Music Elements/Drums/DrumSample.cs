@@ -4,9 +4,7 @@ using UnityEngine.UI;
 
 public class DrumSample : MonoBehaviour
 {
-    FMOD.Studio.EventInstance drumInstanceOne;
-    FMOD.Studio.EventInstance drumInstanceTwo;
-    FMOD.Studio.EventInstance drumInstanceThree;
+    FMOD.Studio.EventInstance drumHitSFXInstance;
     public FMODUnity.EventReference eventPathInteractionSoundOne;
     public FMODUnity.EventReference eventPathInteractionSoundTwo;
     public FMODUnity.EventReference eventPathInteractionSoundThree;
@@ -21,15 +19,6 @@ public class DrumSample : MonoBehaviour
         if(_VFXController == null)
             _VFXController = GetComponentInParent<VFXController>();
             // ImpactSpeedText = GameObject.Find("ImpactSpeedText").GetComponent<Text>();
-
-        drumInstanceTwo = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
-        drumInstanceTwo.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-
-        drumInstanceThree = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundThree);
-        drumInstanceThree.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-
-        drumInstanceOne = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
-        drumInstanceOne.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -59,26 +48,17 @@ public class DrumSample : MonoBehaviour
             //Debug.Log($"You hit the {transform.name} with impact speed: {clampImpactSpeed}. Using {drumStick.GetGrabber()}");
 
             PlaySFX(clampImpactSpeed);
-            PlayVFX(collision, drumStick);
+            PlayVFX(collision.transform, drumStick.GetGrabber());
         }
 
-    }
-
-    private void PlayVFX(Collision collision, DrumStick drumStick)
-    {
-        if (_VFXController != null)
-        {
-            _VFXController.triggerOne(collision.transform);
-            _VFXController.triggerVibration(drumStick.GetGrabber(), 0.1f, 0.1f, 1);
-        }
     }
 
     /// <summary>
-    /// Executed when pressing HiHat pedal.
+    /// Executed when pressing bass drum pedal
     /// </summary>
     public void PlayKickPedal(InputAction.CallbackContext context)
     {
-        if (context.action.phase == InputActionPhase.Performed)
+        if(context.action.phase == InputActionPhase.Performed)
         {
             PlaySFX(1);
         }
@@ -99,25 +79,28 @@ public class DrumSample : MonoBehaviour
     {
         if (OVRInput.Get(OVRInput.Button.One))
         {
-            drumInstanceTwo.setParameterByName("Pitch", clampImpactSpeed01);
-            drumInstanceTwo.start();
+            drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundTwo);
         }
         else if (OVRInput.Get(OVRInput.Button.Two))
         {
-            drumInstanceThree.setParameterByName("Pitch", clampImpactSpeed01);
-            drumInstanceThree.start();
+            drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundThree);
         }
         else
         {
-            drumInstanceOne.setParameterByName("Pitch", clampImpactSpeed01);
-            drumInstanceOne.start();
+            drumHitSFXInstance = FMODUnity.RuntimeManager.CreateInstance(eventPathInteractionSoundOne);
         }
-
+        drumHitSFXInstance.setParameterByName("Pitch", clampImpactSpeed01);
+        drumHitSFXInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        drumHitSFXInstance.start();
+        drumHitSFXInstance.release();
     }
-    
-    private void OnDestroy() {
-        drumInstanceOne.release();
-        drumInstanceTwo.release();
-        drumInstanceThree.release();
+
+    public void PlayVFX(Transform spawnLoc, OVRInput.Controller usedController)
+    {
+        if (_VFXController == null)
+            return;
+
+        _VFXController.triggerOne(spawnLoc);
+        _VFXController.triggerVibration(usedController, 0.1f, 0.1f, 1);
     }
 }

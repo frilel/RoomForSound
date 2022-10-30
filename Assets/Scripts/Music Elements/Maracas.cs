@@ -23,6 +23,7 @@ public class Maracas : MonoBehaviour
     public OVRInput.Controller GetGrabber() => usedController;
     private Guid Latest;
     private VFXController _VFXController;
+    private bool isHighSpeed = false;
     private void Start()
     {
         maracaObj = GetComponent<Grabbable>();
@@ -38,7 +39,6 @@ public class Maracas : MonoBehaviour
 
         if (maracaObj.isGrabbed)
         {
-            //DetectGrabber();
             DetectGrabber();
             moveSpeedVec = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber()));
             moveSpeed = GameManager.Instance.Rig.transform.TransformVector(OVRInput.GetLocalControllerVelocity(GetGrabber())).magnitude;
@@ -46,12 +46,13 @@ public class Maracas : MonoBehaviour
             float clampAcceleration = Mathf.Clamp(acceleration / 10f, 0, 1);
             float clampAccelerationForVolume = Mathf.Sqrt(clampAcceleration);
             clampAcceleration = Mathf.Pow(clampAcceleration, 3);
-            Debug.Log(acceleration);
+            //Debug.Log(acceleration);
             if (Vector3.Angle(moveSpeedVec, lastSpeedVec) > 90)
             {
                 macaraInstance.setParameterByName("Pitch", clampAcceleration);
                 macaraInstance.setParameterByName("Volume", clampAccelerationForVolume);
-                macaraInstance.start();   
+                macaraInstance.start();
+                
             }
             else if (Mathf.Abs(acceleration) > 15)
             {

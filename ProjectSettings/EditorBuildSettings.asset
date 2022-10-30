@@ -35,9 +35,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Ben/MergedSceneBen.unity
     guid: 0af16f3f59b2b70479fceadc331234b9
-  - enabled: 0
-    path: Assets/Scenes/Ben/MergedSceneDrum.unity
-    guid: 9bfdaef902a769943aa54f1300dbe8b7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 97c39cff9565a2a4392032a9ad8d3a15, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f89ac578f7ee1e142bb2dfa44d5f2617, type: 2}

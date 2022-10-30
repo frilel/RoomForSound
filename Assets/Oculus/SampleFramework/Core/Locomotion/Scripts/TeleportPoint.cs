@@ -35,8 +35,6 @@ public class TeleportPoint : MonoBehaviour {
     public int TeleportLayer = 6;
 
     private float lastLookAtTime = 0f;
-    [SerializeField]
-    private bool isDownStage=false;
 
     public Transform GetDestTransform()
     {
@@ -49,10 +47,6 @@ public class TeleportPoint : MonoBehaviour {
         {
             this.GetComponent<MeshRenderer>().enabled = false;
             this.gameObject.layer = IgnoreRaycastLayer;
-            if(isDownStage)
-            {
-                FindObjectOfType<GameManager>().PlayerToDownStage();
-            }
         }
     }
 
@@ -62,10 +56,6 @@ public class TeleportPoint : MonoBehaviour {
         {
             this.GetComponent<MeshRenderer>().enabled = true;
             this.gameObject.layer = TeleportLayer;
-            if(isDownStage)
-            {
-                FindObjectOfType<GameManager>().PlayerExitDownStage();
-            }
         }
     }
 

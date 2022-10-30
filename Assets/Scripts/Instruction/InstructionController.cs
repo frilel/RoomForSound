@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Oculus.Interaction;
 
 public class InstructionController : MonoBehaviour
 {
     public int motionID = 0;
-    public bool[] motionIDFinish = { false, false, false, false, false, false }; // holdcontroller, press button for sequencer, hold drumstick, teleport 
+    bool[] motionIDFinish = { false, false, false, false, false, false }; // holdcontroller, press button for sequencer, hold drumstick, teleport 
     bool enableInstruction = true;
     public GameObject canvasTips;
     public GameObject handL;
@@ -16,13 +15,12 @@ public class InstructionController : MonoBehaviour
     public GameObject instructionCursor;
     bool success = true; // check whether user successfully do the right control 
     public bool wait = false; // wait to check whether user follows the instruction
-
     Vector3[] instructionPositions =
     {
 
         new Vector3(0.0f, 0f, 0.0f),
         new Vector3(0.0f, 0.0f, 0.0f),
-        new Vector3(0.585f, 0.16f, -0.831f),
+        new Vector3(0.92f, 0.228f, -0.742f),
         new Vector3(0.8f, -0.1f, 0.0f),
         new Vector3(-0.5868f, -0.149f, -0.6812f),
 
@@ -43,8 +41,6 @@ public class InstructionController : MonoBehaviour
         StartCoroutine(MotionIDTimeCount(3f));
         transform.position = instructionPositions[motionID];
         enableInstruction = true;
-        for (int i = 0; i < motionIDFinish.Length; i++) motionIDFinish[i] = false;
-
     }
 
     // Update is called once per frame
@@ -52,12 +48,23 @@ public class InstructionController : MonoBehaviour
     {
         if (enableInstruction)
         {
-            if (motionIDFinish[motionID]) {
-                IncreaseMotionID();
-            }
             if ((OVRInput.GetDown(OVRInput.RawButton.A)))
             {
-                IncreaseMotionID();
+                if (motionID < instructionPositions.Length-1)
+                {
+                    //Debug.Log("ss");
+                    motionIDFinish[motionID] = true;
+                    if (motionIDFinish[motionID + 1] == true) motionID++; // skip the one that already finished 
+                    motionID++;
+                    transform.position = instructionPositions[motionID];
+                    canvasTips.transform.rotation = canvasTipsRotation[motionID];
+                }
+                else
+                {
+                    instructionCursor.SetActive(false);
+                    transform.gameObject.SetActive(false);
+                }
+
             }
             if (motionID == instructionPositions.Length - 1)
             {
@@ -66,24 +73,6 @@ public class InstructionController : MonoBehaviour
             }
         }
 
-    }
-    void IncreaseMotionID()
-    {
-        if (motionID < instructionPositions.Length - 1)
-        {
-            //Debug.Log("ss");
-            motionIDFinish[motionID] = true;
-            //if (motionIDFinish[motionID + 1] == true) motionID++; // skip the one that already finished 
-            motionID++;
-            transform.position = instructionPositions[motionID];
-            canvasTips.transform.rotation = canvasTipsRotation[motionID];
-        }
-        else
-        {
-            instructionCursor.SetActive(false);
-            transform.gameObject.SetActive(false);
-            enableInstruction = false;
-        }
     }
     void ChangeInstruction(bool continueOrNot)
     {

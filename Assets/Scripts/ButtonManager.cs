@@ -8,20 +8,14 @@ public class ButtonManager : MonoBehaviour
 
     public GameObject Song1GO;
     public GameObject Song2GO;
-    public GameObject currentSong = null;
+    GameObject currentSong = null;
     string currentPosition;
-    [HideInInspector]
-    public Song2 song2Script;
-    [HideInInspector]
-    public Song1 song1Script;
+    Song2 song2Script;
+    Song1 song1Script;
     public MeshRenderer button03MeshRenderer;
     public Material red;
     public Material white;
-    InstructionController instructionController;
-    public void Start()
-    {
-        instructionController = FindObjectOfType<InstructionController>();
-    }
+
     public void SaveMaterialOfButton(MeshRenderer buttonMaterial)
     {
         ActiveMesh.Add(buttonMaterial);
@@ -29,7 +23,7 @@ public class ButtonManager : MonoBehaviour
 
     public void ChangePreviousButtonMaterial()
     {
-        if (!ActiveMesh.Count.Equals(0))
+        if(!ActiveMesh.Count.Equals(0))
         {
             MeshRenderer mesh = ActiveMesh[0];
             mesh.material = material;
@@ -39,8 +33,7 @@ public class ButtonManager : MonoBehaviour
 
     public void ManageButtonPush(string buttonName, MeshRenderer buttonMeshRenderer)
     {
-        instructionController.motionIDFinish[1] = true;
-        instructionController.motionIDFinish[2] = true;
+
         switch (buttonName)
         {
             // Play Song1
@@ -56,11 +49,11 @@ public class ButtonManager : MonoBehaviour
             // Turn current instrument Off 
             // (Once its off, it can't be turned on, there is a synchronisation issue wich causes the layers to unalign)
             case "Button03":
-                if (song1Script != null)
+                if(song1Script != null) 
                 {
                     song1Script.TurnOffCurrentInstrument(currentPosition);
                 }
-                else if (song2Script != null)
+                else if(song2Script != null) 
                 {
                     song2Script.TurnOffCurrentInstrument(currentPosition);
                 }
@@ -72,7 +65,7 @@ public class ButtonManager : MonoBehaviour
             case "Button04":
                 StopAndCheckStopSong();
                 break;
-            default:
+            default: 
                 break;
         }
     }
@@ -107,7 +100,7 @@ public class ButtonManager : MonoBehaviour
         GameManager.Instance.UpdateCurrentSong(GameManager.Song.ViniWeediWhiskey);
     }
 
-    public void StopAndCheckStopSong()
+    public void StopAndCheckStopSong() 
     {
         ChangePreviousButtonMaterial();
         Destroy(currentSong);
@@ -118,7 +111,7 @@ public class ButtonManager : MonoBehaviour
 
     public void SetCurrentLocationName(string currentPosition)
     {
-        this.currentPosition = currentPosition;
+       this.currentPosition = currentPosition;
     }
 
 }

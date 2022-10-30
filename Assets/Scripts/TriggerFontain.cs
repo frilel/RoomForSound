@@ -1,4 +1,3 @@
-using FMODUnity;
 using UnityEngine;
 
 public class TriggerFontain : MonoBehaviour
@@ -11,26 +10,9 @@ public class TriggerFontain : MonoBehaviour
     FMOD.Studio.EventInstance flameThrowShort;
     
 
-
     private void Start() {
         particles = GetComponent<ParticleSystem>();
         flameThrowShort = FMODUnity.RuntimeManager.CreateInstance("event:/FlameThrow/FlameThrowShort");
-    }
-
-    private void OnEnable()
-    {
-        Song2.OnSong2Start += OnSong2Start;
-    }
-
-    private void OnDestroy()
-    {
-        Song2.OnSong2Start -= OnSong2Start;
-    }
-
-    private void OnSong2Start(Song2 song2fromEvent)
-    {
-        triggerState = song2fromEvent.broadcastMarker;
-        song2 = song2fromEvent;
     }
 
     public void InitiateSong2()
@@ -40,6 +22,13 @@ public class TriggerFontain : MonoBehaviour
     }
 
     private void Update() {
+
+        if (GameObject.Find("Song2GO(Clone)") != null && !songActiveBool)
+        {
+            song2 = GameObject.Find("Song2GO(Clone)").GetComponent<Song2>();
+            triggerState = song2.broadcastMarker;
+            songActiveBool = true;
+        }
 
         // Debug.Log(song2);
         if(song2 != null) 
