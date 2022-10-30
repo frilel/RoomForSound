@@ -7,10 +7,11 @@ public class MusicianControl : MonoBehaviour
     private Animator animator;
     public int animIndex;//0 drum, 1 singing, 2 guitar
     // Start is called before the first frame update
-    private void Awake() {
+    private void Awake()
+    {
         animator = GetComponent<Animator>();
     }
-    void Start()
+    void OnEnable()
     {
         switch (animIndex)
         {
