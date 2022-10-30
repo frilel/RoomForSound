@@ -24,6 +24,7 @@ public class Song2 : MonoBehaviour
     GCHandle timelineHandle;
 
     Transform cam;
+    ButtonManager buttonManager;
 
     public string broadcastMarker;
 
@@ -31,6 +32,8 @@ public class Song2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // cam = GameObject.Find("OVRCameraRig").transform;
+        buttonManager = GameObject.Find("Sequenzer").GetComponent<ButtonManager>();
         cam = GameManager.Instance?.Rig.transform.Find("OVRCameraRig");
         Assert.IsNotNull(cam, "Please add the prefab GameManager to your scene!");
 
@@ -56,6 +59,7 @@ public class Song2 : MonoBehaviour
 
     void OnDestroy()
     {
+        buttonManager.deleteMarker = "DELETE";
         musicInstance.setUserData(IntPtr.Zero);
         musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         musicInstance.release();
