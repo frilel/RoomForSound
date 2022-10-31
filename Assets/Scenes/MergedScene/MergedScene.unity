@@ -7803,7 +7803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 663820427552964267, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
       propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 663820427552964267, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -31430,7 +31430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 663820427552964267, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
       propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 663820427552964267, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -32313,26 +32313,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1932519459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2307e7ad91222841b562bebd81a69a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  streams: []
---- !u!114 &1932519461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1932519459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bcc82901c3f48a88d3408251afa3365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_TextureSize: {x: 1280, y: 720}
-  m_Source: 0
+  m_Source: 3
   m_Camera: {fileID: 0}
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 8400000, guid: 5b88901ca9563d54f8f8d3359d8e5c6a, type: 2}
   m_WebCamDeviceIndex: 0
   m_Depth: 16
   m_AntiAliasing: 1
@@ -32345,6 +32332,20 @@ MonoBehaviour:
     max: 1000
   m_ScaleFactor: 1
   m_AutoRequestUserAuthorization: 1
+--- !u!114 &1932519461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932519459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2307e7ad91222841b562bebd81a69a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  streams:
+  - {fileID: 1932519460}
 --- !u!114 &1932519462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32357,8 +32358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045786cf504bd7347842d6948241cbd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urlSignaling: http://localhost
-  signalingType: Unity.RenderStreaming.Signaling.HttpSignaling
+  urlSignaling: wss://roomforsound-server.herokuapp.com
+  signalingType: Unity.RenderStreaming.Signaling.WebSocketSignaling
   iceServers:
   - credential: 
     credentialType: 0
@@ -32366,7 +32367,8 @@ MonoBehaviour:
     - stun:stun.l.google.com:19302
     username: 
   interval: 5
-  handlers: []
+  handlers:
+  - {fileID: 1932519461}
   runOnAwake: 1
 --- !u!114 &1932519463
 MonoBehaviour:
