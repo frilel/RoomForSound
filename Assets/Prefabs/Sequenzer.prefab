@@ -171,7 +171,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312780896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1242793659}
@@ -179,7 +179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 5.2, y: -0}
   m_SizeDelta: {x: 87.3, y: 83.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &312780899
@@ -222,8 +222,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Vini Weedy Whiskey
+    m_LineSpacing: 1.4
+  m_Text: Ben Esdor Soundroom
 --- !u!1 &319759161
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 614100909}
   - component: {fileID: 4119998189073657828}
   m_Layer: 7
-  m_Name: Button02
+  m_Name: ButtonViniWeediWhiskey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1659,8 +1659,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Room For Sound - Song2
+    m_LineSpacing: 1.4
+  m_Text: Frej Larsson  Vini Weedy Whiskey
 --- !u!1 &1688312889
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,7 +3390,7 @@ GameObject:
   - component: {fileID: 2834829761625354235}
   - component: {fileID: 2314332570071259279}
   m_Layer: 7
-  m_Name: ButtonViniWeediWhiskey
+  m_Name: Button02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
