@@ -7816,7 +7816,7 @@ PrefabInstance:
     - target: {fileID: 663820427552964267, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 481346624}
+      objectReference: {fileID: 481346626}
     - target: {fileID: 663820427552964267, guid: f4c1be5bf1af2b740904092f0c2d300c, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -22956,6 +22956,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 414698, guid: 8359196305d8b024c812a88d51e7e13c, type: 3}
   m_PrefabInstance: {fileID: 1276901109}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1285205131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8190406732669093997, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+  m_PrefabInstance: {fileID: 3582077343691494419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1305553883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34265,6 +34270,10 @@ PrefabInstance:
       propertyPath: Song2GO
       value: 
       objectReference: {fileID: 5225755801503719693, guid: d44d832e5e1a2804b96d1c7ca262e745, type: 3}
+    - target: {fileID: 1112359804851219462, guid: 96a7968b926520545b2293ca0985d07e, type: 3}
+      propertyPath: handMenu
+      value: 
+      objectReference: {fileID: 1285205131}
     - target: {fileID: 1112359804851219462, guid: 96a7968b926520545b2293ca0985d07e, type: 3}
       propertyPath: LeftHandAnchor
       value: 

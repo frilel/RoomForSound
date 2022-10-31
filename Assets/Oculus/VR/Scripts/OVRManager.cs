@@ -1584,10 +1584,10 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		// uncomment the following line to disable the callstack printed to log
 		//Application.SetStackTraceLogType(LogType.Log, StackTraceLogType.None);  // TEMPORARY
 
-		//Debug.Log("Unity v" + Application.unityVersion + ", " +
+		/*Debug.Log("Unity v" + Application.unityVersion + ", " +
 				"Oculus Utilities v" + OVRPlugin.wrapperVersion + ", " +
 				"OVRPlugin v" + OVRPlugin.version + ", " +
-				"SDK v" + OVRPlugin.nativeSDKVersion + ".");
+				"SDK v" + OVRPlugin.nativeSDKVersion + ".");*/
 
 		//Debug.LogFormat("SystemHeadset {0}, API {1}", systemHeadsetType.ToString(), xrApi.ToString());
 
@@ -1696,7 +1696,7 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		Initialize();
 
 		//Debug.LogFormat("Current display frequency {0}, available frequencies [{1}]",
-			display.displayFrequency, string.Join(", ", display.displayFrequenciesAvailable.Select(f => f.ToString()).ToArray()));
+			//display.displayFrequency, string.Join(", ", display.displayFrequenciesAvailable.Select(f => f.ToString()).ToArray()));
 
 		if (resetTrackerOnLoad)
 			display.RecenterPose();

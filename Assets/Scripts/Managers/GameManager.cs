@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using UnityEngine.InputSystem;
 public class GameManager : MonoBehaviour
 {
     static public GameManager Instance;
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Transform audiencesParent;
     public GameObject[] musicians;
     public Transform[] grabbables;
+    public GameObject handMenu;
 
     [Tooltip("Order this array with how the public enum Song is ordered. The song Enum 0 will correspond to position 0 in this array.")]
     [SerializeField] Sprite[] songImages;
@@ -37,7 +38,18 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
+    private void Update()
+    {
+        if (handMenu.activeSelf)
+        {
+            Debug.Log("A");
+            if (OVRInput.Get(OVRInput.Button.SecondaryHandTrigger))
+            {
+                Debug.Log("B");
+                Replay();
+            }
+        }
+    }
     internal void UpdateCurrentSongImage(Song song)
     {
         SongImageDisplay.sprite = songImages[(int)song];

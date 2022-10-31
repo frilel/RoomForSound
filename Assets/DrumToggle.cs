@@ -12,7 +12,7 @@ public class DrumToggle : MonoBehaviour
     {
         //drumStandard = GameObject.Find("DrumStandard");
         //drumVariation = GameObject.Find("DrumVariation");
-        Debug.Log("sss");
+        //Debug.Log("sss");
         drumVariation.SetActive(false);
     }
 
