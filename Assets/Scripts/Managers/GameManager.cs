@@ -42,10 +42,10 @@ public class GameManager : MonoBehaviour
     {
         if (handMenu.activeSelf)
         {
-            Debug.Log("A");
-            if (OVRInput.Get(OVRInput.Button.SecondaryHandTrigger))
+            //Debug.Log("A");
+            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
             {
-                Debug.Log("B");
+                //Debug.Log("B");
                 Replay();
             }
         }
