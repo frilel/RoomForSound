@@ -229,10 +229,11 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 2428441138143119802}
   MinDistance: 1
   MaxDistance: 20
-  Length: 179565
+  Length: 215015
 --- !u!114 &-7400252534855013200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,6 +1673,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-669021518045253407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Vini Weedi Whiskey/LocDrums
+  m_EditorClassIdentifier: 
+  Name: LocDrums
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3119524935
+    data2: 1393632135
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-209184966175457103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1789,7 +1814,7 @@ MonoBehaviour:
   - {fileID: 1278483287379617233}
   StringsBanks:
   - {fileID: 3916383380135203157}
-  cacheTime: 638027144042524067
+  cacheTime: 638028101664938545
   cacheVersion: 131591
 --- !u!114 &12281985263074687
 MonoBehaviour:
@@ -2074,10 +2099,10 @@ MonoBehaviour:
   Path: RoomForSound_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638027144042504194
+  lastModified: 638028101664938545
   FileSizes:
   - Name: Desktop
-    Value: 26612640
+    Value: 26617440
   Exists: 1
 --- !u!114 &1281051470542862836
 MonoBehaviour:
@@ -2267,6 +2292,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &2428441138143119802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Kall ft. BenG/LocDrums
+  m_EditorClassIdentifier: 
+  Name: LocDrums
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3119524935
+    data2: 1393632135
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2517087350412073637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2440,10 +2489,11 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -669021518045253407}
   MinDistance: 1
   MaxDistance: 20
-  Length: 193488
+  Length: 231370
 --- !u!114 &3482821228245385050
 MonoBehaviour:
   m_ObjectHideFlags: 0

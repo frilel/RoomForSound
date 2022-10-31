@@ -52,7 +52,8 @@ public class InstructionController : MonoBehaviour
     {
         if (enableInstruction)
         {
-            if (motionIDFinish[motionID]) {
+            if (motionIDFinish[motionID])
+            {
                 IncreaseMotionID();
             }
             if ((OVRInput.GetDown(OVRInput.RawButton.A)))
@@ -112,6 +113,11 @@ public class InstructionController : MonoBehaviour
         //wait = true;
         //if (motionID == 1) success = true;
         //StartCoroutine(MotionIDTimeCount(3f));
-        if (motionID == instructionPositions.Length - 1) enableInstruction = false;
+        if (motionID == instructionPositions.Length - 1)
+        {
+            instructionCursor.SetActive(false);
+            transform.gameObject.SetActive(false);
+            enableInstruction = false;
+        }
     }
 }

@@ -46,7 +46,7 @@ public class Maracas : MonoBehaviour
             float clampAcceleration = Mathf.Clamp(acceleration / 10f, 0, 1);
             float clampAccelerationForVolume = Mathf.Sqrt(clampAcceleration);
             clampAcceleration = Mathf.Pow(clampAcceleration, 3);
-            Debug.Log(acceleration);
+            //Debug.Log(acceleration);
             if (Vector3.Angle(moveSpeedVec, lastSpeedVec) > 90)
             {
                 macaraInstance.setParameterByName("Pitch", clampAcceleration);

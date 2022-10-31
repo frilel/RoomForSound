@@ -90,7 +90,7 @@ public class TriggerFontain : MonoBehaviour
         // Debug.Log(song2);
         if(song2 != null) 
         {
-            Debug.Log(song2.broadcastMarker);
+            //Debug.Log(song2.broadcastMarker);
             if(triggerState != song2.broadcastMarker)
             {
                 triggerState = song2.broadcastMarker;
