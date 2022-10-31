@@ -12,18 +12,21 @@ public class GameManager : MonoBehaviour
     public GameObject RightHandAnchor;
     public GameObject CenterEyeAnchor;
     public GameObject Rig;
-    public Image SongImageDisplay;
     public Transform audiencesParent;
     public GameObject[] musicians;
     public Transform[] grabbables;
     public GameObject handMenu;
+    public GameObject Song2GO;
 
     [Tooltip("Order this array with how the public enum Song is ordered. The song Enum 0 will correspond to position 0 in this array.")]
-    [SerializeField] Sprite[] songImages;
-    public GameObject Song2GO;
+    [SerializeField] private Sprite[] songImages;
+
+    [Tooltip("Yes, add all the images displays you want to show the song image...")]
+    [SerializeField] private Image[] SongImageDisplays;
 
     public enum Song
     {
+        NoSong,
         Song1,
         Song2,
         Kall,
@@ -34,10 +37,12 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
+
     public void Replay()
     {
         SceneManager.LoadScene(0);
     }
+
     private void Update()
     {
         if (handMenu.activeSelf)
@@ -52,7 +57,10 @@ public class GameManager : MonoBehaviour
     }
     internal void UpdateCurrentSongImage(Song song)
     {
-        SongImageDisplay.sprite = songImages[(int)song];
+        for (int i = 0; i < SongImageDisplays.Length; i++)
+        {
+            SongImageDisplays[i].sprite = songImages[(int)song];
+        }
     }
     public void PlayerToDownStage()
     {

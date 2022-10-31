@@ -121,7 +121,8 @@ public class ButtonManager : MonoBehaviour
         StopAndCheckStopSong();
         currentSong = Instantiate(Song2GO);
         song2Script = currentSong.GetComponent<SongBase>();
-        SaveMaterialOfButton(buttonMeshRenderer);
+        if(buttonMeshRenderer != null)
+            SaveMaterialOfButton(buttonMeshRenderer);
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.Song2);
     }
 
@@ -138,7 +139,8 @@ public class ButtonManager : MonoBehaviour
         StopAndCheckStopSong();
         currentSong = Instantiate(SongViniWeediWhiskeyGO);
         songViniWeediWhiskeyScript = currentSong.GetComponent<SongBase>();
-        SaveMaterialOfButton(buttonMeshRenderer);
+        if (buttonMeshRenderer != null)
+            SaveMaterialOfButton(buttonMeshRenderer);
         GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.ViniWeediWhiskey);
     }
 
@@ -151,6 +153,8 @@ public class ButtonManager : MonoBehaviour
         song1Script = null;
         songViniWeediWhiskeyScript = null;
         songKallScript = null;
+
+        GameManager.Instance.UpdateCurrentSongImage(GameManager.Song.NoSong);
     }
 
     public void SetCurrentLocationName(string currentPosition)

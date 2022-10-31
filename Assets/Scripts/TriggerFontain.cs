@@ -38,8 +38,8 @@ public class TriggerFontain : MonoBehaviour
     private void OnSongStart(SongBase songFromEvent)
     {
 
-        Debug.Log(songFromEvent.eventName.ToString());
-        DebugInVR.Instance.text.text = songFromEvent.eventName.ToString();
+        //Debug.Log(songFromEvent.eventName.ToString());
+        //DebugInVR.Instance.text.text = songFromEvent.eventName.ToString();
         triggerState = songFromEvent.broadcastMarker;
 
         switch (songFromEvent.eventName.ToString())
