@@ -2966,11 +2966,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8102155473089344358, guid: d56b87557a2d32340bf36655f72d7ef8, type: 3}
   m_PrefabInstance: {fileID: 266329573}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &267533064 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 267533064, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
-  m_PrefabInstance: {fileID: 3582077343691494419}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &273168225
 GameObject:
   m_ObjectHideFlags: 0
@@ -7273,6 +7268,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1976f54a4b8d7e74a867116c2232d660, type: 3}
+--- !u!1 &406352406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7373640427623871713, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+  m_PrefabInstance: {fileID: 1275794208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &418206234
 GameObject:
   m_ObjectHideFlags: 0
@@ -8997,6 +8997,7 @@ Transform:
   - {fileID: 231484913}
   - {fileID: 2146424283}
   - {fileID: 1950941908}
+  - {fileID: 1739210701}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11126,7 +11127,7 @@ MonoBehaviour:
   handL: {fileID: 1008631634}
   handR: {fileID: 53213014}
   changeInstruction: 0
-  instructionCursor: {fileID: 267533064}
+  instructionCursor: {fileID: 3582077343691494420}
   wait: 0
 --- !u!4 &696340368
 Transform:
@@ -18885,7 +18886,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 206710c72062c714794b81dcd655ba22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20404,7 +20405,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 206710c72062c714794b81dcd655ba22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22871,7 +22872,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7373640427623871725, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
   m_PrefabInstance: {fileID: 1275794208}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 406352406}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b6a99690c46d7241902cece8594b226, type: 3}
@@ -26379,6 +26380,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8528656402516648906, guid: 4c48702aafa37a843b2dd5aeea9aac4c, type: 3}
   m_PrefabInstance: {fileID: 1487033145}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1487285055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7373640427623871713, guid: 22827833965f9c24a9ec0e7dc05cecd8, type: 3}
+  m_PrefabInstance: {fileID: 7373640426410163396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1511850045
 GameObject:
   m_ObjectHideFlags: 0
@@ -29294,6 +29300,51 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!1 &1739210700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739210701}
+  - component: {fileID: 1739210702}
+  m_Layer: 7
+  m_Name: DrumToggle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739210701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739210700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 542967746}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739210702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739210700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156f9bdfff746b742993ea70020a10e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drumStandard: {fileID: 1487285055}
+  drumVariation: {fileID: 406352406}
 --- !u!1 &1739388808
 GameObject:
   m_ObjectHideFlags: 0
@@ -32260,6 +32311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2307e7ad91222841b562bebd81a69a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  streams: []
 --- !u!114 &1932519461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32272,6 +32324,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bcc82901c3f48a88d3408251afa3365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TextureSize: {x: 1280, y: 720}
+  m_Source: 0
+  m_Camera: {fileID: 0}
+  m_Texture: {fileID: 0}
+  m_WebCamDeviceIndex: 0
+  m_Depth: 16
+  m_AntiAliasing: 1
+  m_Codec:
+    m_MimeType: 
+    m_SdpFmtpLine: 
+  m_FrameRate: 30
+  m_Bitrate:
+    min: 0
+    max: 1000
+  m_ScaleFactor: 1
+  m_AutoRequestUserAuthorization: 1
 --- !u!114 &1932519462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32284,6 +32352,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045786cf504bd7347842d6948241cbd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  urlSignaling: http://localhost
+  signalingType: Unity.RenderStreaming.Signaling.HttpSignaling
+  iceServers:
+  - credential: 
+    credentialType: 0
+    urls:
+    - stun:stun.l.google.com:19302
+    username: 
+  interval: 5
+  handlers: []
+  runOnAwake: 1
 --- !u!114 &1932519463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35262,6 +35341,14 @@ PrefabInstance:
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2146424284}
+    - target: {fileID: 8190406732638187475, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1739210702}
+    - target: {fileID: 8190406732638187475, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toggleDrumSet
+      objectReference: {fileID: 0}
     - target: {fileID: 8190406732855578258, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -35272,6 +35359,11 @@ PrefabInstance:
       objectReference: {fileID: 1172049938}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+--- !u!1 &3582077343691494420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788581488433555660, guid: c9a30c003cd653f4dae59ad977b9b032, type: 3}
+  m_PrefabInstance: {fileID: 3582077343691494419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3671811646240505300
 PrefabInstance:
   m_ObjectHideFlags: 0

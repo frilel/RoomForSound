@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class DrumToggle : MonoBehaviour
 {
-    GameObject drumStandard;
-    GameObject drumVariation; 
+    public GameObject drumStandard;
+    public GameObject drumVariation; 
 
     // Start is called before the first frame update
     void Start()
     {
-        drumStandard = GameObject.Find("DrumStandard");
-        drumVariation = GameObject.Find("DrumVariation");
+        //drumStandard = GameObject.Find("DrumStandard");
+        //drumVariation = GameObject.Find("DrumVariation");
+        Debug.Log("sss");
         drumVariation.SetActive(false);
     }
 
